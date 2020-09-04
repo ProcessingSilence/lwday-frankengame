@@ -67,6 +67,15 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../SkeletalAnimationTest/Assets/PsdToUnity/Editor/PsdImportWindow.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1072">
+              <caret line="269" column="49" selection-start-line="269" selection-start-column="49" selection-end-line="269" selection-end-column="49" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Games/Multijump/JumpMechanics.cs">
           <provider selected="true" editor-type-id="text-editor">
@@ -93,11 +102,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/PlayerController.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="720">
-              <caret line="47" column="17" lean-forward="true" selection-start-line="47" selection-start-column="17" selection-end-line="47" selection-end-column="17" />
+              <caret line="47" column="17" selection-start-line="47" selection-start-column="17" selection-end-line="47" selection-end-column="17" />
               <folding>
                 <marker date="1599179173381" expanded="false" signature="119:191" ph="..." />
                 <marker date="1599179173381" expanded="true" signature="238:4271" ph="{...}" />
@@ -149,6 +158,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Games/Multijump/JumpMechanics.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://F:/UnityPackages/QuickPlatforming/Assets/PlayerController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Games/Teleportation/Scripts/Teleporter.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../SkeletalAnimationTest/Assets/PsdToUnity/Editor/PsdImportWindow.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -160,10 +170,11 @@
         <option value="$PROJECT_DIR$/Assets/Games/Teleportation/Scripts/Teleporter.cs" />
         <option value="$PROJECT_DIR$/Assets/Games/Multijump/JumpMechanics.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" />
+        <option value="$PROJECT_DIR$/../SkeletalAnimationTest/Assets/PsdToUnity/Editor/PsdImportWindow.cs" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds">
     <option name="x" value="-7" />
     <option name="width" value="1294" />
     <option name="height" value="1407" />
@@ -229,12 +240,12 @@
       <option name="presentableId" value="Default" />
       <updated>1599140250738</updated>
       <workItem from="1599140254496" duration="593000" />
-      <workItem from="1599141007271" duration="8076000" />
+      <workItem from="1599141007271" duration="9286000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8669000" />
+    <option name="totallyTimeSpent" value="9879000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -246,7 +257,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="0" width="1294" height="1407" extended-state="1" />
+    <frame x="-7" y="0" width="1294" height="1407" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.5177994" />
@@ -319,22 +330,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Games/Teleportation/Scripts/Teleporter.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="64">
-          <caret line="6" column="10" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
-          <folding>
-            <marker date="1599172368009" expanded="false" signature="6:78" ph="..." />
-            <marker date="1599172368009" expanded="true" signature="119:815" ph="{...}" />
-            <marker date="1599172368009" expanded="true" signature="287:422" ph="{...}" />
-            <marker date="1599172368009" expanded="true" signature="480:501" ph="{...}" />
-            <marker date="1599172368009" expanded="true" signature="563:699" ph="{...}" />
-            <marker date="1599172368009" expanded="true" signature="609:693" ph="{...}" />
-            <marker date="1599172368009" expanded="true" signature="722:813" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Games/Multijump/JumpMechanics.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1056">
@@ -389,7 +384,7 @@
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/PlayerController.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="720">
-          <caret line="47" column="17" lean-forward="true" selection-start-line="47" selection-start-column="17" selection-end-line="47" selection-end-column="17" />
+          <caret line="47" column="17" selection-start-line="47" selection-start-column="17" selection-end-line="47" selection-end-column="17" />
           <folding>
             <marker date="1599179173381" expanded="false" signature="119:191" ph="..." />
             <marker date="1599179173381" expanded="true" signature="238:4271" ph="{...}" />
@@ -418,6 +413,29 @@
             <marker date="1599179173381" expanded="true" signature="4115:4269" ph="{...}" />
             <marker date="1599179173381" expanded="true" signature="4201:4263" ph="{...}" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Games/Teleportation/Scripts/Teleporter.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="64">
+          <caret line="6" column="10" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
+          <folding>
+            <marker date="1599172368009" expanded="false" signature="6:78" ph="..." />
+            <marker date="1599172368009" expanded="true" signature="119:815" ph="{...}" />
+            <marker date="1599172368009" expanded="true" signature="287:422" ph="{...}" />
+            <marker date="1599172368009" expanded="true" signature="480:501" ph="{...}" />
+            <marker date="1599172368009" expanded="true" signature="563:699" ph="{...}" />
+            <marker date="1599172368009" expanded="true" signature="609:693" ph="{...}" />
+            <marker date="1599172368009" expanded="true" signature="722:813" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../SkeletalAnimationTest/Assets/PsdToUnity/Editor/PsdImportWindow.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1072">
+          <caret line="269" column="49" selection-start-line="269" selection-start-column="49" selection-end-line="269" selection-end-column="49" />
         </state>
       </provider>
     </entry>
