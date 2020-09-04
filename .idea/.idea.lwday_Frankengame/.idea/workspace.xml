@@ -37,11 +37,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/PlayerController.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+            <state relative-caret-position="992">
+              <caret line="64" column="5" lean-forward="true" selection-start-line="64" selection-start-column="5" selection-end-line="64" selection-end-column="5" />
               <folding>
                 <marker date="1599179173381" expanded="false" signature="119:191" ph="..." />
                 <marker date="1599179173381" expanded="true" signature="238:4271" ph="{...}" />
@@ -74,11 +74,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/JumpPowerupDetection.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="432">
-              <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+              <caret line="29" selection-start-line="29" selection-end-line="29" />
               <folding>
                 <marker date="1599188397545" expanded="false" signature="6:78" ph="..." />
                 <marker date="1599188397545" expanded="true" signature="129:846" ph="{...}" />
@@ -106,7 +106,6 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Games/Multijump/JumpMechanics.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://F:/UnityPackages/QuickPlatforming/Assets/PlayerController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/JumpPowerupDetection.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Capsule.cs" root0="FORCE_HIGHLIGHTING" />
@@ -129,7 +128,7 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-7" />
+    <option name="x" value="1273" />
     <option name="width" value="1294" />
     <option name="height" value="1407" />
   </component>
@@ -185,12 +184,12 @@
       <updated>1599140250738</updated>
       <workItem from="1599140254496" duration="593000" />
       <workItem from="1599141007271" duration="10283000" />
-      <workItem from="1599186509520" duration="1949000" />
+      <workItem from="1599186509520" duration="3066000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12825000" />
+    <option name="totallyTimeSpent" value="13942000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -305,34 +304,38 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/JumpPowerupDetection.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="29" selection-start-line="29" selection-end-line="29" />
+          <folding>
+            <marker date="1599188397545" expanded="false" signature="6:78" ph="..." />
+            <marker date="1599188397545" expanded="true" signature="129:846" ph="{...}" />
+            <marker date="1599188397545" expanded="true" signature="291:399" ph="{...}" />
+            <marker date="1599188397545" expanded="true" signature="546:623" ph="{...}" />
+            <marker date="1599188397545" expanded="true" signature="650:844" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Games/Multijump/JumpMechanics.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1056">
-          <caret line="68" column="24" selection-start-line="68" selection-start-column="24" selection-end-line="68" selection-end-column="24" />
-          <folding>
-            <marker date="1599172682158" expanded="false" signature="6:78" ph="..." />
-            <marker date="1599172682158" expanded="true" signature="122:1598" ph="{...}" />
-            <marker date="1599172682158" expanded="true" signature="313:367" ph="{...}" />
-            <marker date="1599172682158" expanded="true" signature="425:486" ph="{...}" />
-            <marker date="1599172682158" expanded="true" signature="517:944" ph="{...}" />
-            <marker date="1599172682158" expanded="true" signature="560:731" ph="{...}" />
-            <marker date="1599172682158" expanded="true" signature="613:721" ph="{...}" />
-            <marker date="1599172682158" expanded="true" signature="769:938" ph="{...}" />
-            <marker date="1599172682158" expanded="true" signature="821:928" ph="{...}" />
-            <marker date="1599172682158" expanded="true" signature="964:1217" ph="{...}" />
-            <marker date="1599172682158" expanded="true" signature="1014:1211" ph="{...}" />
-            <marker date="1599172682158" expanded="true" signature="1054:1190" ph="{...}" />
-            <marker date="1599172682158" expanded="true" signature="1277:1319" ph="{...}" />
-            <marker date="1599172682158" expanded="true" signature="1376:1591" ph="{...}" />
-            <marker date="1599172682158" expanded="true" signature="1436:1585" ph="{...}" />
-          </folding>
+        <state relative-caret-position="160">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Games/Speedboost/move.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="40" column="9" lean-forward="true" selection-start-line="40" selection-start-column="9" selection-end-line="41" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/PlayerController.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+        <state relative-caret-position="992">
+          <caret line="64" column="5" lean-forward="true" selection-start-line="64" selection-start-column="5" selection-end-line="64" selection-end-column="5" />
           <folding>
             <marker date="1599179173381" expanded="false" signature="119:191" ph="..." />
             <marker date="1599179173381" expanded="true" signature="238:4271" ph="{...}" />
@@ -360,20 +363,6 @@
             <marker date="1599179173381" expanded="true" signature="3747:3954" ph="{...}" />
             <marker date="1599179173381" expanded="true" signature="4115:4269" ph="{...}" />
             <marker date="1599179173381" expanded="true" signature="4201:4263" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/JumpPowerupDetection.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
-          <folding>
-            <marker date="1599188397545" expanded="false" signature="6:78" ph="..." />
-            <marker date="1599188397545" expanded="true" signature="129:846" ph="{...}" />
-            <marker date="1599188397545" expanded="true" signature="291:399" ph="{...}" />
-            <marker date="1599188397545" expanded="true" signature="546:623" ph="{...}" />
-            <marker date="1599188397545" expanded="true" signature="650:844" ph="{...}" />
           </folding>
         </state>
       </provider>
