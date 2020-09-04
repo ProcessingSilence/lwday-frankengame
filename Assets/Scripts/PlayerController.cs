@@ -31,7 +31,7 @@ public class PlayerController : MonoBehaviour
         // the ground within that time period, they will automatically jump.
         private float jumpPressedPeriodCurrent;
         private float jumpPressedPeriodTime = 0.1f;
-    
+        
    
     // Movement 
         public float moveSpeed;

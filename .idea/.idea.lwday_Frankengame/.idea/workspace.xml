@@ -37,38 +37,53 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/PlayerController.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="992">
-              <caret line="64" column="5" lean-forward="true" selection-start-line="64" selection-start-column="5" selection-end-line="64" selection-end-column="5" />
+            <state relative-caret-position="1940">
+              <caret line="99" column="39" selection-start-line="99" selection-start-column="28" selection-end-line="99" selection-end-column="39" />
               <folding>
-                <marker date="1599179173381" expanded="false" signature="119:191" ph="..." />
-                <marker date="1599179173381" expanded="true" signature="238:4271" ph="{...}" />
-                <marker date="1599179173381" expanded="true" signature="307:351" ph="/* Jump ... */" />
-                <marker date="1599179173381" expanded="true" signature="589:731" ph="/* Gets y position of player when they are no longer grounded. ... */" />
-                <marker date="1599179173381" expanded="true" signature="782:988" ph="/* Flag that determines what happens midair when not grounded. ... */" />
-                <marker date="1599179173381" expanded="true" signature="1039:1227" ph="/* When pressing jump input, waits [input time] before seeing if player lands on ground, if the player lands on ... */" />
-                <marker date="1599179173381" expanded="true" signature="1745:1897" ph="{...}" />
-                <marker date="1599179173381" expanded="true" signature="1929:1981" ph="{...}" />
-                <marker date="1599179173381" expanded="true" signature="2008:2116" ph="{...}" />
-                <marker date="1599179173381" expanded="true" signature="2151:2874" ph="{...}" />
-                <marker date="1599179173381" expanded="true" signature="2291:2373" ph="{...}" />
-                <marker date="1599179173381" expanded="true" signature="2408:2595" ph="{...}" />
-                <marker date="1599179173381" expanded="true" signature="2533:2585" ph="{...}" />
-                <marker date="1599179173381" expanded="true" signature="2686:2761" ph="{...}" />
-                <marker date="1599179173381" expanded="true" signature="2807:2856" ph="{...}" />
-                <marker date="1599179173381" expanded="true" signature="2891:2947" ph="{...}" />
-                <marker date="1599179173381" expanded="true" signature="2967:3058" ph="{...}" />
-                <marker date="1599179173381" expanded="true" signature="3150:3342" ph="{...}" />
-                <marker date="1599179173381" expanded="true" signature="3206:3336" ph="{...}" />
-                <marker date="1599179173381" expanded="true" signature="3382:3717" ph="{...}" />
-                <marker date="1599179173381" expanded="true" signature="3425:3477" ph="{...}" />
-                <marker date="1599179173381" expanded="true" signature="3524:3577" ph="{...}" />
-                <marker date="1599179173381" expanded="true" signature="3594:3646" ph="{...}" />
-                <marker date="1599179173381" expanded="true" signature="3747:3954" ph="{...}" />
-                <marker date="1599179173381" expanded="true" signature="4115:4269" ph="{...}" />
-                <marker date="1599179173381" expanded="true" signature="4201:4263" ph="{...}" />
+                <marker date="1599234249162" expanded="false" signature="119:191" ph="..." />
+                <marker date="1599234249162" expanded="true" signature="238:4275" ph="{...}" />
+                <marker date="1599234249162" expanded="true" signature="307:351" ph="/* Jump ... */" />
+                <marker date="1599234249162" expanded="true" signature="589:731" ph="/* Gets y position of player when they are no longer grounded. ... */" />
+                <marker date="1599234249162" expanded="true" signature="782:988" ph="/* Flag that determines what happens midair when not grounded. ... */" />
+                <marker date="1599234249162" expanded="true" signature="1039:1227" ph="/* When pressing jump input, waits [input time] before seeing if player lands on ground, if the player lands on ... */" />
+                <marker date="1599234249162" expanded="true" signature="1749:1901" ph="{...}" />
+                <marker date="1599234249162" expanded="true" signature="1933:1985" ph="{...}" />
+                <marker date="1599234249162" expanded="true" signature="2012:2120" ph="{...}" />
+                <marker date="1599234249162" expanded="true" signature="2155:2878" ph="{...}" />
+                <marker date="1599234249162" expanded="true" signature="2295:2377" ph="{...}" />
+                <marker date="1599234249162" expanded="true" signature="2412:2599" ph="{...}" />
+                <marker date="1599234249162" expanded="true" signature="2537:2589" ph="{...}" />
+                <marker date="1599234249162" expanded="true" signature="2690:2765" ph="{...}" />
+                <marker date="1599234249162" expanded="true" signature="2811:2860" ph="{...}" />
+                <marker date="1599234249162" expanded="true" signature="2895:2951" ph="{...}" />
+                <marker date="1599234249162" expanded="true" signature="2971:3062" ph="{...}" />
+                <marker date="1599234249162" expanded="true" signature="3154:3346" ph="{...}" />
+                <marker date="1599234249162" expanded="true" signature="3210:3340" ph="{...}" />
+                <marker date="1599234249162" expanded="true" signature="3386:3721" ph="{...}" />
+                <marker date="1599234249162" expanded="true" signature="3429:3481" ph="{...}" />
+                <marker date="1599234249162" expanded="true" signature="3528:3581" ph="{...}" />
+                <marker date="1599234249162" expanded="true" signature="3598:3650" ph="{...}" />
+                <marker date="1599234249162" expanded="true" signature="3751:3958" ph="{...}" />
+                <marker date="1599234249162" expanded="true" signature="4119:4273" ph="{...}" />
+                <marker date="1599234249162" expanded="true" signature="4205:4267" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/AimingAtMouse.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="400">
+              <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+              <folding>
+                <marker date="1599253899842" expanded="true" signature="6:92" ph="..." />
+                <marker date="1599253899842" expanded="true" signature="136:679" ph="{...}" />
+                <marker date="1599253899842" expanded="true" signature="273:294" ph="{...}" />
+                <marker date="1599253899842" expanded="true" signature="352:677" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -96,6 +111,7 @@
     <findStrings>
       <find>Move</find>
       <find>currentJumps</find>
+      <find>iJumpedFlag</find>
     </findStrings>
     <replaceStrings>
       <replace>jumpsLeft</replace>
@@ -106,6 +122,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/AimingAtMouse.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://F:/UnityPackages/QuickPlatforming/Assets/PlayerController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/JumpPowerupDetection.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Capsule.cs" root0="FORCE_HIGHLIGHTING" />
@@ -118,16 +135,17 @@
         <option value="$PROJECT_DIR$/../eventSystemTesting/Assets/TestingEvents.cs" />
         <option value="$PROJECT_DIR$/Assets/Games/Teleportation/Scripts/CollisionEventManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Games/Multijump/JumpMechanics.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" />
         <option value="$PROJECT_DIR$/../SkeletalAnimationTest/Assets/PsdToUnity/Editor/PsdImportWindow.cs" />
         <option value="$PROJECT_DIR$/Assets/Games/Teleportation/Scripts/Teleporter.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Capsule.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CapsuleEventSys.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/JumpPowerupDetection.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/AimingAtMouse.cs" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="1">
     <option name="x" value="1273" />
     <option name="width" value="1294" />
     <option name="height" value="1407" />
@@ -184,12 +202,12 @@
       <updated>1599140250738</updated>
       <workItem from="1599140254496" duration="593000" />
       <workItem from="1599141007271" duration="10283000" />
-      <workItem from="1599186509520" duration="3066000" />
+      <workItem from="1599186509520" duration="5635000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13942000" />
+    <option name="totallyTimeSpent" value="16511000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -201,7 +219,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="0" width="1294" height="1407" extended-state="0" />
+    <frame x="1273" y="0" width="1294" height="1407" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.5177994" />
@@ -282,21 +300,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Capsule.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="16" column="12" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
-          <folding>
-            <marker date="1599186568616" expanded="false" signature="6:78" ph="..." />
-            <marker date="1599186568616" expanded="true" signature="116:642" ph="{...}" />
-            <marker date="1599186568616" expanded="true" signature="265:379" ph="{...}" />
-            <marker date="1599186568616" expanded="true" signature="306:373" ph="{...}" />
-            <marker date="1599186568616" expanded="true" signature="432:640" ph="{...}" />
-            <marker date="1599186568616" expanded="true" signature="502:634" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/CapsuleEventSys.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="416">
@@ -334,35 +337,63 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/PlayerController.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="992">
-          <caret line="64" column="5" lean-forward="true" selection-start-line="64" selection-start-column="5" selection-end-line="64" selection-end-column="5" />
+        <state relative-caret-position="1940">
+          <caret line="99" column="39" selection-start-line="99" selection-start-column="28" selection-end-line="99" selection-end-column="39" />
           <folding>
-            <marker date="1599179173381" expanded="false" signature="119:191" ph="..." />
-            <marker date="1599179173381" expanded="true" signature="238:4271" ph="{...}" />
-            <marker date="1599179173381" expanded="true" signature="307:351" ph="/* Jump ... */" />
-            <marker date="1599179173381" expanded="true" signature="589:731" ph="/* Gets y position of player when they are no longer grounded. ... */" />
-            <marker date="1599179173381" expanded="true" signature="782:988" ph="/* Flag that determines what happens midair when not grounded. ... */" />
-            <marker date="1599179173381" expanded="true" signature="1039:1227" ph="/* When pressing jump input, waits [input time] before seeing if player lands on ground, if the player lands on ... */" />
-            <marker date="1599179173381" expanded="true" signature="1745:1897" ph="{...}" />
-            <marker date="1599179173381" expanded="true" signature="1929:1981" ph="{...}" />
-            <marker date="1599179173381" expanded="true" signature="2008:2116" ph="{...}" />
-            <marker date="1599179173381" expanded="true" signature="2151:2874" ph="{...}" />
-            <marker date="1599179173381" expanded="true" signature="2291:2373" ph="{...}" />
-            <marker date="1599179173381" expanded="true" signature="2408:2595" ph="{...}" />
-            <marker date="1599179173381" expanded="true" signature="2533:2585" ph="{...}" />
-            <marker date="1599179173381" expanded="true" signature="2686:2761" ph="{...}" />
-            <marker date="1599179173381" expanded="true" signature="2807:2856" ph="{...}" />
-            <marker date="1599179173381" expanded="true" signature="2891:2947" ph="{...}" />
-            <marker date="1599179173381" expanded="true" signature="2967:3058" ph="{...}" />
-            <marker date="1599179173381" expanded="true" signature="3150:3342" ph="{...}" />
-            <marker date="1599179173381" expanded="true" signature="3206:3336" ph="{...}" />
-            <marker date="1599179173381" expanded="true" signature="3382:3717" ph="{...}" />
-            <marker date="1599179173381" expanded="true" signature="3425:3477" ph="{...}" />
-            <marker date="1599179173381" expanded="true" signature="3524:3577" ph="{...}" />
-            <marker date="1599179173381" expanded="true" signature="3594:3646" ph="{...}" />
-            <marker date="1599179173381" expanded="true" signature="3747:3954" ph="{...}" />
-            <marker date="1599179173381" expanded="true" signature="4115:4269" ph="{...}" />
-            <marker date="1599179173381" expanded="true" signature="4201:4263" ph="{...}" />
+            <marker date="1599234249162" expanded="false" signature="119:191" ph="..." />
+            <marker date="1599234249162" expanded="true" signature="238:4275" ph="{...}" />
+            <marker date="1599234249162" expanded="true" signature="307:351" ph="/* Jump ... */" />
+            <marker date="1599234249162" expanded="true" signature="589:731" ph="/* Gets y position of player when they are no longer grounded. ... */" />
+            <marker date="1599234249162" expanded="true" signature="782:988" ph="/* Flag that determines what happens midair when not grounded. ... */" />
+            <marker date="1599234249162" expanded="true" signature="1039:1227" ph="/* When pressing jump input, waits [input time] before seeing if player lands on ground, if the player lands on ... */" />
+            <marker date="1599234249162" expanded="true" signature="1749:1901" ph="{...}" />
+            <marker date="1599234249162" expanded="true" signature="1933:1985" ph="{...}" />
+            <marker date="1599234249162" expanded="true" signature="2012:2120" ph="{...}" />
+            <marker date="1599234249162" expanded="true" signature="2155:2878" ph="{...}" />
+            <marker date="1599234249162" expanded="true" signature="2295:2377" ph="{...}" />
+            <marker date="1599234249162" expanded="true" signature="2412:2599" ph="{...}" />
+            <marker date="1599234249162" expanded="true" signature="2537:2589" ph="{...}" />
+            <marker date="1599234249162" expanded="true" signature="2690:2765" ph="{...}" />
+            <marker date="1599234249162" expanded="true" signature="2811:2860" ph="{...}" />
+            <marker date="1599234249162" expanded="true" signature="2895:2951" ph="{...}" />
+            <marker date="1599234249162" expanded="true" signature="2971:3062" ph="{...}" />
+            <marker date="1599234249162" expanded="true" signature="3154:3346" ph="{...}" />
+            <marker date="1599234249162" expanded="true" signature="3210:3340" ph="{...}" />
+            <marker date="1599234249162" expanded="true" signature="3386:3721" ph="{...}" />
+            <marker date="1599234249162" expanded="true" signature="3429:3481" ph="{...}" />
+            <marker date="1599234249162" expanded="true" signature="3528:3581" ph="{...}" />
+            <marker date="1599234249162" expanded="true" signature="3598:3650" ph="{...}" />
+            <marker date="1599234249162" expanded="true" signature="3751:3958" ph="{...}" />
+            <marker date="1599234249162" expanded="true" signature="4119:4273" ph="{...}" />
+            <marker date="1599234249162" expanded="true" signature="4205:4267" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Capsule.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="16" column="12" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
+          <folding>
+            <marker date="1599186568616" expanded="false" signature="6:78" ph="..." />
+            <marker date="1599186568616" expanded="true" signature="116:642" ph="{...}" />
+            <marker date="1599186568616" expanded="true" signature="265:379" ph="{...}" />
+            <marker date="1599186568616" expanded="true" signature="306:373" ph="{...}" />
+            <marker date="1599186568616" expanded="true" signature="432:640" ph="{...}" />
+            <marker date="1599186568616" expanded="true" signature="502:634" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/AimingAtMouse.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+          <folding>
+            <marker date="1599253899842" expanded="true" signature="6:92" ph="..." />
+            <marker date="1599253899842" expanded="true" signature="136:679" ph="{...}" />
+            <marker date="1599253899842" expanded="true" signature="273:294" ph="{...}" />
+            <marker date="1599253899842" expanded="true" signature="352:677" ph="{...}" />
           </folding>
         </state>
       </provider>
