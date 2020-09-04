@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Teleporter : MonoBehaviour
 {
-    public Transform exit;
+    private Transform exit;
 
     private Transform player;
 
@@ -14,15 +14,9 @@ public class Teleporter : MonoBehaviour
     {
         var index = transform.GetSiblingIndex();
         exit = transform.parent.GetChild(index + 1).gameObject.transform;
+        audioSource = GetComponent<AudioSource>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-    
-    
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))

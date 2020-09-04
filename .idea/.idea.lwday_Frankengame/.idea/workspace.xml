@@ -14,29 +14,17 @@
         <state>
           <leaf>
             <file pinned="false" current-in-tab="true">
-              <entry file="file://F:/UnityPackages/QuickPlatforming/Assets/PlayerController.cs">
+              <entry file="file://$PROJECT_DIR$/Assets/Scripts/Capsule.cs">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="668">
-                    <caret line="76" column="31" selection-start-line="76" selection-start-column="31" selection-end-line="76" selection-end-column="31" />
+                  <state relative-caret-position="224">
+                    <caret line="16" column="12" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
                     <folding>
-                      <marker date="1598644435735" expanded="true" signature="95:501" ph="/* NOTE ... */" />
-                      <marker date="1598644435735" expanded="false" signature="508:580" ph="..." />
-                      <marker date="1598644435735" expanded="true" signature="627:2967" ph="{...}" />
-                      <marker date="1598644435735" expanded="true" signature="1159:1268" ph="{...}" />
-                      <marker date="1598644435735" expanded="true" signature="1300:1378" ph="{...}" />
-                      <marker date="1598644435735" expanded="true" signature="1405:1547" ph="{...}" />
-                      <marker date="1598644435735" expanded="true" signature="1553:1751" ph="/* Gives player upward velocity only once, so it can be used in Update() safely. ... */" />
-                      <marker date="1598644435735" expanded="true" signature="1775:1947" ph="{...}" />
-                      <marker date="1598644435735" expanded="true" signature="1856:1932" ph="{...}" />
-                      <marker date="1598644435735" expanded="true" signature="1967:2058" ph="{...}" />
-                      <marker date="1598644435735" expanded="true" signature="2084:2354" ph="{...}" />
-                      <marker date="1598644435735" expanded="true" signature="2127:2179" ph="{...}" />
-                      <marker date="1598644435735" expanded="true" signature="2226:2279" ph="{...}" />
-                      <marker date="1598644435735" expanded="true" signature="2296:2348" ph="{...}" />
-                      <marker date="1598644435735" expanded="true" signature="2381:2460" ph="{...}" />
-                      <marker date="1598644435735" expanded="true" signature="2552:2727" ph="{...}" />
-                      <marker date="1598644435735" expanded="true" signature="2608:2721" ph="{...}" />
-                      <marker date="1598644435735" expanded="true" signature="2758:2965" ph="{...}" />
+                      <marker date="1599186568616" expanded="false" signature="6:78" ph="..." />
+                      <marker date="1599186568616" expanded="true" signature="116:642" ph="{...}" />
+                      <marker date="1599186568616" expanded="true" signature="265:379" ph="{...}" />
+                      <marker date="1599186568616" expanded="true" signature="306:373" ph="{...}" />
+                      <marker date="1599186568616" expanded="true" signature="432:640" ph="{...}" />
+                      <marker date="1599186568616" expanded="true" signature="502:634" ph="{...}" />
                     </folding>
                   </state>
                 </provider>
@@ -50,62 +38,9 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/Games/Teleportation/Scripts/Teleporter.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="64">
-              <caret line="6" column="10" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
-              <folding>
-                <marker date="1599172368009" expanded="false" signature="6:78" ph="..." />
-                <marker date="1599172368009" expanded="true" signature="119:815" ph="{...}" />
-                <marker date="1599172368009" expanded="true" signature="287:422" ph="{...}" />
-                <marker date="1599172368009" expanded="true" signature="480:501" ph="{...}" />
-                <marker date="1599172368009" expanded="true" signature="563:699" ph="{...}" />
-                <marker date="1599172368009" expanded="true" signature="609:693" ph="{...}" />
-                <marker date="1599172368009" expanded="true" signature="722:813" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/../SkeletalAnimationTest/Assets/PsdToUnity/Editor/PsdImportWindow.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1072">
-              <caret line="269" column="49" selection-start-line="269" selection-start-column="49" selection-end-line="269" selection-end-column="49" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/Games/Multijump/JumpMechanics.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1056">
-              <caret line="68" column="24" selection-start-line="68" selection-start-column="24" selection-end-line="68" selection-end-column="24" />
-              <folding>
-                <marker date="1599172682158" expanded="false" signature="6:78" ph="..." />
-                <marker date="1599172682158" expanded="true" signature="122:1598" ph="{...}" />
-                <marker date="1599172682158" expanded="true" signature="313:367" ph="{...}" />
-                <marker date="1599172682158" expanded="true" signature="425:486" ph="{...}" />
-                <marker date="1599172682158" expanded="true" signature="517:944" ph="{...}" />
-                <marker date="1599172682158" expanded="true" signature="560:731" ph="{...}" />
-                <marker date="1599172682158" expanded="true" signature="613:721" ph="{...}" />
-                <marker date="1599172682158" expanded="true" signature="769:938" ph="{...}" />
-                <marker date="1599172682158" expanded="true" signature="821:928" ph="{...}" />
-                <marker date="1599172682158" expanded="true" signature="964:1217" ph="{...}" />
-                <marker date="1599172682158" expanded="true" signature="1014:1211" ph="{...}" />
-                <marker date="1599172682158" expanded="true" signature="1054:1190" ph="{...}" />
-                <marker date="1599172682158" expanded="true" signature="1277:1319" ph="{...}" />
-                <marker date="1599172682158" expanded="true" signature="1376:1591" ph="{...}" />
-                <marker date="1599172682158" expanded="true" signature="1436:1585" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/PlayerController.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="720">
+            <state relative-caret-position="704">
               <caret line="47" column="17" selection-start-line="47" selection-start-column="17" selection-end-line="47" selection-end-column="17" />
               <folding>
                 <marker date="1599179173381" expanded="false" signature="119:191" ph="..." />
@@ -139,6 +74,48 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Games/Multijump/JumpMechanics.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1056">
+              <caret line="68" column="24" selection-start-line="68" selection-start-column="24" selection-end-line="68" selection-end-column="24" />
+              <folding>
+                <marker date="1599172682158" expanded="false" signature="6:78" ph="..." />
+                <marker date="1599172682158" expanded="true" signature="122:1598" ph="{...}" />
+                <marker date="1599172682158" expanded="true" signature="313:367" ph="{...}" />
+                <marker date="1599172682158" expanded="true" signature="425:486" ph="{...}" />
+                <marker date="1599172682158" expanded="true" signature="517:944" ph="{...}" />
+                <marker date="1599172682158" expanded="true" signature="560:731" ph="{...}" />
+                <marker date="1599172682158" expanded="true" signature="613:721" ph="{...}" />
+                <marker date="1599172682158" expanded="true" signature="769:938" ph="{...}" />
+                <marker date="1599172682158" expanded="true" signature="821:928" ph="{...}" />
+                <marker date="1599172682158" expanded="true" signature="964:1217" ph="{...}" />
+                <marker date="1599172682158" expanded="true" signature="1014:1211" ph="{...}" />
+                <marker date="1599172682158" expanded="true" signature="1054:1190" ph="{...}" />
+                <marker date="1599172682158" expanded="true" signature="1277:1319" ph="{...}" />
+                <marker date="1599172682158" expanded="true" signature="1376:1591" ph="{...}" />
+                <marker date="1599172682158" expanded="true" signature="1436:1585" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/JumpPowerupDetection.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="416">
+              <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+              <folding>
+                <marker date="1599188158147" expanded="false" signature="6:78" ph="..." />
+                <marker date="1599188158147" expanded="true" signature="129:794" ph="{...}" />
+                <marker date="1599188158147" expanded="true" signature="291:399" ph="{...}" />
+                <marker date="1599188158147" expanded="true" signature="546:608" ph="{...}" />
+                <marker date="1599188158147" expanded="true" signature="635:792" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="FindInProjectRecents">
@@ -157,8 +134,8 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Games/Multijump/JumpMechanics.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://F:/UnityPackages/QuickPlatforming/Assets/PlayerController.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Games/Teleportation/Scripts/Teleporter.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../SkeletalAnimationTest/Assets/PsdToUnity/Editor/PsdImportWindow.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/JumpPowerupDetection.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Capsule.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -167,10 +144,13 @@
         <option value="$PROJECT_DIR$/Assets/Games/Teleportation/Scripts/Teleportation.cs" />
         <option value="$PROJECT_DIR$/../eventSystemTesting/Assets/TestingEvents.cs" />
         <option value="$PROJECT_DIR$/Assets/Games/Teleportation/Scripts/CollisionEventManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Games/Teleportation/Scripts/Teleporter.cs" />
         <option value="$PROJECT_DIR$/Assets/Games/Multijump/JumpMechanics.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" />
         <option value="$PROJECT_DIR$/../SkeletalAnimationTest/Assets/PsdToUnity/Editor/PsdImportWindow.cs" />
+        <option value="$PROJECT_DIR$/Assets/Games/Teleportation/Scripts/Teleporter.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Capsule.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/CapsuleEventSys.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/JumpPowerupDetection.cs" />
       </list>
     </option>
   </component>
@@ -181,20 +161,10 @@
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
-    <navigator currentView="UnityExplorer" proportions="" version="1">
+    <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes>
-      <pane id="FileSystemExplorer" />
-      <pane id="SolutionExplorer">
-        <option name="show-all-files" value="false" />
-      </pane>
-      <pane id="UnityExplorer">
-        <option name="show-hidden-items" value="false" />
-        <option name="show-project-names" value="true" />
-      </pane>
-      <pane id="AssemblyExplorer" />
-    </panes>
+    <panes />
   </component>
   <component name="PropertiesComponent">
     <property name="Rider.DefaultBreakpoints.AreToggled" value="true" />
@@ -240,12 +210,13 @@
       <option name="presentableId" value="Default" />
       <updated>1599140250738</updated>
       <workItem from="1599140254496" duration="593000" />
-      <workItem from="1599141007271" duration="9286000" />
+      <workItem from="1599141007271" duration="10283000" />
+      <workItem from="1599186509520" duration="1635000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9879000" />
+    <option name="totallyTimeSpent" value="12511000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -306,61 +277,18 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Assets/Speedboost/move.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="829">
-          <caret line="55" column="18" selection-start-line="55" selection-start-column="14" selection-end-line="55" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../eventSystemTesting/Assets/TestingEvents.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="19" column="50" selection-start-line="19" selection-start-column="50" selection-end-line="19" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Games/Teleportation/Scripts/Teleportation.cs">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Games/Teleportation/Scripts/CollisionEventManager.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Games/Multijump/JumpMechanics.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1056">
-          <caret line="68" column="24" selection-start-line="68" selection-start-column="24" selection-end-line="68" selection-end-column="24" />
-          <folding>
-            <marker date="1599172682158" expanded="false" signature="6:78" ph="..." />
-            <marker date="1599172682158" expanded="true" signature="122:1598" ph="{...}" />
-            <marker date="1599172682158" expanded="true" signature="313:367" ph="{...}" />
-            <marker date="1599172682158" expanded="true" signature="425:486" ph="{...}" />
-            <marker date="1599172682158" expanded="true" signature="517:944" ph="{...}" />
-            <marker date="1599172682158" expanded="true" signature="560:731" ph="{...}" />
-            <marker date="1599172682158" expanded="true" signature="613:721" ph="{...}" />
-            <marker date="1599172682158" expanded="true" signature="769:938" ph="{...}" />
-            <marker date="1599172682158" expanded="true" signature="821:928" ph="{...}" />
-            <marker date="1599172682158" expanded="true" signature="964:1217" ph="{...}" />
-            <marker date="1599172682158" expanded="true" signature="1014:1211" ph="{...}" />
-            <marker date="1599172682158" expanded="true" signature="1054:1190" ph="{...}" />
-            <marker date="1599172682158" expanded="true" signature="1277:1319" ph="{...}" />
-            <marker date="1599172682158" expanded="true" signature="1376:1591" ph="{...}" />
-            <marker date="1599172682158" expanded="true" signature="1436:1585" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Speedboost/move.cs" />
+    <entry file="file://$PROJECT_DIR$/../eventSystemTesting/Assets/TestingEvents.cs" />
+    <entry file="file://$PROJECT_DIR$/Assets/Games/Teleportation/Scripts/Teleportation.cs" />
+    <entry file="file://$PROJECT_DIR$/Assets/Games/Teleportation/Scripts/CollisionEventManager.cs" />
+    <entry file="file://$PROJECT_DIR$/../SkeletalAnimationTest/Assets/PsdToUnity/Editor/PsdImportWindow.cs" />
+    <entry file="file://$PROJECT_DIR$/Assets/Games/Teleportation/Scripts/Teleporter.cs" />
     <entry file="file://F:/UnityPackages/QuickPlatforming/Assets/PlayerController.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="668">
-          <caret line="76" column="31" selection-start-line="76" selection-start-column="31" selection-end-line="76" selection-end-column="31" />
+        <state relative-caret-position="640">
+          <caret line="42" column="25" selection-start-line="42" selection-start-column="25" selection-end-line="42" selection-end-column="25" />
           <folding>
             <marker date="1598644435735" expanded="true" signature="95:501" ph="/* NOTE ... */" />
-            <marker date="1598644435735" expanded="false" signature="508:580" ph="..." />
             <marker date="1598644435735" expanded="true" signature="627:2967" ph="{...}" />
             <marker date="1598644435735" expanded="true" signature="1159:1268" ph="{...}" />
             <marker date="1598644435735" expanded="true" signature="1300:1378" ph="{...}" />
@@ -383,7 +311,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/PlayerController.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
+        <state relative-caret-position="704">
           <caret line="47" column="17" selection-start-line="47" selection-start-column="17" selection-end-line="47" selection-end-column="17" />
           <folding>
             <marker date="1599179173381" expanded="false" signature="119:191" ph="..." />
@@ -416,26 +344,63 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Games/Teleportation/Scripts/Teleporter.cs">
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Capsule.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="64">
-          <caret line="6" column="10" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
+        <state relative-caret-position="224">
+          <caret line="16" column="12" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
           <folding>
-            <marker date="1599172368009" expanded="false" signature="6:78" ph="..." />
-            <marker date="1599172368009" expanded="true" signature="119:815" ph="{...}" />
-            <marker date="1599172368009" expanded="true" signature="287:422" ph="{...}" />
-            <marker date="1599172368009" expanded="true" signature="480:501" ph="{...}" />
-            <marker date="1599172368009" expanded="true" signature="563:699" ph="{...}" />
-            <marker date="1599172368009" expanded="true" signature="609:693" ph="{...}" />
-            <marker date="1599172368009" expanded="true" signature="722:813" ph="{...}" />
+            <marker date="1599186568616" expanded="false" signature="6:78" ph="..." />
+            <marker date="1599186568616" expanded="true" signature="116:642" ph="{...}" />
+            <marker date="1599186568616" expanded="true" signature="265:379" ph="{...}" />
+            <marker date="1599186568616" expanded="true" signature="306:373" ph="{...}" />
+            <marker date="1599186568616" expanded="true" signature="432:640" ph="{...}" />
+            <marker date="1599186568616" expanded="true" signature="502:634" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../SkeletalAnimationTest/Assets/PsdToUnity/Editor/PsdImportWindow.cs">
+    <entry file="file://$PROJECT_DIR$/Assets/Games/Multijump/JumpMechanics.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1072">
-          <caret line="269" column="49" selection-start-line="269" selection-start-column="49" selection-end-line="269" selection-end-column="49" />
+        <state relative-caret-position="1056">
+          <caret line="68" column="24" selection-start-line="68" selection-start-column="24" selection-end-line="68" selection-end-column="24" />
+          <folding>
+            <marker date="1599172682158" expanded="false" signature="6:78" ph="..." />
+            <marker date="1599172682158" expanded="true" signature="122:1598" ph="{...}" />
+            <marker date="1599172682158" expanded="true" signature="313:367" ph="{...}" />
+            <marker date="1599172682158" expanded="true" signature="425:486" ph="{...}" />
+            <marker date="1599172682158" expanded="true" signature="517:944" ph="{...}" />
+            <marker date="1599172682158" expanded="true" signature="560:731" ph="{...}" />
+            <marker date="1599172682158" expanded="true" signature="613:721" ph="{...}" />
+            <marker date="1599172682158" expanded="true" signature="769:938" ph="{...}" />
+            <marker date="1599172682158" expanded="true" signature="821:928" ph="{...}" />
+            <marker date="1599172682158" expanded="true" signature="964:1217" ph="{...}" />
+            <marker date="1599172682158" expanded="true" signature="1014:1211" ph="{...}" />
+            <marker date="1599172682158" expanded="true" signature="1054:1190" ph="{...}" />
+            <marker date="1599172682158" expanded="true" signature="1277:1319" ph="{...}" />
+            <marker date="1599172682158" expanded="true" signature="1376:1591" ph="{...}" />
+            <marker date="1599172682158" expanded="true" signature="1436:1585" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/CapsuleEventSys.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="416">
+          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/JumpPowerupDetection.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="416">
+          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+          <folding>
+            <marker date="1599188158147" expanded="false" signature="6:78" ph="..." />
+            <marker date="1599188158147" expanded="true" signature="129:794" ph="{...}" />
+            <marker date="1599188158147" expanded="true" signature="291:399" ph="{...}" />
+            <marker date="1599188158147" expanded="true" signature="546:608" ph="{...}" />
+            <marker date="1599188158147" expanded="true" signature="635:792" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -5,7 +5,6 @@ TagManager:
   serializedVersion: 2
   tags:
   - speedBoost
-  - pickup
   layers:
   - Default
   - TransparentFX
@@ -16,8 +15,8 @@ TagManager:
   - 
   - 
   - Platforms
-  - 
-  - 
+  - JumpTrigger
+  - JumpTriggerDetector
   - 
   - 
   - 

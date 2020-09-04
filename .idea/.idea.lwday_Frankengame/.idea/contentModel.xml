@@ -13,15 +13,12 @@
           <e p="Speedboost" t="Include">
             <e p="move.cs" t="Include" />
           </e>
-          <e p="Teleportation" t="Include">
-            <e p="Scripts" t="Include">
-              <e p="PlayerMovement.cs" t="Include" />
-              <e p="Teleporter.cs" t="Include" />
-            </e>
-          </e>
         </e>
         <e p="Scripts" t="Include">
+          <e p="Capsule.cs" t="Include" />
+          <e p="JumpPowerupDetection.cs" t="Include" />
           <e p="PlayerController.cs" t="Include" />
+          <e p="Teleporter.cs" t="Include" />
         </e>
       </e>
       <e p="Library" t="ExcludeRecursive" />
