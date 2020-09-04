@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Teleporter : MonoBehaviour
 {
-    private Transform exit;
+    public Transform exit;
 
     private Transform player;
 
