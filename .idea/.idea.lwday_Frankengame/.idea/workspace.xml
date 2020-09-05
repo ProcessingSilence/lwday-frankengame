@@ -74,16 +74,41 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/AimingAtMouse.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="400">
-              <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+              <caret line="25" selection-start-line="25" selection-end-line="25" />
               <folding>
-                <marker date="1599253899842" expanded="true" signature="6:92" ph="..." />
-                <marker date="1599253899842" expanded="true" signature="136:679" ph="{...}" />
-                <marker date="1599253899842" expanded="true" signature="273:294" ph="{...}" />
-                <marker date="1599253899842" expanded="true" signature="352:677" ph="{...}" />
+                <marker date="1599253911842" expanded="true" signature="6:92" ph="..." />
+                <marker date="1599253911842" expanded="true" signature="136:682" ph="{...}" />
+                <marker date="1599253911842" expanded="true" signature="273:294" ph="{...}" />
+                <marker date="1599253911842" expanded="true" signature="352:680" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../State-Machine-Behavior-Tutorial-master/State Machine Project Files/Assets/Scripts/FollowBehavior.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <folding>
+                <element signature="e#0#78#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/GlobalEnemy/PulledIn.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <folding>
+                <marker date="1599263975980" expanded="false" signature="6:78" ph="..." />
+                <marker date="1599263975980" expanded="true" signature="117:291" ph="{...}" />
+                <marker date="1599263975980" expanded="true" signature="189:210" ph="{...}" />
+                <marker date="1599263975980" expanded="true" signature="268:289" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -122,7 +147,9 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GlobalEnemy/PulledIn.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/AimingAtMouse.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../State-Machine-Behavior-Tutorial-master/State Machine Project Files/Assets/Scripts/FollowBehavior.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://F:/UnityPackages/QuickPlatforming/Assets/PlayerController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/JumpPowerupDetection.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Capsule.cs" root0="FORCE_HIGHLIGHTING" />
@@ -145,7 +172,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds">
     <option name="x" value="1273" />
     <option name="width" value="1294" />
     <option name="height" value="1407" />
@@ -202,12 +229,12 @@
       <updated>1599140250738</updated>
       <workItem from="1599140254496" duration="593000" />
       <workItem from="1599141007271" duration="10283000" />
-      <workItem from="1599186509520" duration="5635000" />
+      <workItem from="1599186509520" duration="6829000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16511000" />
+    <option name="totallyTimeSpent" value="17705000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -219,7 +246,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1273" y="0" width="1294" height="1407" extended-state="0" />
+    <frame x="1273" y="0" width="1294" height="1407" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.5177994" />
@@ -385,15 +412,39 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../State Machine for Unity Starter/Assets/RW/Scripts/Misc/SimpleCamFollow.cs">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/AimingAtMouse.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="400">
-          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
           <folding>
-            <marker date="1599253899842" expanded="true" signature="6:92" ph="..." />
-            <marker date="1599253899842" expanded="true" signature="136:679" ph="{...}" />
-            <marker date="1599253899842" expanded="true" signature="273:294" ph="{...}" />
-            <marker date="1599253899842" expanded="true" signature="352:677" ph="{...}" />
+            <marker date="1599253911842" expanded="true" signature="6:92" ph="..." />
+            <marker date="1599253911842" expanded="true" signature="136:682" ph="{...}" />
+            <marker date="1599253911842" expanded="true" signature="273:294" ph="{...}" />
+            <marker date="1599253911842" expanded="true" signature="352:680" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../State-Machine-Behavior-Tutorial-master/State Machine Project Files/Assets/Scripts/FollowBehavior.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#78#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/GlobalEnemy/PulledIn.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <marker date="1599263975980" expanded="false" signature="6:78" ph="..." />
+            <marker date="1599263975980" expanded="true" signature="117:291" ph="{...}" />
+            <marker date="1599263975980" expanded="true" signature="189:210" ph="{...}" />
+            <marker date="1599263975980" expanded="true" signature="268:289" ph="{...}" />
           </folding>
         </state>
       </provider>

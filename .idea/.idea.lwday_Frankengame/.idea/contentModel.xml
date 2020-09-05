@@ -9,8 +9,19 @@
         <e p="Scripts" t="Include">
           <e p="AimingAtMouse.cs" t="Include" />
           <e p="Capsule.cs" t="Include" />
+          <e p="GlobalEnemy" t="Include">
+            <e p="Caught.cs" t="Include" />
+            <e p="GoreExplosion.cs" t="Include" />
+            <e p="LimpCorpse.cs" t="Include" />
+            <e p="PulledIn.cs" t="Include" />
+            <e p="Thrown.cs" t="Include" />
+          </e>
           <e p="JumpPowerupDetection.cs" t="Include" />
           <e p="PlayerController.cs" t="Include" />
+          <e p="SimpleEnemy" t="Include">
+            <e p="Idle.cs" t="Include" />
+            <e p="Walking.cs" t="Include" />
+          </e>
           <e p="Teleporter.cs" t="Include" />
         </e>
       </e>
