@@ -4,15 +4,22 @@ using UnityEngine;
 
 public class isIdle : StateMachineBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private SpriteRenderer spriteRenderer;
+    private SimpleVals SimpleVals_script;
+    public int caught;
+
+    override public void OnStateEnter(Animator animator, AnimatorStateInfo animatorStateInfo, int layerIndex)
     {
-        
+        spriteRenderer = animator.GetComponent<SpriteRenderer>();
+        SimpleVals_script = animator.GetComponent<SimpleVals>();
     }
 
-    // Update is called once per frame
-    void Update()
+    override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) 
     {
-        
+        if (caught == 1)
+        {
+            caught = 2;
+            animator.SetBool("caught", true);
+        }
     }
 }

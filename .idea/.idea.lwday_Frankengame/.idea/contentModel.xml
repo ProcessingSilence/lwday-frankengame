@@ -15,10 +15,10 @@
           <e p="Global" t="Include">
             <e p="Enemy" t="Include">
               <e p="Caught.cs" t="Include" />
+              <e p="caughtCheck.cs" t="Include" />
               <e p="GoreExplosion.cs" t="Include" />
               <e p="Idle.cs" t="Include" />
               <e p="LimpCorpse.cs" t="Include" />
-              <e p="PulledIn.cs" t="Include" />
               <e p="Thrown.cs" t="Include" />
             </e>
             <e p="Entity" t="Include">
@@ -27,14 +27,16 @@
             <e p="GlobalVars.cs" t="Include" />
           </e>
           <e p="JumpPowerupDetection.cs" t="Include" />
-          <e p="PlayerController.cs" t="Include" />
+          <e p="Player" t="Include">
+            <e p="PlayerController.cs" t="Include" />
+            <e p="ThrowHand.cs" t="Include" />
+          </e>
           <e p="SimpleEnemy" t="Include">
             <e p="isIdle.cs" t="Include" />
             <e p="SimpleVals.cs" t="Include" />
             <e p="Walking.cs" t="Include" />
           </e>
           <e p="Teleporter.cs" t="Include" />
-          <e p="ThrowHand.cs" t="Include" />
         </e>
       </e>
       <e p="Library" t="ExcludeRecursive" />

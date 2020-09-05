@@ -40,7 +40,12 @@ public class PlayerController : MonoBehaviour
         // Multiplies horizontal velocity to determine direction in FixedUpdate().
         private int inputDirection;
     
-    
+    // Hand
+    public GameObject hand;
+        private bool sendingHand;
+        private bool caughtEnemy;
+        
+        
     // Components
         private Rigidbody2D rb;
         private BoxCollider2D boxCollider2D;

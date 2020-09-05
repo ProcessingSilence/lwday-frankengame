@@ -5,6 +5,7 @@ using UnityEngine;
 public class SimpleVals : MonoBehaviour
 {
     public bool isWalking;
+    
     public float walkSpeed;
     private Animator animator;
     // Start is called before the first frame update
