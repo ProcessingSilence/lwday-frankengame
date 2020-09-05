@@ -49,13 +49,15 @@ public class PlayerController : MonoBehaviour
         private Rigidbody2D rb;
         private BoxCollider2D boxCollider2D;
    
-    
+    // Sprite
+        private SpriteRenderer spriteRenderer;
     
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         boxCollider2D = GetComponent<BoxCollider2D>();
         currentJumpsLeft = multiJumpLimit;
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     private void FixedUpdate()
@@ -67,7 +69,9 @@ public class PlayerController : MonoBehaviour
     private void Update()
     {
         JumpingInput();
-        rb.velocity = new Vector2(HorizontalMovement(), rb.velocity.y);
+        HorizontalMovement();
+        rb.velocity = new Vector2(moveSpeed * inputDirection * Time.fixedDeltaTime, rb.velocity.y);
+        SpriteRender();
     }
 
     
@@ -123,7 +127,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private float HorizontalMovement()
+    private void HorizontalMovement()
     {
         if (Input.GetKey(KeyCode.D))
         {
@@ -137,7 +141,20 @@ public class PlayerController : MonoBehaviour
         {
             inputDirection = 0;
         }
-        return moveSpeed * inputDirection * Time.fixedDeltaTime;
+    }
+
+    private void SpriteRender()
+    {
+        // Left
+        if (inputDirection < 0)
+        {
+            spriteRenderer.flipX = true;
+        }
+        // Right
+        else if (inputDirection > 0)
+        {
+            spriteRenderer.flipX = false;
+        }
     }
 
     public bool IsGrounded()
