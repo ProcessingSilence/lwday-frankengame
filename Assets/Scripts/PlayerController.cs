@@ -41,16 +41,14 @@ public class PlayerController : MonoBehaviour
         private int inputDirection;
     
     
-    // Fall Death
-        public float fallDeathPos;
-    
-    
     // Components
         private Rigidbody2D rb;
         private BoxCollider2D boxCollider2D;
    
     // Sprite
         private SpriteRenderer spriteRenderer;
+        public Sprite[] spriteStates = new Sprite[4];
+        private GameObject aimFace;
     
     void Awake()
     {
@@ -62,7 +60,6 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        FallDeath();
         Gravity();
     }
 
@@ -117,15 +114,6 @@ public class PlayerController : MonoBehaviour
         rb.velocity += Vector2.up * Physics2D.gravity.y * (gravityWeight - 1);
     }
     
-    // Pseudo-respawns player after falling to determined y value
-    void FallDeath()
-    {
-        if (transform.position.y <= fallDeathPos)
-        {
-            rb.velocity = new Vector2(rb.velocity.x, 0);
-            transform.position = new Vector3(0,0,0);
-        }
-    }
 
     private void HorizontalMovement()
     {

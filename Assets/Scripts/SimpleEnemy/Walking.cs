@@ -2,17 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Walking : MonoBehaviour
+public class Walking : StateMachineBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public int direction;
+    public float speed;
+    private Rigidbody2D rb;
+
+    override public void OnStateEnter(Animator animator, AnimatorStateInfo animatorStateInfo, int layerIndex)
     {
-        
+        rb = animator.GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
-    void Update()
+    override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) 
     {
-        
+        rb.velocity = new Vector2(speed*direction, rb.velocity.y);
     }
 }
