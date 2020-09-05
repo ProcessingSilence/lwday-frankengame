@@ -103,12 +103,14 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/GlobalEnemy/PulledIn.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
+            <state relative-caret-position="384">
+              <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
               <folding>
-                <marker date="1599263975980" expanded="false" signature="6:78" ph="..." />
-                <marker date="1599263975980" expanded="true" signature="117:291" ph="{...}" />
-                <marker date="1599263975980" expanded="true" signature="189:210" ph="{...}" />
-                <marker date="1599263975980" expanded="true" signature="268:289" ph="{...}" />
+                <marker date="1599269154116" expanded="true" signature="6:78" ph="..." />
+                <marker date="1599269154116" expanded="true" signature="125:826" ph="{...}" />
+                <marker date="1599269154116" expanded="true" signature="292:377" ph="{...}" />
+                <marker date="1599269154116" expanded="true" signature="486:824" ph="{...}" />
+                <marker date="1599269154116" expanded="true" signature="703:818" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -137,9 +139,11 @@
       <find>Move</find>
       <find>currentJumps</find>
       <find>iJumpedFlag</find>
+      <find>playerPos</find>
     </findStrings>
     <replaceStrings>
       <replace>jumpsLeft</replace>
+      <replace>pullPos</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -169,10 +173,11 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/JumpPowerupDetection.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AimingAtMouse.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GlobalEnemy/PulledIn.cs" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="1">
     <option name="x" value="1273" />
     <option name="width" value="1294" />
     <option name="height" value="1407" />
@@ -229,12 +234,12 @@
       <updated>1599140250738</updated>
       <workItem from="1599140254496" duration="593000" />
       <workItem from="1599141007271" duration="10283000" />
-      <workItem from="1599186509520" duration="6829000" />
+      <workItem from="1599186509520" duration="7572000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17705000" />
+    <option name="totallyTimeSpent" value="18448000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -439,12 +444,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/GlobalEnemy/PulledIn.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
+        <state relative-caret-position="384">
+          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
           <folding>
-            <marker date="1599263975980" expanded="false" signature="6:78" ph="..." />
-            <marker date="1599263975980" expanded="true" signature="117:291" ph="{...}" />
-            <marker date="1599263975980" expanded="true" signature="189:210" ph="{...}" />
-            <marker date="1599263975980" expanded="true" signature="268:289" ph="{...}" />
+            <marker date="1599269154116" expanded="true" signature="6:78" ph="..." />
+            <marker date="1599269154116" expanded="true" signature="125:826" ph="{...}" />
+            <marker date="1599269154116" expanded="true" signature="292:377" ph="{...}" />
+            <marker date="1599269154116" expanded="true" signature="486:824" ph="{...}" />
+            <marker date="1599269154116" expanded="true" signature="703:818" ph="{...}" />
           </folding>
         </state>
       </provider>

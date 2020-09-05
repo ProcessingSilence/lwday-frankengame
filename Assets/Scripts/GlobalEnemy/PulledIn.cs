@@ -2,17 +2,23 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PulledIn : MonoBehaviour
+public class PulledIn : StateMachineBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public Transform pullPos;
+    public float speed;
 
-    // Update is called once per frame
-    void Update()
+    override public void OnStateEnter(Animator animator, AnimatorStateInfo animatorStateInfo, int layerIndex)
     {
-        
+        pullPos = GameObject.FindGameObjectWithTag("PullPos").transform;
+    }
+    
+    override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) 
+    {
+        animator.transform.position = Vector2.MoveTowards(animator.transform.position, pullPos.position, speed * Time.deltaTime);
+        if (Vector2.Distance(animator.transform.position, pullPos.position) < 1)
+        {
+            animator.SetBool("isPulled", false);
+            animator.SetBool("caught", true);
+        }
     }
 }
