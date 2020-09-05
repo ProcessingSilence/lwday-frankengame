@@ -22,7 +22,7 @@ public class Walking : StateMachineBehaviour
 
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) 
     {
-        if (CaughtCheck_script.isCaught)
+        if (CaughtCheck_script.isCaught == 1)
         {
             caught = 2;
             animator.SetBool("caught", true);

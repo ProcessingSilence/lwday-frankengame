@@ -28,8 +28,8 @@
           </e>
           <e p="JumpPowerupDetection.cs" t="Include" />
           <e p="Player" t="Include">
+            <e p="HandThrow.cs" t="Include" />
             <e p="PlayerController.cs" t="Include" />
-            <e p="ThrowHand.cs" t="Include" />
           </e>
           <e p="SimpleEnemy" t="Include">
             <e p="isIdle.cs" t="Include" />

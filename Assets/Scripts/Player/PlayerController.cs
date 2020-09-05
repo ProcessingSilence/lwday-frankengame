@@ -3,6 +3,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.XR;
 
 public class PlayerController : MonoBehaviour
 {
@@ -41,7 +42,7 @@ public class PlayerController : MonoBehaviour
         private int inputDirection;
     
     // Hand
-    public GameObject hand;
+        public GameObject hand;
         private bool sendingHand;
         private bool caughtEnemy;
         
@@ -72,6 +73,7 @@ public class PlayerController : MonoBehaviour
     {
         JumpingInput();
         HorizontalMovement();
+        HandAttack();
         rb.velocity = new Vector2(moveSpeed * inputDirection * Time.fixedDeltaTime, rb.velocity.y);
         SpriteRender();
     }
@@ -150,11 +152,17 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    private void HandAttack()
+    {
+        
+    }
+
     public bool IsGrounded()
     {
         RaycastHit2D raycastHit = Physics2D.BoxCast(boxCollider2D.bounds.center, boxCollider2D.bounds.size, 0f,Vector2.down, .05f, platformLayerMask);
         return raycastHit.collider != null;
     }
+
 
     // Prevents player from auto-jumping after touching the one-way platforms while velocity is upwards.
     private void OnCollisionEnter2D(Collision2D other)
