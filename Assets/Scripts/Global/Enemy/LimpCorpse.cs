@@ -27,7 +27,7 @@ public class LimpCorpse : StateMachineBehaviour
         }
         else
         {
-            animator.SetBool("isDead", false);
+            animator.SetBool("dead", false);
             animator.SetBool("disableAll", true);
         }
     }

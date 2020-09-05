@@ -70,15 +70,30 @@
             <file pinned="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/Assets/Scripts/Global/Enemy/LimpCorpse.cs">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="512">
-                    <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
+                  <state relative-caret-position="32">
+                    <caret line="4" column="26" lean-forward="true" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="47" />
                     <folding>
-                      <marker date="1599320186822" expanded="false" signature="6:78" ph="..." />
-                      <marker date="1599320186822" expanded="true" signature="127:1116" ph="{...}" />
-                      <marker date="1599320186822" expanded="true" signature="402:1114" ph="{...}" />
-                      <marker date="1599320186822" expanded="true" signature="486:848" ph="{...}" />
-                      <marker date="1599320186822" expanded="true" signature="904:978" ph="{...}" />
-                      <marker date="1599320186822" expanded="true" signature="991:1108" ph="{...}" />
+                      <marker date="1599322401818" expanded="false" signature="6:78" ph="..." />
+                      <marker date="1599322401818" expanded="true" signature="127:1114" ph="{...}" />
+                      <marker date="1599322401818" expanded="true" signature="402:1112" ph="{...}" />
+                      <marker date="1599322401818" expanded="true" signature="486:848" ph="{...}" />
+                      <marker date="1599322401818" expanded="true" signature="904:978" ph="{...}" />
+                      <marker date="1599322401818" expanded="true" signature="991:1106" ph="{...}" />
+                    </folding>
+                  </state>
+                </provider>
+              </entry>
+            </file>
+            <file pinned="false" current-in-tab="false">
+              <entry file="file://$PROJECT_DIR$/Assets/Scripts/SimpleEnemy/isIdle.cs">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state relative-caret-position="32">
+                    <caret line="4" column="43" selection-start-line="4" selection-start-column="43" selection-end-line="4" selection-end-column="43" />
+                    <folding>
+                      <marker date="1599322610280" expanded="false" signature="6:78" ph="..." />
+                      <marker date="1599322610280" expanded="true" signature="123:297" ph="{...}" />
+                      <marker date="1599322610280" expanded="true" signature="195:216" ph="{...}" />
+                      <marker date="1599322610280" expanded="true" signature="274:295" ph="{...}" />
                     </folding>
                   </state>
                 </provider>
@@ -220,6 +235,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Global/GlobalVars.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/JumpPowerupDetection.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Capsule.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/SimpleEnemy/isIdle.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -244,10 +260,11 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Global/Entity/DeathFall.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Global/GlobalVars.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Global/Enemy/LimpCorpse.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SimpleEnemy/isIdle.cs" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-7" />
     <option name="width" value="1294" />
     <option name="height" value="1407" />
@@ -304,12 +321,12 @@
       <updated>1599140250738</updated>
       <workItem from="1599140254496" duration="593000" />
       <workItem from="1599141007271" duration="10283000" />
-      <workItem from="1599186509520" duration="13646000" />
+      <workItem from="1599186509520" duration="14437000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24522000" />
+    <option name="totallyTimeSpent" value="25313000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -321,7 +338,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="0" width="1294" height="1407" extended-state="0" />
+    <frame x="-7" y="0" width="1294" height="1407" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.5177994" />
@@ -559,19 +576,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/SimpleEnemy/Walking.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="8" selection-start-line="8" selection-end-line="8" selection-end-column="27" />
-          <folding>
-            <marker date="1599317255430" expanded="false" signature="6:78" ph="..." />
-            <marker date="1599317255430" expanded="true" signature="124:564" ph="{...}" />
-            <marker date="1599317255430" expanded="true" signature="315:378" ph="{...}" />
-            <marker date="1599317255430" expanded="true" signature="483:562" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Global/Entity/DeathFall.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="128">
@@ -590,17 +594,50 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/SimpleEnemy/Walking.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="8" selection-start-line="8" selection-end-line="8" selection-end-column="27" />
+          <folding>
+            <marker date="1599317255430" expanded="false" signature="6:78" ph="..." />
+            <marker date="1599317255430" expanded="true" signature="124:564" ph="{...}" />
+            <marker date="1599317255430" expanded="true" signature="315:378" ph="{...}" />
+            <marker date="1599317255430" expanded="true" signature="483:562" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/SimpleEnemy/Idle.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/SimpleEnemy/isIdle.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="32">
+          <caret line="4" column="43" selection-start-line="4" selection-start-column="43" selection-end-line="4" selection-end-column="43" />
+          <folding>
+            <marker date="1599322610280" expanded="false" signature="6:78" ph="..." />
+            <marker date="1599322610280" expanded="true" signature="123:297" ph="{...}" />
+            <marker date="1599322610280" expanded="true" signature="195:216" ph="{...}" />
+            <marker date="1599322610280" expanded="true" signature="274:295" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Global/Enemy/LimpCorpse.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="512">
-          <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
+        <state relative-caret-position="32">
+          <caret line="4" column="26" lean-forward="true" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="47" />
           <folding>
-            <marker date="1599320186822" expanded="false" signature="6:78" ph="..." />
-            <marker date="1599320186822" expanded="true" signature="127:1116" ph="{...}" />
-            <marker date="1599320186822" expanded="true" signature="402:1114" ph="{...}" />
-            <marker date="1599320186822" expanded="true" signature="486:848" ph="{...}" />
-            <marker date="1599320186822" expanded="true" signature="904:978" ph="{...}" />
-            <marker date="1599320186822" expanded="true" signature="991:1108" ph="{...}" />
+            <marker date="1599322401818" expanded="false" signature="6:78" ph="..." />
+            <marker date="1599322401818" expanded="true" signature="127:1114" ph="{...}" />
+            <marker date="1599322401818" expanded="true" signature="402:1112" ph="{...}" />
+            <marker date="1599322401818" expanded="true" signature="486:848" ph="{...}" />
+            <marker date="1599322401818" expanded="true" signature="904:978" ph="{...}" />
+            <marker date="1599322401818" expanded="true" signature="991:1106" ph="{...}" />
           </folding>
         </state>
       </provider>
