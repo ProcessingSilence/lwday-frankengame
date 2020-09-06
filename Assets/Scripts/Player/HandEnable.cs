@@ -6,18 +6,23 @@ public class HandEnable : MonoBehaviour
 {
     public GameObject hand;
     private GameObject currentThrownHand;
-    private bool wasThrownFlag;
     public GameObject caughtEnemy;
+    public GameObject aimingObj;    
+    
+    private bool wasThrownFlag;
+
     private int throwDirection;
 
     private HandThrow HandThrow_script;
-    
-    public PlayerController PlayerController_script;
+    private HandEnable HandEnable_script;
     private AimingAtMouse AimingAtMouse_script; 
-    public GameObject aimingObj;
+    public PlayerController PlayerController_script;
+
+
     // Start is called before the first frame update
     void OnEnable()
     {
+        HandEnable_script = gameObject.GetComponent<HandEnable>();
         hand.SetActive(false);
         AimingAtMouse_script = aimingObj.GetComponent<AimingAtMouse>();
         aimingObj.SetActive(false);
@@ -36,6 +41,7 @@ public class HandEnable : MonoBehaviour
         {
             aimingObj.SetActive(true);
             AimingAtMouse_script.enemyObj = caughtEnemy;
+            HandThrow_script.enabled = false;
         }
     }
 

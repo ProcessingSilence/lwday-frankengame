@@ -959,12 +959,12 @@ MonoBehaviour:
   currentJumpsLeft: 0
   moveSpeed: 650
   inputDirection: 0
-  hand: {fileID: 0}
   spriteStates:
-  - {fileID: -5667924240727281768, guid: 0f8049e01ee491248a111406659b635a, type: 3}
   - {fileID: 1039097438880152013, guid: 0f8049e01ee491248a111406659b635a, type: 3}
+  - {fileID: -5667924240727281768, guid: 0f8049e01ee491248a111406659b635a, type: 3}
   - {fileID: -3004345582686462501, guid: 0f8049e01ee491248a111406659b635a, type: 3}
   - {fileID: 3499129542387002436, guid: 0f8049e01ee491248a111406659b635a, type: 3}
+  chosenSprite: 0
 --- !u!212 &2083914858
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1108,8 +1108,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hand: {fileID: 1422036132350370248}
   caughtEnemy: {fileID: 0}
-  PlayerController_script: {fileID: 2083914857}
   aimingObj: {fileID: 196159441}
+  PlayerController_script: {fileID: 2083914857}
 --- !u!1 &1422036132350370248
 GameObject:
   m_ObjectHideFlags: 0

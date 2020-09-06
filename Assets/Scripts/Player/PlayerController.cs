@@ -42,20 +42,17 @@ public class PlayerController : MonoBehaviour
         [HideInInspector]
         public int inputDirection;
     
-    // Hand
-        public GameObject hand;
-        private bool sendingHand;
-        private bool caughtEnemy;
-        
-        
+                       
     // Components
         private Rigidbody2D rb;
         private BoxCollider2D boxCollider2D;
    
+        
     // Sprite
         private SpriteRenderer spriteRenderer;
         public Sprite[] spriteStates = new Sprite[4];
         private GameObject aimFace;
+        public int chosenSprite; 
     
     void Awake()
     {
@@ -74,7 +71,6 @@ public class PlayerController : MonoBehaviour
     {
         JumpingInput();
         HorizontalMovement();
-        HandAttack();
         rb.velocity = new Vector2(moveSpeed * inputDirection * Time.fixedDeltaTime, rb.velocity.y);
         SpriteRender();
     }
@@ -98,18 +94,32 @@ public class PlayerController : MonoBehaviour
             {
                 Jump();
             }
+            if (iJumpedFlag > 1)
+            {
+                iJumpedFlag = 0;
+            }    
         }
         
-        if (!IsGrounded() && currentJumpsLeft > 0 && Input.GetKeyDown(KeyCode.W))
+        if (!IsGrounded())
         {
-            Jump();
-            currentJumpsLeft -= 1;
+            if (currentJumpsLeft > 0 && Input.GetKeyDown(KeyCode.W))
+            {
+                Jump();
+                currentJumpsLeft -= 1;
+            }
+
+            if (chosenSprite != 3)
+            {
+                chosenSprite = 2;
+            }
         }
 
+        /*
         if (IsGrounded() && iJumpedFlag > 1)
         {
             iJumpedFlag = 0;
-        }            
+        } 
+        */           
     }
 
     void Jump()
@@ -151,11 +161,30 @@ public class PlayerController : MonoBehaviour
         {
             spriteRenderer.flipX = false;
         }
-    }
 
-    private void HandAttack()
-    {
-        
+        if (chosenSprite != 3)
+        {
+            if (IsGrounded() )
+            {
+                // Idle
+                if (inputDirection == 0)
+                {
+                    chosenSprite = 1;
+                }
+                
+                // Moving
+                else
+                {
+                    chosenSprite = 0;
+                }
+            }
+            // Jumping
+            else if (!IsGrounded())
+            {
+                chosenSprite = 2;
+            }
+        }
+        spriteRenderer.sprite = spriteStates[chosenSprite];
     }
 
     public bool IsGrounded()

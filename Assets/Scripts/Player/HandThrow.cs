@@ -13,23 +13,21 @@ public class HandThrow : MonoBehaviour
     public float timeSpeed;
     public float throwSpeed;
     private float currentTime;
+    
     public int throwDirection;
-
     // 0: No enemy.
     // Enemy found - 1: "caught" anim bool not set, 2: anim bool set; set position + rotation based on handObj.
     private int haveCaughtEnemy;
 
     private bool currentlyThrowing;
-
     private bool thrownOnceCheck;
 
     // Other properties    
     private PlayerController PlayerController_script;  
     private HandEnable HandEnable_script;
 
-
-    
     public Transform player;
+    
     // Direction of arm is based on player spriteRenderer flipX direction.
     private SpriteRenderer playerSpriteDirection;
     
@@ -74,8 +72,6 @@ public class HandThrow : MonoBehaviour
             }
         }
 
-
-
         playerPos = player.transform.position;
         throwPos = new Vector2(playerPos.x + throwOffset * throwDirection, playerPos.y);
         currentTime = Time.time;
@@ -92,8 +88,13 @@ public class HandThrow : MonoBehaviour
     {
         if (timeSpeed > 2)
         {
-            HandEnable_script.caughtEnemy = caughtEnemy;
-            caughtEnemy = null;
+            if (caughtEnemy)
+            {
+                HandEnable_script.caughtEnemy = caughtEnemy;
+                caughtEnemy = null;
+                
+            }
+
             haveCaughtEnemy = 0;
             timeSpeed = 0;
             throwDirection = 0;

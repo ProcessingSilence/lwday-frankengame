@@ -10,7 +10,6 @@
           <e p="CREDITS.txt" t="Include" />
         </e>
         <e p="Scripts" t="Include">
-          <e p="AimingAtMouse.cs" t="Include" />
           <e p="Capsule.cs" t="Include" />
           <e p="Global" t="Include">
             <e p="Enemy" t="Include">
@@ -28,6 +27,7 @@
           </e>
           <e p="JumpPowerupDetection.cs" t="Include" />
           <e p="Player" t="Include">
+            <e p="AimingAtMouse.cs" t="Include" />
             <e p="HandEnable.cs" t="Include" />
             <e p="HandThrow.cs" t="Include" />
             <e p="PlayerController.cs" t="Include" />
