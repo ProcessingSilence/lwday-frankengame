@@ -10,13 +10,14 @@ GameObject:
   m_Component:
   - component: {fileID: 8865028335394118532}
   - component: {fileID: 8865028335394118529}
+  - component: {fileID: 2563697588365506276}
   - component: {fileID: 5063725748201346346}
   - component: {fileID: 9222816431759778237}
   - component: {fileID: 554196036188543676}
   - component: {fileID: 1681267780785818840}
   m_Layer: 0
   m_Name: SimpleEnemy
-  m_TagString: Player
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -56,6 +57,32 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
+--- !u!61 &2563697588365506276
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8865028335394118531}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!212 &5063725748201346346
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -139,7 +166,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isWalking: 0
-  isCaught: 0
   walkSpeed: 0
 --- !u!114 &1681267780785818840
 MonoBehaviour:
@@ -154,3 +180,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isCaught: 0
+  hand: {fileID: 0}

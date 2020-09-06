@@ -10,6 +10,7 @@ TagManager:
   - PullPos
   - Boss
   - Important
+  - Enemy
   layers:
   - Default
   - TransparentFX

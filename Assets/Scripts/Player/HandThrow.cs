@@ -11,6 +11,8 @@ public class HandThrow : MonoBehaviour
     public float throwOffset;   
     public float speed = 1;
     public float timeSpeed;
+    public float throwSpeed;
+    private float currentTime;
     public int throwDirection;
 
     // 0: No enemy.
@@ -18,6 +20,8 @@ public class HandThrow : MonoBehaviour
     private int haveCaughtEnemy;
 
     private bool currentlyThrowing;
+
+    private bool thrownOnceCheck;
 
     // Other properties    
     private PlayerController PlayerController_script;  
@@ -41,9 +45,14 @@ public class HandThrow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        CaughtEnemyCheck();
+        
         Throw();
         DoneThrowing();
+    }
+
+    private void LateUpdate()
+    {
+        CaughtEnemyCheck();
     }
 
     // Upon enemy found, Set enemy to "caught" state, have it follow transform properties of the hand.
@@ -52,7 +61,9 @@ public class HandThrow : MonoBehaviour
         if (haveCaughtEnemy == 1)
         {
             haveCaughtEnemy = 2;
-            caughtEnemy.GetComponent<Animator>().SetBool("caught", true);            
+            caughtEnemy.GetComponent<Animator>().SetBool("caught", true);
+            caughtEnemy.GetComponent<Rigidbody2D>().gravityScale = 0;
+            caughtEnemy.GetComponent<BoxCollider2D>().enabled = false;
         }
 
         if (haveCaughtEnemy == 2)
@@ -65,22 +76,28 @@ public class HandThrow : MonoBehaviour
     // Ping-pongs from player position to playerPos + offset, movement based on deltaTime.
     private void Throw()
     {
-        if (playerSpriteDirection.flipX == false)
+        if (thrownOnceCheck == false)
         {
-            throwDirection = 1;
+            thrownOnceCheck = true;
+            if (playerSpriteDirection.flipX == false)
+            {
+                throwDirection = 1;
+            }
+            else
+            {
+                throwDirection = -1;
+            }
         }
-        else
-        {
-            throwDirection = -1;
-        }
+
+
 
         playerPos = player.transform.position;
         throwPos = new Vector2(playerPos.x + throwOffset * throwDirection, playerPos.y);
-
+        currentTime = Time.time;
 
         if (currentlyThrowing)
         {
-            timeSpeed += Time.deltaTime * speed;
+            timeSpeed += Time.deltaTime * throwSpeed;
             transform.position = Vector2.Lerp(player.transform.position, throwPos, Mathf.PingPong(timeSpeed, 1.0f));
         }
     }
@@ -96,6 +113,7 @@ public class HandThrow : MonoBehaviour
             haveCaughtEnemy = 0;
             timeSpeed = 0;
             throwDirection = 0;
+            thrownOnceCheck = false;
             gameObject.SetActive(false);
         }
     }
@@ -104,6 +122,7 @@ public class HandThrow : MonoBehaviour
     {
         if (other.CompareTag("Enemy") && haveCaughtEnemy < 1)
         {
+            Debug.Log("Hit Enemy");
             haveCaughtEnemy = 1;
             caughtEnemy = other.gameObject;
         }

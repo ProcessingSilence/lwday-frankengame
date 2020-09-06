@@ -6,7 +6,7 @@ public class isIdle : StateMachineBehaviour
 {
     private SpriteRenderer spriteRenderer;
     private SimpleVals SimpleVals_script;
-    public int caught;
+    //public int caught;
 
     override public void OnStateEnter(Animator animator, AnimatorStateInfo animatorStateInfo, int layerIndex)
     {
@@ -14,6 +14,7 @@ public class isIdle : StateMachineBehaviour
         SimpleVals_script = animator.GetComponent<SimpleVals>();
     }
 
+    /*
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) 
     {
         if (caught == 1)
@@ -22,4 +23,5 @@ public class isIdle : StateMachineBehaviour
             animator.SetBool("caught", true);
         }
     }
+    */
 }
