@@ -26,6 +26,11 @@ public class HandEnable : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (hand.activeSelf == false && caughtEnemy == false)
+        {
+            wasThrownFlag = false;
+        }
+
         EnableOnMouseDown();
         if (caughtEnemy)
         {

@@ -26,16 +26,19 @@ public class HandThrow : MonoBehaviour
     // Other properties    
     private PlayerController PlayerController_script;  
     private HandEnable HandEnable_script;
- 
+
+
+    
     public Transform player;
     // Direction of arm is based on player spriteRenderer flipX direction.
     private SpriteRenderer playerSpriteDirection;
     
+    private GameObject playerObj;
     public GameObject caughtEnemy;
 
     void Start()
     {
-        var playerObj = player.gameObject;
+        playerObj = player.gameObject;
         PlayerController_script = playerObj.GetComponent<PlayerController>();
         playerSpriteDirection = playerObj.GetComponent<SpriteRenderer>();
         HandEnable_script = playerObj.GetComponent<HandEnable>();  
@@ -44,34 +47,16 @@ public class HandThrow : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
-        
+    {      
         Throw();
-        DoneThrowing();
     }
 
     private void LateUpdate()
     {
-        CaughtEnemyCheck();
+        CaughtEnemyCheck();        
+        DoneThrowing();
     }
 
-    // Upon enemy found, Set enemy to "caught" state, have it follow transform properties of the hand.
-    private void CaughtEnemyCheck()
-    {  
-        if (haveCaughtEnemy == 1)
-        {
-            haveCaughtEnemy = 2;
-            caughtEnemy.GetComponent<Animator>().SetBool("caught", true);
-            caughtEnemy.GetComponent<Rigidbody2D>().gravityScale = 0;
-            caughtEnemy.GetComponent<BoxCollider2D>().enabled = false;
-        }
-
-        if (haveCaughtEnemy == 2)
-        {
-            caughtEnemy.transform.position = transform.position;
-            caughtEnemy.transform.rotation = transform.rotation;
-        }
-    }
 
     // Ping-pongs from player position to playerPos + offset, movement based on deltaTime.
     private void Throw()
@@ -107,14 +92,32 @@ public class HandThrow : MonoBehaviour
     {
         if (timeSpeed > 2)
         {
-            currentlyThrowing = false;
             HandEnable_script.caughtEnemy = caughtEnemy;
             caughtEnemy = null;
             haveCaughtEnemy = 0;
             timeSpeed = 0;
             throwDirection = 0;
             thrownOnceCheck = false;
+            currentlyThrowing = true;
             gameObject.SetActive(false);
+        }
+    }
+        
+    // Upon enemy found, Set enemy to "caught" state, have it follow transform properties of the hand.
+    private void CaughtEnemyCheck()
+    {  
+        if (haveCaughtEnemy == 1)
+        {
+            haveCaughtEnemy = 2;
+            caughtEnemy.GetComponent<Animator>().SetBool("caught", true);
+            caughtEnemy.GetComponent<Rigidbody2D>().gravityScale = 0;
+            caughtEnemy.GetComponent<BoxCollider2D>().enabled = false;
+        }
+
+        if (haveCaughtEnemy == 2)
+        {
+            caughtEnemy.transform.position = transform.position;
+            caughtEnemy.transform.rotation = transform.rotation;
         }
     }
 
