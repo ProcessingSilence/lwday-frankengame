@@ -6,15 +6,22 @@ using UnityEngine;
 public class AimingAtMouse : MonoBehaviour
 {
     public Vector2 mousePos, myPos;
+    
     public float angle;
+    
     public SpriteRenderer face;
+    
     public Transform handGraphicPos;
-
-    public bool enableThrowGraphics;
-
+ 
+    public PlayerController PlayerController_script;
+    
     public GameObject enemyObj;
     // Start is called before the first frame update
 
+    void OnEnable()
+    {
+        PlayerController_script.chosenSprite = 3;
+    }
 
     // Update is called once per frame
     void Update()
@@ -24,6 +31,12 @@ public class AimingAtMouse : MonoBehaviour
         EnemyPosAndRot();
     }
 
+    private void OnDisable()
+    {
+        PlayerController_script.chosenSprite = 1;
+    }
+    
+    
     private void AimRotation()
     {
         myPos = Camera.main.WorldToViewportPoint(transform.position);
