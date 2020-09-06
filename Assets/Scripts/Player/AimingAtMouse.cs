@@ -14,8 +14,14 @@ public class AimingAtMouse : MonoBehaviour
     public Transform handGraphicPos;
  
     public PlayerController PlayerController_script;
+    private ThrownVals ThrownVals_script;
+    public HandEnable HandEnable_script;
     
     public GameObject enemyObj;
+
+    private Animator enemyAnimator;
+    
+    private bool haveThrown;
     // Start is called before the first frame update
 
     void OnEnable()
@@ -29,13 +35,9 @@ public class AimingAtMouse : MonoBehaviour
         AimRotation();
         GraphicProperties();
         EnemyPosAndRot();
+        MouseInput();
+        SetThrownProperties();
     }
-
-    private void OnDisable()
-    {
-        PlayerController_script.chosenSprite = 1;
-    }
-    
     
     private void AimRotation()
     {
@@ -63,6 +65,27 @@ public class AimingAtMouse : MonoBehaviour
         {
             enemyObj.transform.position = handGraphicPos.position;
             enemyObj.transform.rotation = transform.rotation;
+        }
+    }
+
+    private void MouseInput()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            haveThrown = true;
+        }
+    }
+
+    private void SetThrownProperties()
+    {
+        if (haveThrown)
+        {
+            ThrownVals_script = enemyObj.GetComponent<ThrownVals>();
+            ThrownVals_script.givenVelocity = 70;            
+            enemyObj.GetComponent<Animator>().SetBool("thrown", true);
+            enemyObj = null;
+            PlayerController_script.chosenSprite = 1;
+            gameObject.SetActive(false);
         }
     }
 }

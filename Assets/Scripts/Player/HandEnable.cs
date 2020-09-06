@@ -41,6 +41,7 @@ public class HandEnable : MonoBehaviour
         {
             aimingObj.SetActive(true);
             AimingAtMouse_script.enemyObj = caughtEnemy;
+            caughtEnemy = null;
             HandThrow_script.enabled = false;
         }
     }
