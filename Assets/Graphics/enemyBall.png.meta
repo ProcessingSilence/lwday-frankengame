@@ -14,6 +14,9 @@ TextureImporter:
   - first:
       213: -3208834251885037119
     second: enemyBall_3
+  - first:
+      213: 1004340224689716819
+    second: enemyBall_4
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -185,7 +188,7 @@ TextureImporter:
         width: 11
         height: 11
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -206,7 +209,7 @@ TextureImporter:
         width: 11
         height: 11
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -214,6 +217,27 @@ TextureImporter:
       bones: []
       spriteID: 1c93941cf3ee773d0800000000000000
       internalID: -3208834251885037119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemyBall_4
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35e3446fc1220fd00800000000000000
+      internalID: 1004340224689716819
       vertices: []
       indices: 
       edges: []

@@ -28,6 +28,7 @@
           </e>
           <e p="JumpPowerupDetection.cs" t="Include" />
           <e p="Player" t="Include">
+            <e p="HandEnable.cs" t="Include" />
             <e p="HandThrow.cs" t="Include" />
             <e p="PlayerController.cs" t="Include" />
           </e>

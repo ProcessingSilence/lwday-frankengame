@@ -4,47 +4,107 @@ using UnityEngine;
 
 public class HandThrow : MonoBehaviour
 {
-    public Transform player;
+
+    public Vector2 playerPos;
     public Vector2 throwPos;
 
+    public float throwOffset;   
     public float speed = 1;
-
     public float timeSpeed;
+    public int throwDirection;
 
-    private bool haveCaughtEnemy;
-
-    public GameObject caughtEnemy;
+    // 0: No enemy.
+    // Enemy found - 1: "caught" anim bool not set, 2: anim bool set; set position + rotation based on handObj.
+    private int haveCaughtEnemy;
 
     private bool currentlyThrowing;
-    // Start is called before the first frame update
+
+    // Other properties    
+    private PlayerController PlayerController_script;  
+    private HandEnable HandEnable_script;
+ 
+    public Transform player;
+    // Direction of arm is based on player spriteRenderer flipX direction.
+    private SpriteRenderer playerSpriteDirection;
+    
+    public GameObject caughtEnemy;
+
     void Start()
     {
-
+        var playerObj = player.gameObject;
+        PlayerController_script = playerObj.GetComponent<PlayerController>();
+        playerSpriteDirection = playerObj.GetComponent<SpriteRenderer>();
+        HandEnable_script = playerObj.GetComponent<HandEnable>();  
+        currentlyThrowing = true;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (currentlyThrowing)
+        CaughtEnemyCheck();
+        Throw();
+        DoneThrowing();
+    }
+
+    // Upon enemy found, Set enemy to "caught" state, have it follow transform properties of the hand.
+    private void CaughtEnemyCheck()
+    {  
+        if (haveCaughtEnemy == 1)
         {
-            Throw();
+            haveCaughtEnemy = 2;
+            caughtEnemy.GetComponent<Animator>().SetBool("caught", true);            
+        }
+
+        if (haveCaughtEnemy == 2)
+        {
+            caughtEnemy.transform.position = transform.position;
+            caughtEnemy.transform.rotation = transform.rotation;
         }
     }
 
+    // Ping-pongs from player position to playerPos + offset, movement based on deltaTime.
     private void Throw()
     {
-        timeSpeed += Time.deltaTime * speed;
-        transform.position = Vector2.Lerp(player.position, throwPos, Mathf.PingPong(timeSpeed, 1.0f));
+        if (playerSpriteDirection.flipX == false)
+        {
+            throwDirection = 1;
+        }
+        else
+        {
+            throwDirection = -1;
+        }
+
+        playerPos = player.transform.position;
+        throwPos = new Vector2(playerPos.x + throwOffset * throwDirection, playerPos.y);
+
+
+        if (currentlyThrowing)
+        {
+            timeSpeed += Time.deltaTime * speed;
+            transform.position = Vector2.Lerp(player.transform.position, throwPos, Mathf.PingPong(timeSpeed, 1.0f));
+        }
+    }
+    
+    // Reset all vars and disable self, activate aiming if enemy is caught.
+    private void DoneThrowing()
+    {
         if (timeSpeed > 2)
         {
+            currentlyThrowing = false;
+            HandEnable_script.caughtEnemy = caughtEnemy;
+            caughtEnemy = null;
+            haveCaughtEnemy = 0;
             timeSpeed = 0;
+            throwDirection = 0;
+            gameObject.SetActive(false);
         }
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Enemy") && haveCaughtEnemy)
+        if (other.CompareTag("Enemy") && haveCaughtEnemy < 1)
         {
+            haveCaughtEnemy = 1;
             caughtEnemy = other.gameObject;
         }
     }

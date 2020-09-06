@@ -39,7 +39,8 @@ public class PlayerController : MonoBehaviour
         private float movVec;   
         
         // Multiplies horizontal velocity to determine direction in FixedUpdate().
-        private int inputDirection;
+        [HideInInspector]
+        public int inputDirection;
     
     // Hand
         public GameObject hand;
