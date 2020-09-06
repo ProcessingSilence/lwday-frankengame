@@ -9,7 +9,6 @@ public class Walking : StateMachineBehaviour
     private SpriteRenderer spriteRenderer;
     private SimpleVals SimpleVals_script;
     //public int caught;
-    private CaughtCheck CaughtCheck_script;
 
     override public void OnStateEnter(Animator animator, AnimatorStateInfo animatorStateInfo, int layerIndex)
     {
@@ -17,7 +16,6 @@ public class Walking : StateMachineBehaviour
         spriteRenderer = animator.GetComponent<SpriteRenderer>();
         SimpleVals_script = animator.GetComponent<SimpleVals>();
         speed = SimpleVals_script.walkSpeed;
-        CaughtCheck_script = animator.gameObject.GetComponent<CaughtCheck>();
     }
 
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) 
