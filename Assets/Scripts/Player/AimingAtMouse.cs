@@ -83,6 +83,10 @@ public class AimingAtMouse : MonoBehaviour
     {
         if (haveThrown)
         {
+            if (transform.eulerAngles.z <= 300 && transform.eulerAngles.z >= 240)
+            {
+                PlayerController_script.jumpFromThrowingEnemy = true;
+            }
             ThrownVals_script = enemyObj.GetComponent<ThrownVals>();
             ThrownVals_script.givenVelocity = 70;
             enemyObj.transform.position = face.transform.position;
