@@ -11,6 +11,7 @@
         </e>
         <e p="Scripts" t="Include">
           <e p="Capsule.cs" t="Include" />
+          <e p="EndlessRotation.cs" t="Include" />
           <e p="Global" t="Include">
             <e p="Enemy" t="Include">
               <e p="Caught.cs" t="Include" />
