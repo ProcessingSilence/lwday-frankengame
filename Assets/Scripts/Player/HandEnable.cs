@@ -9,11 +9,11 @@ public class HandEnable : MonoBehaviour
     public GameObject caughtEnemy;
     public GameObject aimingObj;    
     
-    private bool wasThrownFlag;
+    [HideInInspector] public bool wasThrownFlag;
 
     private int throwDirection;
 
-    private HandThrow HandThrow_script;
+    public HandThrow HandThrow_script;
     private HandEnable HandEnable_script;
     private AimingAtMouse AimingAtMouse_script; 
     public PlayerController PlayerController_script;
@@ -36,14 +36,20 @@ public class HandEnable : MonoBehaviour
             wasThrownFlag = false;
         }
 
-        EnableOnMouseDown();
         if (caughtEnemy)
         {
             aimingObj.SetActive(true);
             AimingAtMouse_script.enemyObj = caughtEnemy;
             caughtEnemy = null;
-            HandThrow_script.enabled = false;
+            //wasThrownFlag = false;
+            hand.SetActive(false);
+            HandEnable_script.enabled = false;
         }
+    }
+
+    private void LateUpdate()
+    {
+        EnableOnMouseDown();
     }
 
     private void EnableOnMouseDown()

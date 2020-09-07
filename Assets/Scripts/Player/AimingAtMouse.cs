@@ -85,7 +85,17 @@ public class AimingAtMouse : MonoBehaviour
             enemyObj.GetComponent<Animator>().SetBool("thrown", true);
             enemyObj = null;
             PlayerController_script.chosenSprite = 1;
-            gameObject.SetActive(false);
+            haveThrown = false;
+            StartCoroutine(StartHandEnableDelay());
+
         }
+    }
+
+    IEnumerator StartHandEnableDelay()
+    {
+        yield return new WaitForSecondsRealtime(0.01f);
+        HandEnable_script.wasThrownFlag = false;
+        HandEnable_script.enabled = true;
+        gameObject.SetActive(false);
     }
 }
