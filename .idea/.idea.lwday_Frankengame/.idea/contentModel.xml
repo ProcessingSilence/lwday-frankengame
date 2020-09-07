@@ -10,6 +10,7 @@
           <e p="CREDITS.txt" t="Include" />
         </e>
         <e p="Scripts" t="Include">
+          <e p="Button.cs" t="Include" />
           <e p="Capsule.cs" t="Include" />
           <e p="EndlessRotation.cs" t="Include" />
           <e p="Global" t="Include">
@@ -41,6 +42,7 @@
             <e p="Walking.cs" t="Include" />
           </e>
           <e p="Teleporter.cs" t="Include" />
+          <e p="Wall.cs" t="Include" />
         </e>
       </e>
       <e p="Library" t="ExcludeRecursive" />

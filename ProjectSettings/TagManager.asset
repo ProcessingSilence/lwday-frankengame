@@ -27,9 +27,9 @@ TagManager:
   - Corpse
   - Projectile
   - Enemy
-  - 
-  - 
-  - 
+  - Teleporter
+  - Projectile
+  - Button
   - 
   - 
   - 

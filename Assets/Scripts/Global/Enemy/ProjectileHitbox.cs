@@ -10,6 +10,8 @@ public class ProjectileHitbox : MonoBehaviour
     private ThrownVals ThrownVals_script;
     private Animator enemyAnimator;
     private GameObject otherEnemy;
+    private GameObject buttonObj;
+    private bool alreadyPressedButton;
     private bool goreOrCorpse;
     private int beginDeathSequence;
     // Start is called before the first frame update
@@ -32,8 +34,20 @@ public class ProjectileHitbox : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        PressButton();
         DeathSequence();
         KillOtherEnemy();
+    }
+
+    void PressButton()
+    {
+        if (buttonObj && alreadyPressedButton == false)
+        {
+            alreadyPressedButton = true;
+            var Button_script = buttonObj.GetComponent<Button>();
+            Button_script.buttonHit = 1;
+
+        }
     }
 
     void KillOtherEnemy()
@@ -70,6 +84,11 @@ public class ProjectileHitbox : MonoBehaviour
         if (other.CompareTag("Enemy") && otherEnemy == false)
         {
             otherEnemy = other.gameObject;
+        }
+
+        if (other.CompareTag("Button"))
+        {
+            buttonObj = other.gameObject;
         }
     }
 }
