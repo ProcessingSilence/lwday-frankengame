@@ -48,16 +48,17 @@ public class AimingAtMouse : MonoBehaviour
 
     private void GraphicProperties()
     {
-        if (transform.eulerAngles.z < 90 && transform.eulerAngles.z > -90)
+        if ((transform.eulerAngles.z < 90  && transform.eulerAngles.z >= 0) || (transform.eulerAngles.z <= 360 && transform.eulerAngles.z > 270))
         {
             face.flipY = false;
             Debug.Log("flip false");
-            Debug.Log(transform.rotation.z);
+            Debug.Log(transform.eulerAngles.z);
         }
         else
         {
             face.flipY = true;
             Debug.Log("flip true");
+            Debug.Log(transform.eulerAngles.z);
         }
     }
 
