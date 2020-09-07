@@ -58,7 +58,7 @@ MonoBehaviour:
   goreSound:
   - {fileID: 8300000, guid: 42ef7c9750b6496418ff7bf3394f72bf, type: 3}
   - {fileID: 8300000, guid: e68849de89587334ab9832ab05629503, type: 3}
-  - {fileID: 8300000, guid: 416cf1a53ade6e649ba464acd3b26636, type: 3}
+  - {fileID: 8300000, guid: 33acf2ab9d426c243be29cc15c917bfa, type: 3}
   goreAmount: 6
 --- !u!82 &4489645240279299906
 AudioSource:
