@@ -46,7 +46,7 @@ public class PlayerController : MonoBehaviour
                        
     // Components
         private Rigidbody2D rb;
-        private BoxCollider2D boxCollider2D;
+        private CircleCollider2D boxCollider2D;
    
         
     // Sprite
@@ -58,7 +58,7 @@ public class PlayerController : MonoBehaviour
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-        boxCollider2D = GetComponent<BoxCollider2D>();
+        boxCollider2D = GetComponent<CircleCollider2D>();
         currentJumpsLeft = multiJumpLimit;
         spriteRenderer = GetComponent<SpriteRenderer>();
     }

@@ -29,7 +29,9 @@
             </e>
             <e p="GlobalVars.cs" t="Include" />
           </e>
+          <e p="Goal.cs" t="Include" />
           <e p="JumpPowerupDetection.cs" t="Include" />
+          <e p="MainSceneManager.cs" t="Include" />
           <e p="Player" t="Include">
             <e p="AimingAtMouse.cs" t="Include" />
             <e p="HandEnable.cs" t="Include" />
