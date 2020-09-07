@@ -6,7 +6,7 @@ public class Teleporter : MonoBehaviour
 {
     private Transform exit;
 
-    private Transform player;
+    private Transform teleportObj;
 
     private AudioSource audioSource;
     // Start is called before the first frame update
@@ -19,16 +19,16 @@ public class Teleporter : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player") || other.CompareTag("Enemy"))
         {
-            player = other.transform;
+            teleportObj = other.transform;
             OnTeleport();
         }
     }
 
     void OnTeleport()
     {
-        player.transform.position = exit.position;
+        teleportObj.transform.position = exit.position;
         audioSource.Play();
     }
 }
