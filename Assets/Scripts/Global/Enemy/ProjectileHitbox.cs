@@ -86,7 +86,7 @@ public class ProjectileHitbox : MonoBehaviour
             otherEnemy = other.gameObject;
         }
 
-        if (other.CompareTag("Button"))
+        if (other.gameObject.layer == 16)
         {
             buttonObj = other.gameObject;
         }
