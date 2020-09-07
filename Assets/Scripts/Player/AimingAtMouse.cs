@@ -7,7 +7,7 @@ public class AimingAtMouse : MonoBehaviour
 {
     public Vector2 mousePos, myPos;
     
-    public float angle;
+    public Vector2 angle;
     
     public SpriteRenderer face;
     
@@ -41,21 +41,23 @@ public class AimingAtMouse : MonoBehaviour
     
     private void AimRotation()
     {
-        myPos = Camera.main.WorldToViewportPoint(transform.position);
-        mousePos = Camera.main.ScreenToViewportPoint(Input.mousePosition);
-        angle = (float) Math.Atan2(myPos.y - mousePos.y, myPos.x - mousePos.x) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.Euler(new Vector3(0f, 0f, angle - 180));
+        mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        angle = new Vector2(mousePos.x - transform.position.x,mousePos.y - transform.position.y);
+        transform.right = angle;
     }
 
     private void GraphicProperties()
     {
-        if (angle > 90 || angle < -90)
+        if (transform.eulerAngles.z < 90 && transform.eulerAngles.z > -90)
         {
             face.flipY = false;
+            Debug.Log("flip false");
+            Debug.Log(transform.rotation.z);
         }
-        else if (angle < 90 && angle > -90)
+        else
         {
             face.flipY = true;
+            Debug.Log("flip true");
         }
     }
 
@@ -81,7 +83,8 @@ public class AimingAtMouse : MonoBehaviour
         if (haveThrown)
         {
             ThrownVals_script = enemyObj.GetComponent<ThrownVals>();
-            ThrownVals_script.givenVelocity = 70;            
+            ThrownVals_script.givenVelocity = 70;
+            enemyObj.transform.position = face.transform.position;
             enemyObj.GetComponent<Animator>().SetBool("thrown", true);
             enemyObj = null;
             PlayerController_script.chosenSprite = 1;

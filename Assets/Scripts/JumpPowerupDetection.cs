@@ -16,8 +16,11 @@ public class JumpPowerupDetection : MonoBehaviour
     // Layers of JumpTrigger and JumpTriggerDetector only detect each other and nothing else.
     private void OnTriggerEnter2D(Collider2D other)
     {
-        powerupObj = other.gameObject;
-        AddToJumpLimit();
+        if (other.CompareTag("IncreaseJump"))
+        {
+            powerupObj = other.gameObject;
+            AddToJumpLimit();
+        }
     }
 
     void AddToJumpLimit()

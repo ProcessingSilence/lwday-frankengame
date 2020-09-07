@@ -9,6 +9,7 @@ public class ProjectileHitbox : MonoBehaviour
     private GameObject goreExplosion;
     private ThrownVals ThrownVals_script;
     private Animator enemyAnimator;
+    private GameObject otherEnemy;
     private bool goreOrCorpse;
     private int beginDeathSequence;
     // Start is called before the first frame update
@@ -32,6 +33,18 @@ public class ProjectileHitbox : MonoBehaviour
     void Update()
     {
         DeathSequence();
+        KillOtherEnemy();
+    }
+
+    void KillOtherEnemy()
+    {
+        if (otherEnemy)
+        {
+            Instantiate(goreExplosion, otherEnemy.transform.position, Quaternion.identity);
+            Destroy(otherEnemy);
+            otherEnemy = null;
+        }
+
     }
 
     void DeathSequence()
@@ -39,16 +52,8 @@ public class ProjectileHitbox : MonoBehaviour
         if (beginDeathSequence == 1)
         {
             beginDeathSequence = 2;
-            if (goreOrCorpse)
-            {
-                enemyAnimator.SetBool("dead", true);
-                myParent.GetComponent<BoxCollider2D>().enabled = true;
-            }
-            else
-            {
-                Instantiate(goreExplosion, transform.position, quaternion.identity);
-                Destroy(myParent);
-            }
+            Instantiate(goreExplosion, transform.position, quaternion.identity);
+            Destroy(myParent);           
             gameObject.GetComponent<ProjectileHitbox>().enabled = false;
         }
     }
@@ -60,6 +65,11 @@ public class ProjectileHitbox : MonoBehaviour
         if (other.gameObject.layer == 8 && beginDeathSequence < 1)
         {
             beginDeathSequence = 1;
+        }
+
+        if (other.CompareTag("Enemy") && otherEnemy == false)
+        {
+            otherEnemy = other.gameObject;
         }
     }
 }
