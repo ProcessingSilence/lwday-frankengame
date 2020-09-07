@@ -18,6 +18,7 @@
               <e p="GoreExplosion.cs" t="Include" />
               <e p="Idle.cs" t="Include" />
               <e p="LimpCorpse.cs" t="Include" />
+              <e p="ProjectileHitbox.cs" t="Include" />
               <e p="Thrown.cs" t="Include" />
               <e p="ThrownVals.cs" t="Include" />
             </e>
