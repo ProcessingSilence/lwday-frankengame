@@ -12,6 +12,7 @@ TagManager:
   - Important
   - Enemy
   - IncreaseJump
+  - SceneManager
   layers:
   - Default
   - TransparentFX

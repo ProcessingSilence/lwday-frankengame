@@ -113,6 +113,8 @@ public class HandThrow : MonoBehaviour
             caughtEnemy.GetComponent<Animator>().SetBool("caught", true);
             caughtEnemy.GetComponent<Rigidbody2D>().gravityScale = 0;
             caughtEnemy.GetComponent<BoxCollider2D>().enabled = false;
+            var audioObj = Instantiate(Resources.Load("AudioObj") as GameObject);
+            audioObj.GetComponent<AudioObj>().givenAudio = Resources.Load("Audio/clap") as AudioClip;
         }
 
         if (haveCaughtEnemy == 2)

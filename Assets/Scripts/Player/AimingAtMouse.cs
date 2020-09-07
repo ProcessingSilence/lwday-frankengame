@@ -22,6 +22,7 @@ public class AimingAtMouse : MonoBehaviour
     private Animator enemyAnimator;
     
     private bool haveThrown;
+
     // Start is called before the first frame update
 
     void OnEnable()
@@ -87,6 +88,10 @@ public class AimingAtMouse : MonoBehaviour
             {
                 PlayerController_script.jumpFromThrowingEnemy = true;
             }
+            // Instantiate AudioObj from Resources to make "woosh" sound.
+            var audioObj = Instantiate(Resources.Load("AudioObj") as GameObject);
+            audioObj.GetComponent<AudioObj>().givenAudio = Resources.Load("Audio/throwSound2") as AudioClip;
+            
             ThrownVals_script = enemyObj.GetComponent<ThrownVals>();
             ThrownVals_script.givenVelocity = 70;
             enemyObj.transform.position = face.transform.position;
