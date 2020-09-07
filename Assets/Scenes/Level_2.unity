@@ -950,7 +950,7 @@ MonoBehaviour:
   nextLevel: 
   thisLevel: 
   stringArray: []
-  sceneNum: 0
+  levelNum: 0
   sceneStringNum: 0
   playerObj: {fileID: 2083914856}
   fadeImageObj: {fileID: 31555731}
@@ -10682,9 +10682,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1878046497}
   - component: {fileID: 1878046496}
-  - component: {fileID: 1878046501}
   - component: {fileID: 1878046500}
-  - component: {fileID: 1878046502}
   - component: {fileID: 1878046499}
   - component: {fileID: 1878046498}
   m_Layer: 0
@@ -15548,8 +15546,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 51886e395e485da42bd67f708638d705, type: 3}
-  m_PlayOnAwake: 0
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -15634,34 +15632,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1878046501
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1878046495}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6aef75df3cac34d408622925b426c5ac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!58 &1878046502
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1878046495}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 1
 --- !u!1 &1925095643
 GameObject:
   m_ObjectHideFlags: 0

@@ -9,11 +9,20 @@ public class Goal : MonoBehaviour
     private GameObject mainSceneManager;
 
     private MainSceneManager MainSceneManager_script;
+
+    private AudioSource audioSource;
+
+    private ParticleSystem particleSystem;
+
+    private SpriteRenderer spriteRenderer;
     // Start is called before the first frame update
     void Start()
     {
         mainSceneManager = GameObject.FindWithTag("SceneManager");
         MainSceneManager_script = mainSceneManager.GetComponent<MainSceneManager>();
+        audioSource = GetComponent<AudioSource>();
+        particleSystem = GetComponent<ParticleSystem>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -22,6 +31,10 @@ public class Goal : MonoBehaviour
         if (hitGoal == 1)
         {
             hitGoal = 2;
+            audioSource.Play();
+            particleSystem.Play();
+            spriteRenderer.enabled = false;
+            MainSceneManager_script.sceneNum = 2;
         }
     }
 

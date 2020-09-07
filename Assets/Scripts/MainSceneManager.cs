@@ -10,7 +10,7 @@ public class MainSceneManager : MonoBehaviour
     public string thisLevel;
     public string[] stringArray;
 
-    public int levelNum;
+    public int sceneNum;
     public int sceneStringNum;
     
     public GameObject playerObj;
@@ -38,14 +38,14 @@ public class MainSceneManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (levelNum != 0)
+        if (sceneNum != 0)
         {
             StartCoroutine(ChangeLevel());
         }
 
         if (Input.GetKeyDown(KeyCode.Return) && sceneStringNum == 1)
         {
-            levelNum = 3;
+            sceneNum = 3;
         }
     }
     
@@ -81,7 +81,7 @@ public class MainSceneManager : MonoBehaviour
         StartCoroutine(Fading(1));
         if (fadeImage.color.a > 1)
         {
-            if (levelNum == 1)
+            if (sceneNum == 1)
             {
                 SceneManager.LoadScene(thisLevel);
             }
