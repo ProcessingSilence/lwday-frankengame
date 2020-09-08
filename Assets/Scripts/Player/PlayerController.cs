@@ -69,7 +69,7 @@ public class PlayerController : MonoBehaviour
     {
         JumpingInput();
         HorizontalMovement();
-        rb.velocity = new Vector2(moveSpeed * inputDirection * Time.fixedDeltaTime, rb.velocity.y);
+        rb.velocity = new Vector2(moveSpeed * inputDirection, rb.velocity.y);
         SpriteRender();
     }
 
@@ -120,7 +120,7 @@ public class PlayerController : MonoBehaviour
     }
     void NewJump()
     {
-        rb.velocity = new Vector2(rb.velocity.x, 0);
+        //rb.velocity = new Vector2(rb.velocity.x, 0);
         rb.velocity = Vector2.up * jumpVel;
     }
 

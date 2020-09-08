@@ -12,6 +12,8 @@ public class MainSceneManager : MonoBehaviour
 
     public int sceneNum;
     public int sceneStringNum;
+
+    private bool instantRestart;
     
     public GameObject playerObj;
     public GameObject fadeImageObj;
@@ -39,8 +41,14 @@ public class MainSceneManager : MonoBehaviour
     void Update()
     {
         // Player death
-        if (playerObj.activeSelf == false || !playerObj || Input.GetKey(KeyCode.R))
+        if (playerObj.activeSelf == false || !playerObj)
         {
+            sceneNum = 1;
+        }
+
+        if (Input.GetKey(KeyCode.R))
+        {
+            instantRestart = true;
             sceneNum = 1;
         }
 
@@ -83,7 +91,8 @@ public class MainSceneManager : MonoBehaviour
 
     IEnumerator ChangeLevel()
     {
-        yield return new WaitForSeconds(1f);
+        if (instantRestart == false)
+            yield return new WaitForSeconds(1f);
         StartCoroutine(Fading(1));
         if (fadeImage.color.a > 1)
         {
