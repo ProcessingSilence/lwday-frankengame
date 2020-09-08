@@ -5,6 +5,7 @@ using UnityEngine;
 public class Button : MonoBehaviour
 {
     public GameObject wall;
+    public GameObject[] walls;
     private Button Button_script;
     public Sprite[] buttonStates;
     private SpriteRenderer spriteRenderer;
@@ -22,6 +23,14 @@ public class Button : MonoBehaviour
         if (buttonHit == 1)
         {
             buttonHit = 2;
+            if (walls.Length > 0)
+            {
+                foreach (GameObject item in walls)
+                {
+                    Destroy(item);
+                }
+            }
+
             Destroy(wall);
             spriteRenderer.sprite = buttonStates[1];
             Destroy(gameObject.GetComponent<BoxCollider2D>());
