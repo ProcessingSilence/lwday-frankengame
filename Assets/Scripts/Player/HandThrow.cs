@@ -128,7 +128,7 @@ public class HandThrow : MonoBehaviour
     {
         if (other.CompareTag("Enemy") && haveCaughtEnemy < 1)
         {
-            Debug.Log("Hit Enemy");
+            //Debug.Log("Caught Enemy");
             haveCaughtEnemy = 1;
             caughtEnemy = other.gameObject;
         }

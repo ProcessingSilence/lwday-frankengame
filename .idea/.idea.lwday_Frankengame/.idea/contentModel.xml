@@ -6,18 +6,17 @@
     <e p="F:\UnityProjects\lwday_Frankengame" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
-        <e p="Prefabs" t="Include">
-          <e p="AudioObj.cs" t="Include" />
-        </e>
         <e p="Resources" t="Include">
           <e p="Audio" t="Include">
             <e p="CREDITS.txt" t="Include" />
           </e>
         </e>
         <e p="Scripts" t="Include">
+          <e p="AudioObj.cs" t="Include" />
           <e p="Button.cs" t="Include" />
           <e p="Capsule.cs" t="Include" />
           <e p="EndlessRotation.cs" t="Include" />
+          <e p="EnemyRespawner.cs" t="Include" />
           <e p="Global" t="Include">
             <e p="Enemy" t="Include">
               <e p="Caught.cs" t="Include" />
@@ -49,6 +48,7 @@
             <e p="Walking.cs" t="Include" />
           </e>
           <e p="Teleporter.cs" t="Include" />
+          <e p="ToGoreHitbox.cs" t="Include" />
           <e p="Wall.cs" t="Include" />
         </e>
       </e>

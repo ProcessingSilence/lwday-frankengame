@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using Unity.Mathematics;
 using UnityEngine;
 
+// Detects when enemies are hit or when buttons are pressed, uses a larger hitbox than ToGoreHitbox so it's more forgiving
+// to the player to hit the objects.
+
 public class ProjectileHitbox : MonoBehaviour
 {
     private GameObject myParent;
@@ -13,11 +16,10 @@ public class ProjectileHitbox : MonoBehaviour
     private GameObject buttonObj;
     private bool alreadyPressedButton;
     private bool goreOrCorpse;
-    private int beginDeathSequence;
     // Start is called before the first frame update
     void Start()
     {
-        myParent = gameObject.transform.parent.gameObject;
+        myParent = transform.parent.gameObject;
         ThrownVals_script = myParent.GetComponent<ThrownVals>();
         enemyAnimator = myParent.GetComponent<Animator>();
         goreExplosion = ThrownVals_script.goreMess;
@@ -31,11 +33,9 @@ public class ProjectileHitbox : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         PressButton();
-        DeathSequence();
         KillOtherEnemy();
     }
 
@@ -58,29 +58,13 @@ public class ProjectileHitbox : MonoBehaviour
             Destroy(otherEnemy);
             otherEnemy = null;
         }
-
     }
 
-    void DeathSequence()
-    {
-        if (beginDeathSequence == 1)
-        {
-            beginDeathSequence = 2;
-            Instantiate(goreExplosion, transform.position, quaternion.identity);
-            Destroy(myParent);           
-            gameObject.GetComponent<ProjectileHitbox>().enabled = false;
-        }
-    }
+
 
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        // Begin death sequence upon detecting surface.
-        if (other.gameObject.layer == 8 && beginDeathSequence < 1)
-        {
-            beginDeathSequence = 1;
-        }
-
         if (other.CompareTag("Enemy") && otherEnemy == false)
         {
             otherEnemy = other.gameObject;
