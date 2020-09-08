@@ -38,9 +38,11 @@ public class ToGoreHitbox : MonoBehaviour
             beginDeathSequence = 2;
             var goreSpawnCheck= Instantiate(goreExplosion, myParent.transform.position, quaternion.identity);
             myParentSpriteRenderer.enabled = false;
-            yield return new WaitUntil(() => goreSpawnCheck);              
+            yield return new WaitUntil(() => goreSpawnCheck == true);
+                
             Destroy(myParent);  
-        }      
+        }
+        
     }
     
     private void OnTriggerEnter2D(Collider2D other)
