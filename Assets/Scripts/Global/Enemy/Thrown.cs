@@ -18,7 +18,6 @@ public class Thrown : StateMachineBehaviour
     {
 
         animator.gameObject.layer = 15;
-        animator.gameObject.GetComponent<BoxCollider2D>().enabled = true;
         projectileHitbox = Instantiate(projectileHitbox,animator.transform.position, quaternion.identity);
         projectileHitbox.transform.parent = animator.gameObject.transform;
         rb = animator.gameObject.GetComponent<Rigidbody2D>();
