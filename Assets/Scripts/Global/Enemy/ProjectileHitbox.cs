@@ -46,7 +46,10 @@ public class ProjectileHitbox : MonoBehaviour
             alreadyPressedButton = true;
             var Button_script = buttonObj.GetComponent<Button>();
             Button_script.buttonHit = 1;
-
+            if (Button_script.buttonHit == 1)
+            {
+                transform.GetChild(0).GetComponent<ToGoreHitbox>().beginDeathSequence = 1;
+            }
         }
     }
 

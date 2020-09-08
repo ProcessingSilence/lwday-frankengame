@@ -8,7 +8,7 @@ using UnityEngine;
 
 public class ToGoreHitbox : MonoBehaviour
 {
-    private int beginDeathSequence;
+    public int beginDeathSequence;
     public GameObject myParent;
     private SpriteRenderer myParentSpriteRenderer;
     public GameObject goreExplosion;
@@ -27,22 +27,20 @@ public class ToGoreHitbox : MonoBehaviour
 
     void LateUpdate()
     {
-        StartCoroutine(DeathSequence());
-
+        if (beginDeathSequence == 1)
+        {
+            beginDeathSequence = 2;
+            StartCoroutine(DeathSequence());
+        }
     }
 
     IEnumerator DeathSequence()
     {
-        if (beginDeathSequence == 1)
-        {
-            beginDeathSequence = 2;
-            var goreSpawnCheck= Instantiate(goreExplosion, myParent.transform.position, quaternion.identity);
-            myParentSpriteRenderer.enabled = false;
-            yield return new WaitUntil(() => goreSpawnCheck == true);
-                
-            Destroy(myParent);  
-        }
-        
+        var goreSpawnCheck= Instantiate(goreExplosion, myParent.transform.position, quaternion.identity);
+        myParentSpriteRenderer.enabled = false;
+        yield return new WaitUntil(() => goreSpawnCheck == true);
+            
+        Destroy(myParent);                 
     }
     
     private void OnTriggerEnter2D(Collider2D other)
