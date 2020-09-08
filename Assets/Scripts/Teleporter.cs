@@ -19,7 +19,7 @@ public class Teleporter : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player") || other.CompareTag("Enemy"))
+        if (other.CompareTag("Player") || other.CompareTag("Enemy") || other.CompareTag("DamageEnemy"))
         {
             teleportObj = other.transform;
             OnTeleport();

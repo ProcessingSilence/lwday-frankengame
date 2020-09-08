@@ -68,7 +68,7 @@ public class ProjectileHitbox : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Enemy") && otherEnemy == false)
+        if ((other.CompareTag("Enemy") || other.CompareTag("DamageEnemy")) && otherEnemy == false)
         {
             otherEnemy = other.gameObject;
         }
