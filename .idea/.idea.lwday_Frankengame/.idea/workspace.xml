@@ -221,19 +221,19 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/ToGoreHitbox.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="624">
-              <caret line="39" column="51" selection-start-line="39" selection-start-column="51" selection-end-line="39" selection-end-column="51" />
+            <state relative-caret-position="512">
+              <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
               <folding>
-                <marker date="1599524784014" expanded="true" signature="6:103" ph="..." />
-                <marker date="1599524784014" expanded="true" signature="105:272" ph="/* Gores enemy upon collision. Uses a smaller collision to detect when to gore so that the enemy doesn't instantl ... */" />
-                <marker date="1599524784014" expanded="true" signature="315:1532" ph="{...}" />
-                <marker date="1599524784014" expanded="true" signature="543:695" ph="{...}" />
-                <marker date="1599524784014" expanded="true" signature="832:845" ph="{...}" />
-                <marker date="1599524784014" expanded="true" signature="868:922" ph="{...}" />
-                <marker date="1599524784014" expanded="true" signature="955:1303" ph="{...}" />
-                <marker date="1599524784014" expanded="true" signature="998:1288" ph="{...}" />
-                <marker date="1599524784014" expanded="true" signature="1360:1530" ph="{...}" />
-                <marker date="1599524784014" expanded="true" signature="1433:1524" ph="{...}" />
+                <marker date="1599586835736" expanded="true" signature="6:103" ph="..." />
+                <marker date="1599586835736" expanded="true" signature="105:272" ph="/* Gores enemy upon collision. Uses a smaller collision to detect when to gore so that the enemy doesn't instantl ... */" />
+                <marker date="1599586835736" expanded="true" signature="315:1573" ph="{...}" />
+                <marker date="1599586835736" expanded="true" signature="543:695" ph="{...}" />
+                <marker date="1599586835736" expanded="true" signature="832:845" ph="{...}" />
+                <marker date="1599586835736" expanded="true" signature="868:922" ph="{...}" />
+                <marker date="1599586835736" expanded="true" signature="955:1344" ph="{...}" />
+                <marker date="1599586835736" expanded="true" signature="998:1329" ph="{...}" />
+                <marker date="1599586835736" expanded="true" signature="1401:1571" ph="{...}" />
+                <marker date="1599586835736" expanded="true" signature="1474:1565" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -382,13 +382,13 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/EnemyRespawner.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/HandThrow.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Global/Enemy/ProjectileHitbox.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ToGoreHitbox.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Goal.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/AimingAtMouse.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MainSceneManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Global/Entity/DeathFall.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Button.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ToGoreHitbox.cs" />
       </list>
     </option>
   </component>
@@ -452,12 +452,12 @@
       <workItem from="1599186509520" duration="15572000" />
       <workItem from="1599325768159" duration="1951000" />
       <workItem from="1599327752598" duration="22459000" />
-      <workItem from="1599424060926" duration="39699000" />
+      <workItem from="1599424060926" duration="39999000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="90557000" />
+    <option name="totallyTimeSpent" value="90857000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -469,7 +469,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1273" y="0" width="1294" height="1407" extended-state="1" />
+    <frame x="1273" y="0" width="1294" height="1407" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.5177994" />
@@ -1171,19 +1171,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/ToGoreHitbox.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="624">
-          <caret line="39" column="51" selection-start-line="39" selection-start-column="51" selection-end-line="39" selection-end-column="51" />
+        <state relative-caret-position="512">
+          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
           <folding>
-            <marker date="1599524784014" expanded="true" signature="6:103" ph="..." />
-            <marker date="1599524784014" expanded="true" signature="105:272" ph="/* Gores enemy upon collision. Uses a smaller collision to detect when to gore so that the enemy doesn't instantl ... */" />
-            <marker date="1599524784014" expanded="true" signature="315:1532" ph="{...}" />
-            <marker date="1599524784014" expanded="true" signature="543:695" ph="{...}" />
-            <marker date="1599524784014" expanded="true" signature="832:845" ph="{...}" />
-            <marker date="1599524784014" expanded="true" signature="868:922" ph="{...}" />
-            <marker date="1599524784014" expanded="true" signature="955:1303" ph="{...}" />
-            <marker date="1599524784014" expanded="true" signature="998:1288" ph="{...}" />
-            <marker date="1599524784014" expanded="true" signature="1360:1530" ph="{...}" />
-            <marker date="1599524784014" expanded="true" signature="1433:1524" ph="{...}" />
+            <marker date="1599586835736" expanded="true" signature="6:103" ph="..." />
+            <marker date="1599586835736" expanded="true" signature="105:272" ph="/* Gores enemy upon collision. Uses a smaller collision to detect when to gore so that the enemy doesn't instantl ... */" />
+            <marker date="1599586835736" expanded="true" signature="315:1573" ph="{...}" />
+            <marker date="1599586835736" expanded="true" signature="543:695" ph="{...}" />
+            <marker date="1599586835736" expanded="true" signature="832:845" ph="{...}" />
+            <marker date="1599586835736" expanded="true" signature="868:922" ph="{...}" />
+            <marker date="1599586835736" expanded="true" signature="955:1344" ph="{...}" />
+            <marker date="1599586835736" expanded="true" signature="998:1329" ph="{...}" />
+            <marker date="1599586835736" expanded="true" signature="1401:1571" ph="{...}" />
+            <marker date="1599586835736" expanded="true" signature="1474:1565" ph="{...}" />
           </folding>
         </state>
       </provider>
