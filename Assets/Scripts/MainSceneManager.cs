@@ -38,6 +38,12 @@ public class MainSceneManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Player death
+        if (playerObj.activeSelf == false || !playerObj)
+        {
+            sceneNum = 1;
+        }
+
         if (sceneNum != 0)
         {
             StartCoroutine(ChangeLevel());

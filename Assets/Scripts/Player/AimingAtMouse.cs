@@ -10,7 +10,7 @@ public class AimingAtMouse : MonoBehaviour
     public Vector2 angle;
     
     public SpriteRenderer face;
-    
+    public Transform throwLocation;
     public Transform handGraphicPos;
  
     public PlayerController PlayerController_script;
@@ -94,7 +94,7 @@ public class AimingAtMouse : MonoBehaviour
             
             ThrownVals_script = enemyObj.GetComponent<ThrownVals>();
             ThrownVals_script.givenVelocity = 70;
-            enemyObj.transform.position = face.transform.position;
+            enemyObj.transform.position = throwLocation.position;
             enemyObj.GetComponent<Animator>().SetBool("thrown", true);
             enemyObj = null;
             PlayerController_script.chosenSprite = 1;
