@@ -9894,8 +9894,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00de33abe2f4ccf4d97aabdbeff58531, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerController_script: {fileID: 0}
-  powerupObj: {fileID: 0}
 --- !u!1 &1769346766
 GameObject:
   m_ObjectHideFlags: 0
@@ -15277,6 +15275,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isImportant: 0
+  goreObj: {fileID: 4489645240279299919, guid: 4d2729933e371f54088ad0738fb1aacc, type: 3}
 --- !u!4 &2083914860
 Transform:
   m_ObjectHideFlags: 0
