@@ -1,11 +1,10 @@
 fileFormatVersion: 2
-guid: af13a1db8dea94e4ab0027d4c17e4008
+guid: f0c2d64eb50493440b96fe5a3155b8c0
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
   defaultReferences:
-  - deathSprite: {instanceID: 0}
-  - goreDeath: {fileID: 4489645240279299919, guid: 4d2729933e371f54088ad0738fb1aacc,
+  - goreSpawn: {fileID: 4489645240279299919, guid: 4d2729933e371f54088ad0738fb1aacc,
       type: 3}
   executionOrder: 0
   icon: {instanceID: 0}

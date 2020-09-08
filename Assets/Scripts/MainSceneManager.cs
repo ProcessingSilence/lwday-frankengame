@@ -41,7 +41,7 @@ public class MainSceneManager : MonoBehaviour
     void Update()
     {
         // Player death
-        if (playerObj.activeSelf == false || !playerObj)
+        if (playerObj.activeSelf == false || playerObj == null)
         {
             sceneNum = 1;
         }

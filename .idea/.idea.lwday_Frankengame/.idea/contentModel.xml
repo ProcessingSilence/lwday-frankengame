@@ -33,6 +33,7 @@
             </e>
             <e p="Entity" t="Include">
               <e p="DeathFall.cs" t="Include" />
+              <e p="TakeDamage.cs" t="Include" />
             </e>
             <e p="GlobalVars.cs" t="Include" />
           </e>

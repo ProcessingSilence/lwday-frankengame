@@ -320,6 +320,7 @@ GameObject:
   - component: {fileID: 3744556654827539438}
   - component: {fileID: 3744556654827539433}
   - component: {fileID: 3744556654827539435}
+  - component: {fileID: 7354184338201331609}
   - component: {fileID: 3744556654827539439}
   - component: {fileID: 3744556654827539434}
   - component: {fileID: 3744556654827539437}
@@ -409,7 +410,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isImportant: 0
-  goreObj: {fileID: 0}
+  goreObj: {fileID: 4489645240279299919, guid: 4d2729933e371f54088ad0738fb1aacc, type: 3}
+--- !u!114 &7354184338201331609
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3744556654827539432}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0c2d64eb50493440b96fe5a3155b8c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  takeEnemyDamage: 0
+  goreSpawn: {fileID: 4489645240279299919, guid: 4d2729933e371f54088ad0738fb1aacc,
+    type: 3}
 --- !u!114 &3744556654827539439
 MonoBehaviour:
   m_ObjectHideFlags: 0
