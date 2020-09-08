@@ -10,35 +10,38 @@ public class ToGoreHitbox : MonoBehaviour
 {
     private int beginDeathSequence;
     public GameObject myParent;
-
+    private SpriteRenderer myParentSpriteRenderer;
     public GameObject goreExplosion;
     // Start is called before the first frame update
     void Start()
     {
         myParent = gameObject.transform.parent.parent.gameObject;
+        myParentSpriteRenderer = myParent.GetComponent<SpriteRenderer>();
     }
 
     // Call death in LateUpdate so if it collides with a button + wall at the same time, it will detect button first.
     void Update()
     {
-        DeathSequence();
+
     }
 
     void LateUpdate()
     {
-        if (beginDeathSequence == 2)
-        {
-            Destroy(myParent);  
-        }
+        StartCoroutine(DeathSequence());
+
     }
 
-    void DeathSequence()
+    IEnumerator DeathSequence()
     {
         if (beginDeathSequence == 1)
         {
             beginDeathSequence = 2;
-            Instantiate(goreExplosion, myParent.transform.position, quaternion.identity);         
+            Instantiate(goreExplosion, myParent.transform.position, quaternion.identity);
+            myParentSpriteRenderer.enabled = false;
+            yield return new WaitForSecondsRealtime(0.1f);
+            Destroy(myParent);  
         }
+        
     }
     
     private void OnTriggerEnter2D(Collider2D other)

@@ -6,6 +6,9 @@
     <e p="F:\UnityProjects\lwday_Frankengame" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="Graphics" t="Include">
+          <e p="FONT CREDIT.txt" t="Include" />
+        </e>
         <e p="Resources" t="Include">
           <e p="Audio" t="Include">
             <e p="CREDITS.txt" t="Include" />
@@ -34,7 +37,6 @@
             <e p="GlobalVars.cs" t="Include" />
           </e>
           <e p="Goal.cs" t="Include" />
-          <e p="JumpPowerupDetection.cs" t="Include" />
           <e p="MainSceneManager.cs" t="Include" />
           <e p="Player" t="Include">
             <e p="AimingAtMouse.cs" t="Include" />

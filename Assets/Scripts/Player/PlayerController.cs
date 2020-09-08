@@ -10,15 +10,12 @@ public class PlayerController : MonoBehaviour
     [SerializeField]private LayerMask platformLayerMask;
     
     // Jump
-        //public float jumpFall_vel;
-
         public float jumpVel;
-        public float gravityWeight = 2f;
-        // How many midair jumps are allowed, set to 0 to disable.
         
-        public int multiJumpLimit;
-        public int currentJumpsLeft;
-        
+        public float inputGravityWeight = 2.5f;
+
+        public float noInputGravityWeight = 2f;
+
         // Gets y position of player when they are no longer grounded.
             // If the player's y-position >= yPosLimit, they will start falling
         private float yPosLimit;
@@ -32,6 +29,7 @@ public class PlayerController : MonoBehaviour
         // the ground within that time period, they will automatically jump.
         private float jumpPressedPeriodCurrent;
         private float jumpPressedPeriodTime = 0.1f;
+        private bool haveAlreadyJumped;
         public bool jumpFromThrowingEnemy;
         
    
@@ -46,7 +44,7 @@ public class PlayerController : MonoBehaviour
                        
     // Components
         private Rigidbody2D rb;
-        private CircleCollider2D boxCollider2D;
+        private BoxCollider2D boxCollider2D;
    
         
     // Sprite
@@ -58,8 +56,7 @@ public class PlayerController : MonoBehaviour
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-        boxCollider2D = GetComponent<CircleCollider2D>();
-        currentJumpsLeft = multiJumpLimit;
+        boxCollider2D = GetComponent<BoxCollider2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
@@ -80,7 +77,7 @@ public class PlayerController : MonoBehaviour
     
     void JumpingInput()
     {
-        jumpPressedPeriodCurrent -= Time.deltaTime;
+        jumpPressedPeriodCurrent -= Time.deltaTime*2;
         
         // Reset timer on jump.
         if (Input.GetKeyDown(KeyCode.W))
@@ -90,25 +87,20 @@ public class PlayerController : MonoBehaviour
         
         if (IsGrounded())
         {
-            currentJumpsLeft = multiJumpLimit;
             if (rb.velocity.y <= 0 && jumpPressedPeriodCurrent > 0)
             {
-                Jump();
+                NewJump();
             }
-            if (iJumpedFlag > 1)
-            {
-                iJumpedFlag = 0;
-            }    
         }
-        
+
         if (!IsGrounded())
         {
-            if (currentJumpsLeft > 0 && Input.GetKeyDown(KeyCode.W))
+            if (Input.GetKeyUp(KeyCode.W))
             {
-                Jump();
-                currentJumpsLeft -= 1;
+                haveAlreadyJumped = true;
             }
-
+            
+            // Jump sprite
             if (chosenSprite != 3)
             {
                 chosenSprite = 2;
@@ -118,25 +110,30 @@ public class PlayerController : MonoBehaviour
         if (jumpFromThrowingEnemy)
         {
             jumpFromThrowingEnemy = false;
-            Jump();
-        }
-
-        /*
-        if (IsGrounded() && iJumpedFlag > 1)
-        {
-            iJumpedFlag = 0;
-        } 
-        */           
+            NewJump();
+        }      
     }
 
     void Jump()
     {
         rb.velocity = Vector2.up * jumpVel;
     }
+    void NewJump()
+    {
+        rb.velocity = new Vector2(rb.velocity.x, 0);
+        rb.velocity = Vector2.up * jumpVel;
+    }
 
     void Gravity()
     {
-        rb.velocity += Vector2.up * Physics2D.gravity.y * (gravityWeight - 1);
+        if (rb.velocity.y < 0)
+        {
+            rb.velocity += Vector2.up * Physics2D.gravity.y * (inputGravityWeight - 1) * Time.deltaTime;
+        }
+        else if (rb.velocity.y > 0 && !Input.GetKey(KeyCode.W))
+        {
+            rb.velocity += Vector2.up * Physics2D.gravity.y * (noInputGravityWeight - 1 ) * Time.deltaTime;
+        }
     }
     
 
@@ -196,7 +193,7 @@ public class PlayerController : MonoBehaviour
 
     public bool IsGrounded()
     {
-        RaycastHit2D raycastHit = Physics2D.BoxCast(boxCollider2D.bounds.center, boxCollider2D.bounds.size, 0f,Vector2.down, .05f, platformLayerMask);
+        RaycastHit2D raycastHit = Physics2D.BoxCast(boxCollider2D.bounds.center, boxCollider2D.bounds.size*.9f, 0f,Vector2.down, .1f, platformLayerMask);
         return raycastHit.collider != null;
     }
 

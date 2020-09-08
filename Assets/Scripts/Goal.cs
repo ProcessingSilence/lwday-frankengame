@@ -15,6 +15,8 @@ public class Goal : MonoBehaviour
     private ParticleSystem particleSystem;
 
     private SpriteRenderer spriteRenderer;
+
+    private CircleCollider2D circleCollider2D;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +25,7 @@ public class Goal : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
         particleSystem = GetComponent<ParticleSystem>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        circleCollider2D = GetComponent<CircleCollider2D>();
     }
 
     // Update is called once per frame
@@ -31,6 +34,7 @@ public class Goal : MonoBehaviour
         if (hitGoal == 1)
         {
             hitGoal = 2;
+            circleCollider2D.enabled = false;
             audioSource.Play();
             particleSystem.Play();
             spriteRenderer.enabled = false;
@@ -40,7 +44,7 @@ public class Goal : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player") && hitGoal != 1) 
         {
             hitGoal = 1;
         }
