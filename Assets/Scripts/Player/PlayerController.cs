@@ -12,8 +12,8 @@ public class PlayerController : MonoBehaviour
     // Jump
         public float jumpVel;
         
+        // Gravity multiplier depending if input is held or not.
         public float inputGravityWeight = 2.5f;
-
         public float noInputGravityWeight = 2f;
 
         // Gets y position of player when they are no longer grounded.
@@ -74,6 +74,26 @@ public class PlayerController : MonoBehaviour
     }
 
     
+    void Gravity()
+    {
+        if (!IsGrounded())
+        {
+            if (rb.velocity.y < 0)
+            {
+                rb.velocity += Vector2.up * Physics2D.gravity.y * (inputGravityWeight - 1) * Time.deltaTime;
+            }
+            else if (rb.velocity.y > 0 && !Input.GetKey(KeyCode.W))
+            {
+                rb.velocity += Vector2.up * Physics2D.gravity.y * (noInputGravityWeight - 1 ) * Time.deltaTime;
+            }
+        }
+    }
+    
+    void Jump()
+    {
+        //rb.velocity = new Vector2(rb.velocity.x, 0);
+        rb.velocity = Vector2.up * jumpVel;
+    }
     
     void JumpingInput()
     {
@@ -89,7 +109,7 @@ public class PlayerController : MonoBehaviour
         {
             if (rb.velocity.y <= 0 && jumpPressedPeriodCurrent > 0)
             {
-                NewJump();
+                Jump();
             }
         }
 
@@ -110,33 +130,14 @@ public class PlayerController : MonoBehaviour
         if (jumpFromThrowingEnemy)
         {
             jumpFromThrowingEnemy = false;
-            NewJump();
+            Jump();
         }      
-    }
-
-    void Jump()
-    {
-        rb.velocity = Vector2.up * jumpVel;
-    }
-    void NewJump()
-    {
-        //rb.velocity = new Vector2(rb.velocity.x, 0);
-        rb.velocity = Vector2.up * jumpVel;
-    }
-
-    void Gravity()
-    {
-        if (rb.velocity.y < 0)
-        {
-            rb.velocity += Vector2.up * Physics2D.gravity.y * (inputGravityWeight - 1) * Time.deltaTime;
-        }
-        else if (rb.velocity.y > 0 && !Input.GetKey(KeyCode.W))
-        {
-            rb.velocity += Vector2.up * Physics2D.gravity.y * (noInputGravityWeight - 1 ) * Time.deltaTime;
-        }
     }
     
 
+
+
+    
     private void HorizontalMovement()
     {
         if (Input.GetKey(KeyCode.D))
