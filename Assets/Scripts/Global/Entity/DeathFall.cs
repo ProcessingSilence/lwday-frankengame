@@ -7,6 +7,8 @@ public class DeathFall : MonoBehaviour
     private float deathPos;
 
     public bool isImportant;
+
+    public GameObject goreObj;
     // Start is called before the first frame update
     void Start()
     {
@@ -31,6 +33,7 @@ public class DeathFall : MonoBehaviour
             }
             else
             {
+                Instantiate(goreObj, transform.position, Quaternion.identity);
                 Destroy(gameObject);
             }
         }
