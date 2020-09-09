@@ -45,7 +45,7 @@ public class ToGoreHitbox : MonoBehaviour
     
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.layer == 8 && beginDeathSequence < 1)
+        if ((other.gameObject.layer == 8 || other.gameObject.layer == 18) && beginDeathSequence < 1)
         {
             Debug.Log("Hit Wall");
             beginDeathSequence = 1;

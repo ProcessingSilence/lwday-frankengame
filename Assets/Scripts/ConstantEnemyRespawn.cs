@@ -12,13 +12,19 @@ public class ConstantEnemyRespawn : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(WaitBeforeRespawn());
+        StartCoroutine(WaitBeforeSpawning());
     }
 
-    IEnumerator WaitBeforeRespawn()
+    IEnumerator WaitBeforeSpawning()
+    {
+        yield return new WaitForSecondsRealtime(0.25f);
+        StartCoroutine(Spawn());
+    }
+
+    IEnumerator Spawn()
     {
         currentEnemy = Instantiate(enemyToSpawn, transform.position, Quaternion.identity);   
         yield return new WaitForSecondsRealtime(waitTime);
-        StartCoroutine(WaitBeforeRespawn());
+        StartCoroutine(Spawn());
     }
 }
