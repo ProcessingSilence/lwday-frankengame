@@ -96,11 +96,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/MainSceneManager.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="714">
-              <caret line="62" column="9" lean-forward="true" selection-start-line="62" selection-start-column="9" selection-end-line="62" selection-end-column="9" />
+            <state relative-caret-position="186">
+              <caret line="62" column="9" selection-start-line="62" selection-start-column="9" selection-end-line="62" selection-end-column="9" />
               <folding>
                 <marker date="1599628906830" expanded="true" signature="6:135" ph="..." />
                 <marker date="1599628906830" expanded="true" signature="182:2793" ph="{...}" />
@@ -125,6 +125,20 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Assets/physicsObj.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="208">
+              <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+              <folding>
+                <marker date="1599632333902" expanded="true" signature="59:225" ph="{...}" />
+                <marker date="1599632333902" expanded="true" signature="118:223" ph="{...}" />
+                <marker date="1599632333902" expanded="true" signature="164:217" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/Teleporter.cs">
           <provider selected="true" editor-type-id="text-editor">
@@ -137,21 +151,6 @@
                 <marker date="1599624079121" expanded="true" signature="532:801" ph="{...}" />
                 <marker date="1599624079121" expanded="true" signature="706:795" ph="{...}" />
                 <marker date="1599624079121" expanded="true" signature="824:920" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/Scripts/Global/Enemy/Thrown.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="496">
-              <caret line="31" selection-start-line="31" selection-end-line="31" />
-              <folding>
-                <marker date="1599620699106" expanded="true" signature="6:78" ph="..." />
-                <marker date="1599620699106" expanded="true" signature="123:983" ph="{...}" />
-                <marker date="1599620699106" expanded="true" signature="422:800" ph="{...}" />
-                <marker date="1599620699106" expanded="true" signature="905:976" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -217,7 +216,7 @@
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/Flashing.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="352">
-              <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+              <caret line="24" selection-start-line="24" selection-end-line="24" />
               <folding>
                 <marker date="1599628826473" expanded="false" signature="6:78" ph="..." />
                 <marker date="1599628826473" expanded="true" signature="139:503" ph="{...}" />
@@ -309,6 +308,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/HandEnable.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Global/Entity/DeathFall.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Global/Enemy/DeathProperties.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/physicsObj.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Global/GlobalVars.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Global/Enemy/ThrownVals.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/EndlessRotation.cs" root0="FORCE_HIGHLIGHTING" />
@@ -316,7 +316,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Games/Teleportation/Scripts/CollisionEventManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Games/Multijump/JumpMechanics.cs" />
         <option value="$PROJECT_DIR$/../SkeletalAnimationTest/Assets/PsdToUnity/Editor/PsdImportWindow.cs" />
         <option value="$PROJECT_DIR$/Assets/Games/Teleportation/Scripts/Teleporter.cs" />
@@ -367,6 +366,7 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Flashing.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MainSceneManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/physicsObj.cs" />
       </list>
     </option>
   </component>
@@ -430,12 +430,12 @@
       <workItem from="1599186509520" duration="15572000" />
       <workItem from="1599325768159" duration="1951000" />
       <workItem from="1599327752598" duration="22459000" />
-      <workItem from="1599424060926" duration="57106000" />
+      <workItem from="1599424060926" duration="57726000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="107964000" />
+    <option name="totallyTimeSpent" value="108584000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -447,7 +447,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="2576" height="1416" extended-state="6" />
+    <frame x="-8" y="-8" width="2576" height="1416" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.5177994" />
@@ -613,7 +613,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Assets/Games/Speedboost/move.cs" />
     <entry file="file://$PROJECT_DIR$/../State Machine for Unity Starter/Assets/RW/Scripts/Misc/SimpleCamFollow.cs" />
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/GlobalEnemy/PulledIn.cs" />
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/GlobalEnemy/DeathFall.cs" />
@@ -1180,7 +1179,7 @@
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Flashing.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="352">
-          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+          <caret line="24" selection-start-line="24" selection-end-line="24" />
           <folding>
             <marker date="1599628826473" expanded="false" signature="6:78" ph="..." />
             <marker date="1599628826473" expanded="true" signature="139:503" ph="{...}" />
@@ -1192,8 +1191,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/MainSceneManager.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
-          <caret line="62" column="9" lean-forward="true" selection-start-line="62" selection-start-column="9" selection-end-line="62" selection-end-column="9" />
+        <state relative-caret-position="186">
+          <caret line="62" column="9" selection-start-line="62" selection-start-column="9" selection-end-line="62" selection-end-column="9" />
           <folding>
             <marker date="1599628906830" expanded="true" signature="6:135" ph="..." />
             <marker date="1599628906830" expanded="true" signature="182:2793" ph="{...}" />
@@ -1213,6 +1212,18 @@
             <marker date="1599628906830" expanded="true" signature="2557:2783" ph="{...}" />
             <marker date="1599628906830" expanded="true" signature="2598:2677" ph="{...}" />
             <marker date="1599628906830" expanded="true" signature="2694:2773" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/physicsObj.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+          <folding>
+            <marker date="1599632333902" expanded="true" signature="59:225" ph="{...}" />
+            <marker date="1599632333902" expanded="true" signature="118:223" ph="{...}" />
+            <marker date="1599632333902" expanded="true" signature="164:217" ph="{...}" />
           </folding>
         </state>
       </provider>
