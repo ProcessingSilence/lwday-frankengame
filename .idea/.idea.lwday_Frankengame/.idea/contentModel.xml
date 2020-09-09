@@ -18,6 +18,7 @@
           <e p="AudioObj.cs" t="Include" />
           <e p="Button.cs" t="Include" />
           <e p="Capsule.cs" t="Include" />
+          <e p="ConstantEnemyRespawn.cs" t="Include" />
           <e p="EndlessRotation.cs" t="Include" />
           <e p="EnemyRespawner.cs" t="Include" />
           <e p="Global" t="Include">

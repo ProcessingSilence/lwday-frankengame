@@ -1,22 +1,13 @@
 fileFormatVersion: 2
-guid: 1a17352c40e52a84d9e1fcd5262c4200
+guid: 43110db2dcb5f1349b806c6d5a1e6edd
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7345218965457657766
-    second: enemyBall_0
+      213: -5084741242070260934
+    second: springEnemy_0
   - first:
-      213: -4350588034831182154
-    second: enemyBall_1
-  - first:
-      213: 5744541349281089809
-    second: enemyBall_2
-  - first:
-      213: -3208834251885037119
-    second: enemyBall_3
-  - first:
-      213: 1004340224689716819
-    second: enemyBall_4
+      213: -6049260483185349996
+    second: springEnemy_1
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -138,97 +129,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: enemyBall_0
+      name: springEnemy_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 11
-        height: 11
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6afd0918bb57fe560800000000000000
-      internalID: 7345218965457657766
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: enemyBall_1
-      rect:
-        serializedVersion: 2
-        x: 12
-        y: 0
-        width: 11
-        height: 11
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6b692d39b3b9f93c0800000000000000
-      internalID: -4350588034831182154
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: enemyBall_2
-      rect:
-        serializedVersion: 2
-        x: 24
-        y: 0
-        width: 11
-        height: 11
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1194179dbe5b8bf40800000000000000
-      internalID: 5744541349281089809
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: enemyBall_3
-      rect:
-        serializedVersion: 2
-        x: 36
-        y: 0
-        width: 11
-        height: 11
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1c93941cf3ee773d0800000000000000
-      internalID: -3208834251885037119
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: enemyBall_4
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 0
-        width: 11
-        height: 11
+        height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -236,8 +143,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 35e3446fc1220fd00800000000000000
-      internalID: 1004340224689716819
+      spriteID: a33af9bc7ce5f69b0800000000000000
+      internalID: -5084741242070260934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: springEnemy_1
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 0
+        width: 11
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49aede114a5bc0ca0800000000000000
+      internalID: -6049260483185349996
       vertices: []
       indices: 
       edges: []

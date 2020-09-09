@@ -1,6 +1,5 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using Unity.Mathematics;
 using UnityEngine;
 
 public class TakeDamage : MonoBehaviour
@@ -24,7 +23,7 @@ public class TakeDamage : MonoBehaviour
         if (dieOnce == 1)
         {
             dieOnce = 2;
-            currentGoreSpawn = Instantiate(goreSpawn, transform.position, quaternion.identity);
+            currentGoreSpawn = Instantiate(goreSpawn, transform.position, Quaternion.identity);
         }
     }
 

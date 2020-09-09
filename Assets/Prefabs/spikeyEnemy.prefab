@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 174436147742557965}
   - component: {fileID: 174436147742557964}
   - component: {fileID: 174436147742557967}
+  - component: {fileID: 1697218784395559828}
   m_Layer: 13
   m_Name: spikeyEnemy
   m_TagString: DamageEnemy
@@ -155,3 +156,17 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &1697218784395559828
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 174436147742557953}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c345d04db8447b4ea32c24b4c1d2130, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isImportant: 0
+  goreObj: {fileID: 4489645240279299919, guid: 4d2729933e371f54088ad0738fb1aacc, type: 3}

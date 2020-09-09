@@ -33,7 +33,6 @@ public class DeathFall : MonoBehaviour
             }
             else
             {
-                Instantiate(goreObj, transform.position, Quaternion.identity);
                 Destroy(gameObject);
             }
         }

@@ -1,6 +1,5 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using Unity.Mathematics;
 using UnityEngine;
 
 public class Thrown : StateMachineBehaviour
@@ -18,7 +17,7 @@ public class Thrown : StateMachineBehaviour
     {
 
         animator.gameObject.layer = 15;
-        projectileHitbox = Instantiate(projectileHitbox,animator.transform.position, quaternion.identity);
+        projectileHitbox = Instantiate(projectileHitbox,animator.transform.position, Quaternion.identity);
         projectileHitbox.transform.parent = animator.gameObject.transform;
         rb = animator.gameObject.GetComponent<Rigidbody2D>();
         velocity = animator.gameObject.GetComponent<ThrownVals>().givenVelocity;

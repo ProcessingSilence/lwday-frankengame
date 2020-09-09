@@ -1,6 +1,5 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using Unity.Mathematics;
 using UnityEngine;
 
 // Detects when enemies are hit or when buttons are pressed, uses a larger hitbox than ToGoreHitbox so it's more forgiving
