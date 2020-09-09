@@ -15,6 +15,7 @@ TagManager:
   - SceneManager
   - DamageEnemy
   - Damage
+  - Projectile
   layers:
   - Default
   - TransparentFX
