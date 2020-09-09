@@ -963,6 +963,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wall: {fileID: 176433097}
+  walls: []
   buttonStates:
   - {fileID: -5066846463355323016, guid: cdb5175be7f05b045bb3fab700f669f0, type: 3}
   - {fileID: -6487207882843635499, guid: cdb5175be7f05b045bb3fab700f669f0, type: 3}
@@ -16657,6 +16658,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 3744556654827539433, guid: 6df08fb2b7a94ac4cb946fd32b4b6746,
+        type: 3}
+      propertyPath: moveSpeed
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 3744556654827539436, guid: 6df08fb2b7a94ac4cb946fd32b4b6746,
         type: 3}

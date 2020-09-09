@@ -14,6 +14,7 @@ TagManager:
   - IncreaseJump
   - SceneManager
   - DamageEnemy
+  - Damage
   layers:
   - Default
   - TransparentFX

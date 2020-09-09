@@ -15,8 +15,9 @@ GameObject:
   - component: {fileID: 1031419545066309655}
   - component: {fileID: 4904808092712671629}
   - component: {fileID: 3648369441485113686}
+  - component: {fileID: 7241596278026985667}
   m_Layer: 13
-  m_Name: SimpleEnemy (5)
+  m_Name: SimpleEnemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -186,3 +187,18 @@ MonoBehaviour:
   deathSprite: {fileID: 1004340224689716819, guid: cac5a0112dd2dc2448de8351daaf73fb,
     type: 3}
   thrownDirection: {x: 0, y: 0}
+--- !u!114 &7241596278026985667
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3648369441485113689}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0c2d64eb50493440b96fe5a3155b8c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  takeEnemyDamage: 0
+  goreSpawn: {fileID: 4489645240279299919, guid: 4d2729933e371f54088ad0738fb1aacc,
+    type: 3}

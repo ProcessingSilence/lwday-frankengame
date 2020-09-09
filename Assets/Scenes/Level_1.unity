@@ -1204,6 +1204,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wall: {fileID: 176433097}
+  walls: []
   buttonStates:
   - {fileID: -5066846463355323016, guid: cdb5175be7f05b045bb3fab700f669f0, type: 3}
   - {fileID: -6487207882843635499, guid: cdb5175be7f05b045bb3fab700f669f0, type: 3}
@@ -15203,7 +15204,7 @@ MonoBehaviour:
   inputGravityWeight: 7
   noInputGravityWeight: 17.84
   jumpFromThrowingEnemy: 0
-  moveSpeed: 650
+  moveSpeed: 13
   inputDirection: 0
   spriteStates:
   - {fileID: 1039097438880152013, guid: 0f8049e01ee491248a111406659b635a, type: 3}

@@ -50,6 +50,7 @@
             <e p="SimpleVals.cs" t="Include" />
             <e p="Walking.cs" t="Include" />
           </e>
+          <e p="SpawnGoalUponDeaths.cs" t="Include" />
           <e p="Teleporter.cs" t="Include" />
           <e p="ToGoreHitbox.cs" t="Include" />
           <e p="Wall.cs" t="Include" />
