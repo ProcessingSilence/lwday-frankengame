@@ -94,6 +94,11 @@ public class PlayerController : MonoBehaviour
         //rb.velocity = new Vector2(rb.velocity.x, 0);
         rb.velocity = Vector2.up * jumpVel;
     }
+    void HigherJump()
+    {
+        //rb.velocity = new Vector2(rb.velocity.x, 0);
+        rb.velocity = Vector2.up * jumpVel * 1.75f;
+    }
     
     void JumpingInput()
     {
@@ -130,13 +135,9 @@ public class PlayerController : MonoBehaviour
         if (jumpFromThrowingEnemy)
         {
             jumpFromThrowingEnemy = false;
-            Jump();
+            HigherJump();
         }      
-    }
-    
-
-
-
+    }    
     
     private void HorizontalMovement()
     {

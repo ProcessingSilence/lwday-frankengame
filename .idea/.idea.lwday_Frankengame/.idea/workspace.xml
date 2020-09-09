@@ -11,35 +11,6 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/Scripts/Player/AimingAtMouse.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="762">
-              <caret line="97" column="14" selection-start-line="97" selection-start-column="14" selection-end-line="97" selection-end-column="14" />
-              <folding>
-                <marker date="1599617066761" expanded="false" signature="6:92" ph="..." />
-                <marker date="1599617066761" expanded="true" signature="136:3278" ph="{...}" />
-                <marker date="1599617066761" expanded="true" signature="636:698" ph="{...}" />
-                <marker date="1599617066761" expanded="true" signature="756:899" ph="{...}" />
-                <marker date="1599617066761" expanded="true" signature="935:1150" ph="{...}" />
-                <marker date="1599617066761" expanded="true" signature="1188:1639" ph="{...}" />
-                <marker date="1599617066761" expanded="true" signature="1340:1481" ph="{...}" />
-                <marker date="1599617066761" expanded="true" signature="1395:1471" ph="/* Debug.Log(&quot;flip false&quot;); ... */" />
-                <marker date="1599617066761" expanded="true" signature="1494:1633" ph="{...}" />
-                <marker date="1599617066761" expanded="true" signature="1548:1623" ph="/* Debug.Log(&quot;flip true&quot;); ... */" />
-                <marker date="1599617066761" expanded="true" signature="1674:1857" ph="{...}" />
-                <marker date="1599617066761" expanded="true" signature="1702:1851" ph="{...}" />
-                <marker date="1599617066761" expanded="true" signature="1888:1992" ph="{...}" />
-                <marker date="1599617066761" expanded="true" signature="1935:1986" ph="{...}" />
-                <marker date="1599617066761" expanded="true" signature="2032:3040" ph="{...}" />
-                <marker date="1599617066761" expanded="true" signature="2062:3034" ph="{...}" />
-                <marker date="1599617066761" expanded="true" signature="2154:2252" ph="{...}" />
-                <marker date="1599617066761" expanded="true" signature="3080:3276" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/EnemyRespawner.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="96">
@@ -146,7 +117,7 @@
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/Teleporter.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="512">
-              <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
+              <caret line="34" selection-start-line="34" selection-end-line="34" />
               <folding>
                 <marker date="1599624079121" expanded="false" signature="6:78" ph="..." />
                 <marker date="1599624079121" expanded="true" signature="119:922" ph="{...}" />
@@ -200,11 +171,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/ToGoreHitbox.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="480">
-              <caret line="33" column="9" lean-forward="true" selection-start-line="33" selection-start-column="9" selection-end-line="33" selection-end-column="9" />
+              <caret line="33" column="9" selection-start-line="33" selection-start-column="9" selection-end-line="33" selection-end-column="9" />
               <folding>
                 <marker date="1599624493230" expanded="false" signature="6:103" ph="..." />
                 <marker date="1599624493230" expanded="true" signature="105:272" ph="/* Gores enemy upon collision. Uses a smaller collision to detect when to gore so that the enemy doesn't instantl ... */" />
@@ -217,6 +188,15 @@
                 <marker date="1599624493230" expanded="true" signature="1396:1600" ph="{...}" />
                 <marker date="1599624493230" expanded="true" signature="1503:1594" ph="{...}" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Assets/Graphics/FONT CREDIT.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="16">
+              <caret line="1" column="45" selection-start-line="1" selection-start-column="45" selection-end-line="1" selection-end-column="45" />
             </state>
           </provider>
         </entry>
@@ -308,7 +288,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Games/Teleportation/Scripts/Teleportation.cs" />
         <option value="$PROJECT_DIR$/../eventSystemTesting/Assets/TestingEvents.cs" />
         <option value="$PROJECT_DIR$/Assets/Games/Teleportation/Scripts/CollisionEventManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Games/Multijump/JumpMechanics.cs" />
@@ -359,6 +338,7 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Teleporter.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ConstantEnemyRespawn.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ToGoreHitbox.cs" />
+        <option value="$PROJECT_DIR$/Assets/Graphics/FONT CREDIT.txt" />
       </list>
     </option>
   </component>
@@ -422,12 +402,12 @@
       <workItem from="1599186509520" duration="15572000" />
       <workItem from="1599325768159" duration="1951000" />
       <workItem from="1599327752598" duration="22459000" />
-      <workItem from="1599424060926" duration="54922000" />
+      <workItem from="1599424060926" duration="56111000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="105780000" />
+    <option name="totallyTimeSpent" value="106969000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -439,7 +419,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="2576" height="1416" extended-state="6" />
+    <frame x="-8" y="-8" width="2576" height="1416" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.5177994" />
@@ -605,7 +585,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/CapsuleEventSys.cs" />
     <entry file="file://$PROJECT_DIR$/Assets/Games/Multijump/JumpMechanics.cs" />
     <entry file="file://$PROJECT_DIR$/Assets/Games/Speedboost/move.cs" />
     <entry file="file://$PROJECT_DIR$/../State Machine for Unity Starter/Assets/RW/Scripts/Misc/SimpleCamFollow.cs" />
@@ -1120,7 +1099,7 @@
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Teleporter.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="512">
-          <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
+          <caret line="34" selection-start-line="34" selection-end-line="34" />
           <folding>
             <marker date="1599624079121" expanded="false" signature="6:78" ph="..." />
             <marker date="1599624079121" expanded="true" signature="119:922" ph="{...}" />
@@ -1173,7 +1152,7 @@
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/ToGoreHitbox.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="480">
-          <caret line="33" column="9" lean-forward="true" selection-start-line="33" selection-start-column="9" selection-end-line="33" selection-end-column="9" />
+          <caret line="33" column="9" selection-start-line="33" selection-start-column="9" selection-end-line="33" selection-end-column="9" />
           <folding>
             <marker date="1599624493230" expanded="false" signature="6:103" ph="..." />
             <marker date="1599624493230" expanded="true" signature="105:272" ph="/* Gores enemy upon collision. Uses a smaller collision to detect when to gore so that the enemy doesn't instantl ... */" />
@@ -1186,6 +1165,13 @@
             <marker date="1599624493230" expanded="true" signature="1396:1600" ph="{...}" />
             <marker date="1599624493230" expanded="true" signature="1503:1594" ph="{...}" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Graphics/FONT CREDIT.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="16">
+          <caret line="1" column="45" selection-start-line="1" selection-start-column="45" selection-end-line="1" selection-end-column="45" />
         </state>
       </provider>
     </entry>
