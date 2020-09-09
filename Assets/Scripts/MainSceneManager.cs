@@ -77,8 +77,10 @@ public class MainSceneManager : MonoBehaviour
         // Get int number from string and add to it by 1.
         sceneStringNum = System.Convert.ToInt32(stringArray[1]) + 1;
 
-        if (sceneStringNum == 6)
+        /*
+        if (sceneStringNum == 16)
             sceneStringNum = 1;
+        */
         // Create next level name, put it into nextLevel variable.
         nextLevel = stringArray[0] + "_" + sceneStringNum;
     }

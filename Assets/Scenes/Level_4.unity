@@ -1390,6 +1390,7 @@ MonoBehaviour:
   sceneStringNum: 0
   playerObj: {fileID: 1047003296}
   fadeImageObj: {fileID: 31555731}
+  pressEnterToStart: 0
 --- !u!4 &543514720
 Transform:
   m_ObjectHideFlags: 0
@@ -7020,7 +7021,7 @@ PrefabInstance:
     - target: {fileID: 6422651855898315940, guid: 6a49689d03617094ba6d943870135b9f,
         type: 3}
       propertyPath: m_Tiles.Array.data[71].second.m_TileSpriteIndex
-      value: 12
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 6422651855898315940, guid: 6a49689d03617094ba6d943870135b9f,
         type: 3}
@@ -8128,14 +8129,13 @@ PrefabInstance:
     - target: {fileID: 6422651855898315940, guid: 6a49689d03617094ba6d943870135b9f,
         type: 3}
       propertyPath: m_TileSpriteArray.Array.data[12].m_RefCount
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6422651855898315940, guid: 6a49689d03617094ba6d943870135b9f,
         type: 3}
       propertyPath: m_TileSpriteArray.Array.data[12].m_Data
       value: 
-      objectReference: {fileID: -4179241478792582805, guid: ed81769623539384ea5e62b80075e9be,
-        type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 6422651855898315940, guid: 6a49689d03617094ba6d943870135b9f,
         type: 3}
       propertyPath: m_Tiles.Array.data[60].second.m_TileIndex
@@ -9628,13 +9628,14 @@ PrefabInstance:
     - target: {fileID: 6422651855898315940, guid: 6a49689d03617094ba6d943870135b9f,
         type: 3}
       propertyPath: m_TileSpriteArray.Array.data[15].m_RefCount
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6422651855898315940, guid: 6a49689d03617094ba6d943870135b9f,
         type: 3}
       propertyPath: m_TileSpriteArray.Array.data[15].m_Data
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: -4179241478792582805, guid: ed81769623539384ea5e62b80075e9be,
+        type: 3}
     - target: {fileID: 6422651855898315940, guid: 6a49689d03617094ba6d943870135b9f,
         type: 3}
       propertyPath: m_TileAssetArray.Array.data[16].m_RefCount
@@ -9720,6 +9721,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Tiles.Array.data[21].second.m_TileSpriteIndex
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6422651855898315941, guid: 6a49689d03617094ba6d943870135b9f,
+        type: 3}
+      propertyPath: m_UsedByComposite
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6422651855898315943, guid: 6a49689d03617094ba6d943870135b9f,
         type: 3}
@@ -14836,7 +14842,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Grid_NoGhostVector
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6422651855898315943, guid: 6a49689d03617094ba6d943870135b9f, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 6a49689d03617094ba6d943870135b9f, type: 3}
 --- !u!1001 &1599267788
 PrefabInstance:

@@ -102,7 +102,7 @@ public class PlayerController : MonoBehaviour
     
     void JumpingInput()
     {
-        jumpPressedPeriodCurrent -= Time.deltaTime*2;
+        jumpPressedPeriodCurrent -= Time.deltaTime;
         
         // Reset timer on jump.
         if (Input.GetKeyDown(KeyCode.W))

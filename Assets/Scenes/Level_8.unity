@@ -853,6 +853,7 @@ MonoBehaviour:
   sceneStringNum: 0
   playerObj: {fileID: 1047003296}
   fadeImageObj: {fileID: 31555731}
+  pressEnterToStart: 0
 --- !u!4 &543514720
 Transform:
   m_ObjectHideFlags: 0
@@ -13764,6 +13765,11 @@ PrefabInstance:
       propertyPath: m_Tiles.Array.data[40].second.m_TileSpriteIndex
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6422651855898315941, guid: 6a49689d03617094ba6d943870135b9f,
+        type: 3}
+      propertyPath: m_UsedByComposite
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6422651855898315943, guid: 6a49689d03617094ba6d943870135b9f,
         type: 3}
       propertyPath: m_ColliderPaths.Array.data[0].m_ColliderPaths.Array.size
@@ -18119,7 +18125,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Grid
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6422651855898315943, guid: 6a49689d03617094ba6d943870135b9f, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 6a49689d03617094ba6d943870135b9f, type: 3}
 --- !u!1001 &6639340940683721964
 PrefabInstance:
