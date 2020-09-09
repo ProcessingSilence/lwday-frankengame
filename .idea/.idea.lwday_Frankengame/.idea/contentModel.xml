@@ -21,6 +21,7 @@
           <e p="ConstantEnemyRespawn.cs" t="Include" />
           <e p="EndlessRotation.cs" t="Include" />
           <e p="EnemyRespawner.cs" t="Include" />
+          <e p="Flashing.cs" t="Include" />
           <e p="Global" t="Include">
             <e p="Enemy" t="Include">
               <e p="Caught.cs" t="Include" />

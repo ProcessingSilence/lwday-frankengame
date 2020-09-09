@@ -18,7 +18,7 @@ public class MainSceneManager : MonoBehaviour
     public GameObject playerObj;
     public GameObject fadeImageObj;
     private Image fadeImage;
-
+    public bool pressEnterToStart;
 
     // Start is called before the first frame update
     void Awake()
@@ -40,6 +40,11 @@ public class MainSceneManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKey(KeyCode.Return) && pressEnterToStart)
+        {
+            sceneNum = 2;
+        }
+
         // Player death
         if (playerObj.activeSelf == false || playerObj == null)
         {

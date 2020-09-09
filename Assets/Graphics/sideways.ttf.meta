@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: cf3b3d5af3a32e642b235559a92d62ac
+guid: 718772fcfae9fe849b69675992de97d2
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -8,9 +8,9 @@ TrueTypeFontImporter:
   characterSpacing: 0
   characterPadding: 1
   includeFontData: 1
-  fontName: Perfect DOS VGA 437
+  fontName: Sideways BRK
   fontNames:
-  - Perfect DOS VGA 437
+  - Sideways BRK
   fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0
