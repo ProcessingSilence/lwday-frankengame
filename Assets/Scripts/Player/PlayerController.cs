@@ -65,7 +65,7 @@ public class PlayerController : MonoBehaviour
         Gravity();
     }
 
-    private void Update()
+    private void LateUpdate()
     {
         JumpingInput();
         HorizontalMovement();
@@ -194,7 +194,7 @@ public class PlayerController : MonoBehaviour
 
     public bool IsGrounded()
     {
-        RaycastHit2D raycastHit = Physics2D.BoxCast(boxCollider2D.bounds.center, boxCollider2D.bounds.size*.9f, 0f,Vector2.down, .1f, platformLayerMask);
+        RaycastHit2D raycastHit = Physics2D.BoxCast(boxCollider2D.bounds.center, boxCollider2D.bounds.size*.9f, 0f,Vector2.down, .5f, platformLayerMask);
         return raycastHit.collider != null;
     }
 
