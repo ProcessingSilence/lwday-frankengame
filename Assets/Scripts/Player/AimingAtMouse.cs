@@ -95,7 +95,7 @@ public class AimingAtMouse : MonoBehaviour
             ThrownVals_script = enemyObj.GetComponent<ThrownVals>();
             ThrownVals_script.givenVelocity = 70;
             enemyObj.transform.position = throwLocation.position;
-            enemyObj.GetComponent<BoxCollider2D>().enabled = false;
+            //enemyObj.GetComponent<BoxCollider2D>().enabled = false;
             enemyObj.GetComponent<Animator>().SetBool("thrown", true);
             enemyObj = null;
             PlayerController_script.chosenSprite = 1;
