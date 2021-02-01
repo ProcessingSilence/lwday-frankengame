@@ -749,6 +749,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wall: {fileID: 7106364129651844208}
+  walls: []
   buttonStates:
   - {fileID: -5066846463355323016, guid: cdb5175be7f05b045bb3fab700f669f0, type: 3}
   - {fileID: -6487207882843635499, guid: cdb5175be7f05b045bb3fab700f669f0, type: 3}

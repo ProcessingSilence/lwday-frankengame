@@ -10,6 +10,8 @@ public class Button : MonoBehaviour
     public Sprite[] buttonStates;
     private SpriteRenderer spriteRenderer;
     public int buttonHit;
+
+    private AudioSource _audioSource;
     // Start is called before the first frame update
     void Start()
     {
@@ -31,6 +33,9 @@ public class Button : MonoBehaviour
                 }
             }
 
+            _audioSource = gameObject.AddComponent<AudioSource>();
+            _audioSource.clip = Resources.Load<AudioClip>("click");
+            _audioSource.Play();
             Destroy(wall);
             spriteRenderer.sprite = buttonStates[1];
             Destroy(gameObject.GetComponent<BoxCollider2D>());

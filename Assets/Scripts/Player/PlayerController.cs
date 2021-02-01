@@ -1,6 +1,4 @@
-﻿// MAIN MECHANIC: A quick and consistent jump (plus multi-jump) that is NOT affected by how long space is held.
-
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR;
