@@ -12,6 +12,7 @@ public class ToGoreHitbox : MonoBehaviour
     public GameObject myParent;
     private SpriteRenderer myParentSpriteRenderer;
     public GameObject goreExplosion;
+    private Rigidbody2D rb2d; 
 
     // Start is called before the first frame update
     void Start()
@@ -21,6 +22,13 @@ public class ToGoreHitbox : MonoBehaviour
         myParentSpriteRenderer = myParent.GetComponent<SpriteRenderer>();
     }
 
+    private void FixedUpdate()
+    {
+        throw new System.NotImplementedException();
+
+
+    }
+
     // Call death in LateUpdate so if it collides with a button + wall at the same time, it will detect button first.
     void Update()
     {
@@ -28,6 +36,8 @@ public class ToGoreHitbox : MonoBehaviour
         {
             StartCoroutine(DeathSequence());
         }
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, myParent.transform.rotation * Vector2.right, 10);
+        Debug.DrawRay(transform.position * Vector2.one, myParent.transform.rotation * Vector2.right, Color.green);
     }
 
     IEnumerator DeathSequence()
