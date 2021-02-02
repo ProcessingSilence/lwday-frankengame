@@ -11,6 +11,12 @@ public class ThrownVals : MonoBehaviour
     public Sprite deathSprite;
 
     public Vector2 thrownDirection;
+
+    public bool instaKill;
+
+    public GameObject projectileHitbox;
+
+    public GameObject toGoreHitbox;
     // Start is called before the first frame update
     void Start()
     {

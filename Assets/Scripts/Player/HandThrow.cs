@@ -91,8 +91,7 @@ public class HandThrow : MonoBehaviour
             if (caughtEnemy)
             {
                 HandEnable_script.caughtEnemy = caughtEnemy;
-                caughtEnemy = null;
-                
+                caughtEnemy = null;           
             }
 
             haveCaughtEnemy = 0;
@@ -112,10 +111,11 @@ public class HandThrow : MonoBehaviour
             haveCaughtEnemy = 2;
             caughtEnemy.GetComponent<Animator>().SetBool("caught", true);
             caughtEnemy.GetComponent<Rigidbody2D>().gravityScale = 0;
-            caughtEnemy.GetComponent<BoxCollider2D>().size = new Vector2(0.05f,0.05f);
+            //caughtEnemy.GetComponent<BoxCollider2D>().size = new Vector2(0.05f,0.05f);
             caughtEnemy.tag = "Projectile";
             var audioObj = Instantiate(Resources.Load("AudioObj") as GameObject);
             audioObj.GetComponent<AudioObj>().givenAudio = Resources.Load("Audio/clap") as AudioClip;
+            caughtEnemy.GetComponent<BoxCollider2D>().enabled = false;
         }
 
         if (haveCaughtEnemy == 2)

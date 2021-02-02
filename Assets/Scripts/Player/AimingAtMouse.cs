@@ -23,6 +23,7 @@ public class AimingAtMouse : MonoBehaviour
     
     private bool haveThrown;
 
+    public DetectOverlap detectOverlap_script;
     // Start is called before the first frame update
 
     void OnEnable()
@@ -96,12 +97,17 @@ public class AimingAtMouse : MonoBehaviour
             ThrownVals_script.givenVelocity = 70;
             enemyObj.transform.position = throwLocation.position;
             //enemyObj.GetComponent<BoxCollider2D>().enabled = false;
+            if (detectOverlap_script.isOverlapping)
+            {
+                ThrownVals_script.instaKill = true;
+            }
+
             enemyObj.GetComponent<Animator>().SetBool("thrown", true);
             enemyObj = null;
             PlayerController_script.chosenSprite = 1;
             haveThrown = false;
             StartCoroutine(StartHandEnableDelay());
-
+            
         }
     }
 

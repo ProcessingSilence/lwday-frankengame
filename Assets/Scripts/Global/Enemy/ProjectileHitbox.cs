@@ -15,6 +15,8 @@ public class ProjectileHitbox : MonoBehaviour
     private GameObject buttonObj;
     private bool alreadyPressedButton;
     private bool goreOrCorpse;
+
+    public Transform child;
     // Start is called before the first frame update
     void Start()
     {
@@ -47,7 +49,7 @@ public class ProjectileHitbox : MonoBehaviour
             Button_script.buttonHit = 1;
             if (Button_script.buttonHit == 1)
             {
-                transform.GetChild(0).GetComponent<ToGoreHitbox>().beginDeathSequence = 1;
+                child.GetComponent<ToGoreHitbox>().beginDeathSequence = true;
             }
         }
     }
@@ -61,8 +63,6 @@ public class ProjectileHitbox : MonoBehaviour
             otherEnemy = null;
         }
     }
-
-
 
 
     private void OnTriggerEnter2D(Collider2D other)

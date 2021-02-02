@@ -8,28 +8,24 @@ using UnityEngine;
 
 public class ToGoreHitbox : MonoBehaviour
 {
-    public int beginDeathSequence;
+    public bool beginDeathSequence;
     public GameObject myParent;
     private SpriteRenderer myParentSpriteRenderer;
     public GameObject goreExplosion;
+
     // Start is called before the first frame update
     void Start()
     {
         myParent = gameObject.transform.parent.parent.gameObject;
+        myParent.GetComponent<BoxCollider2D>().enabled = false;
         myParentSpriteRenderer = myParent.GetComponent<SpriteRenderer>();
     }
 
     // Call death in LateUpdate so if it collides with a button + wall at the same time, it will detect button first.
     void Update()
     {
-
-    }
-
-    void LateUpdate()
-    {
-        if (beginDeathSequence == 1)
+        if (beginDeathSequence)
         {
-            beginDeathSequence = 2;
             StartCoroutine(DeathSequence());
         }
     }
@@ -45,10 +41,17 @@ public class ToGoreHitbox : MonoBehaviour
     
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if ((other.gameObject.layer == 8 || other.gameObject.layer == 18) && beginDeathSequence < 1)
+        beginDeathSequence = DetectedObj(other.gameObject);
+    }
+
+    private bool DetectedObj(GameObject obj)
+    {
+        if ((obj.gameObject.layer == 8 || obj.gameObject.layer == 18) && beginDeathSequence == false)
         {
             Debug.Log("Hit Wall");
-            beginDeathSequence = 1;
+            return true;
         }
+
+        return false;
     }
 }
