@@ -58,7 +58,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/Player/AimingAtMouse.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="619">
@@ -133,7 +133,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/Teleporter.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="448">
@@ -287,8 +287,8 @@
       <find>wait</find>
       <find>Projectile</find>
       <find>box</find>
-      <find>throw</find>
       <find>mouse</find>
+      <find>throw</find>
     </findStrings>
     <replaceStrings>
       <replace>jumpsLeft</replace>
@@ -470,12 +470,12 @@
       <workItem from="1601521884879" duration="944000" />
       <workItem from="1611092387129" duration="1410000" />
       <workItem from="1612208470841" duration="15002000" />
-      <workItem from="1612454617369" duration="3046000" />
+      <workItem from="1612454617369" duration="3626000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="134562000" />
+    <option name="totallyTimeSpent" value="135142000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1169,21 +1169,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Teleporter.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="448">
-          <caret line="30" column="55" selection-start-line="30" selection-start-column="55" selection-end-line="30" selection-end-column="55" />
-          <folding>
-            <marker date="1599624079121" expanded="false" signature="6:78" ph="..." />
-            <marker date="1599624079121" expanded="true" signature="119:922" ph="{...}" />
-            <marker date="1599624079121" expanded="true" signature="293:479" ph="{...}" />
-            <marker date="1599624079121" expanded="true" signature="532:801" ph="{...}" />
-            <marker date="1599624079121" expanded="true" signature="706:795" ph="{...}" />
-            <marker date="1599624079121" expanded="true" signature="824:920" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Global/Enemy/Thrown.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="480">
@@ -1270,6 +1255,21 @@
             <marker date="1612463206470" expanded="true" signature="2290:2388" ph="{...}" />
             <marker date="1612463206470" expanded="true" signature="2987:3067" ph="{...}" />
             <marker date="1612463206470" expanded="true" signature="3442:3638" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Teleporter.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="448">
+          <caret line="30" column="55" selection-start-line="30" selection-start-column="55" selection-end-line="30" selection-end-column="55" />
+          <folding>
+            <marker date="1599624079121" expanded="false" signature="6:78" ph="..." />
+            <marker date="1599624079121" expanded="true" signature="119:922" ph="{...}" />
+            <marker date="1599624079121" expanded="true" signature="293:479" ph="{...}" />
+            <marker date="1599624079121" expanded="true" signature="532:801" ph="{...}" />
+            <marker date="1599624079121" expanded="true" signature="706:795" ph="{...}" />
+            <marker date="1599624079121" expanded="true" signature="824:920" ph="{...}" />
           </folding>
         </state>
       </provider>
