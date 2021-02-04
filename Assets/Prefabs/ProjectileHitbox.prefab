@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1913691354620354069}
   m_Layer: 0
   m_Name: ToGoreHitbox
-  m_TagString: Untagged
+  m_TagString: ProjectileHitbox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -100,7 +100,7 @@ GameObject:
   - component: {fileID: 4339957929114996151}
   m_Layer: 0
   m_Name: ProjectileHitbox
-  m_TagString: Untagged
+  m_TagString: ProjectileHitbox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

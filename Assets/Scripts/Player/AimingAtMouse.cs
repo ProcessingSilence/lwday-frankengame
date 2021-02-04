@@ -26,6 +26,8 @@ public class AimingAtMouse : MonoBehaviour
     public DetectOverlap detectOverlap_script;
     // Start is called before the first frame update
 
+    [SerializeField]private bool testThrow;
+
     void OnEnable()
     {
         PlayerController_script.chosenSprite = 3;
@@ -75,8 +77,9 @@ public class AimingAtMouse : MonoBehaviour
 
     private void MouseInput()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) || testThrow)
         {
+            testThrow = false;
             haveThrown = true;
         }
     }

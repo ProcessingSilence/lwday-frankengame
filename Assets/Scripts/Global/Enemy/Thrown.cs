@@ -30,10 +30,11 @@ public class Thrown : StateMachineBehaviour
 
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) 
     {
+        // Prevent player from throwing enemy through the tilemap.
         if (ThrownVals_script.instaKill)
         {
             projectileHitbox.transform.GetChild(0).GetComponent<ToGoreHitbox>().beginDeathSequence = true;
-            Debug.Log("NO BULLET-THROUGH-PAPER FOR YOU, PROJECTILE. INSTA-KILLED.");
+            Debug.Log("NO BULLET-THROUGH-PAPER FOR YOU, PROJECTILE! INSTA-KILLED.");
         }
         
         if (ThrownVals_script.instaKill == false)

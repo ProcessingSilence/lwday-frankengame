@@ -33504,6 +33504,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6422651855898315942, guid: 6a49689d03617094ba6d943870135b9f,
         type: 3}
+      propertyPath: m_BodyType
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6422651855898315942, guid: 6a49689d03617094ba6d943870135b9f,
+        type: 3}
       propertyPath: m_CollisionDetection
       value: 1
       objectReference: {fileID: 0}
@@ -33520,7 +33525,7 @@ PrefabInstance:
     - target: {fileID: 6422651855898315943, guid: 6a49689d03617094ba6d943870135b9f,
         type: 3}
       propertyPath: m_GeometryType
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6422651855898315943, guid: 6a49689d03617094ba6d943870135b9f,
         type: 3}
@@ -51179,10 +51184,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2327024154335227464, guid: 6df08fb2b7a94ac4cb946fd32b4b6746,
+        type: 3}
+      propertyPath: m_TagString
+      value: PlayerComponent
+      objectReference: {fileID: 0}
+    - target: {fileID: 3744556654537868963, guid: 6df08fb2b7a94ac4cb946fd32b4b6746,
+        type: 3}
+      propertyPath: m_TagString
+      value: PlayerComponent
+      objectReference: {fileID: 0}
     - target: {fileID: 3744556654537868965, guid: 6df08fb2b7a94ac4cb946fd32b4b6746,
         type: 3}
       propertyPath: m_CollisionDetection
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3744556654690036804, guid: 6df08fb2b7a94ac4cb946fd32b4b6746,
+        type: 3}
+      propertyPath: m_TagString
+      value: PlayerComponent
       objectReference: {fileID: 0}
     - target: {fileID: 3744556654827539432, guid: 6df08fb2b7a94ac4cb946fd32b4b6746,
         type: 3}
@@ -51249,16 +51269,41 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3744556654937157467, guid: 6df08fb2b7a94ac4cb946fd32b4b6746,
+        type: 3}
+      propertyPath: m_TagString
+      value: PlayerComponent
+      objectReference: {fileID: 0}
+    - target: {fileID: 3744556655284685316, guid: 6df08fb2b7a94ac4cb946fd32b4b6746,
+        type: 3}
+      propertyPath: m_TagString
+      value: PlayerComponent
+      objectReference: {fileID: 0}
+    - target: {fileID: 3744556655503382877, guid: 6df08fb2b7a94ac4cb946fd32b4b6746,
+        type: 3}
+      propertyPath: m_TagString
+      value: PlayerComponent
+      objectReference: {fileID: 0}
     - target: {fileID: 3744556655624661073, guid: 6df08fb2b7a94ac4cb946fd32b4b6746,
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3744556655624661073, guid: 6df08fb2b7a94ac4cb946fd32b4b6746,
+        type: 3}
+      propertyPath: m_TagString
+      value: PlayerComponent
       objectReference: {fileID: 0}
     - target: {fileID: 3744556655624661075, guid: 6df08fb2b7a94ac4cb946fd32b4b6746,
         type: 3}
       propertyPath: detectOverlap_script
       value: 
       objectReference: {fileID: 2114299274}
+    - target: {fileID: 3744556655907352570, guid: 6df08fb2b7a94ac4cb946fd32b4b6746,
+        type: 3}
+      propertyPath: m_TagString
+      value: PlayerComponent
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6df08fb2b7a94ac4cb946fd32b4b6746, type: 3}
 --- !u!1001 &4489645241597842296

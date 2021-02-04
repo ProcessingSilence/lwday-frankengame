@@ -16,6 +16,8 @@ TagManager:
   - DamageEnemy
   - Damage
   - Projectile
+  - ProjectileHitbox
+  - PlayerComponent
   layers:
   - Default
   - TransparentFX

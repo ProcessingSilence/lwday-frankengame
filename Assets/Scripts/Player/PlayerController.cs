@@ -205,7 +205,7 @@ public class PlayerController : MonoBehaviour
         {
             jumpPressedPeriodCurrent = 0;
         }
-        Debug.Log(other.gameObject);
+        //Debug.Log(other.gameObject);
     }
     
 }
