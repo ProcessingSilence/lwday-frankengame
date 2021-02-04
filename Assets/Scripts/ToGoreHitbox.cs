@@ -18,7 +18,7 @@ public class ToGoreHitbox : MonoBehaviour
     void Start()
     {
         myParent = gameObject.transform.parent.parent.gameObject;
-        myParent.GetComponent<BoxCollider2D>().enabled = false;
+        //myParent.GetComponent<BoxCollider2D>().enabled = false;
         myParentSpriteRenderer = myParent.GetComponent<SpriteRenderer>();
     }
 
@@ -63,7 +63,7 @@ public class ToGoreHitbox : MonoBehaviour
 
     private bool DetectedObj(GameObject obj)
     {
-        if ((obj.gameObject.layer == 8 || obj.gameObject.layer == 18) && beginDeathSequence == false)
+        if ((obj.gameObject.layer == 8 || obj.gameObject.layer == 18) && beginDeathSequence == false && !obj.CompareTag("Projectile"))
         {
             //Debug.Log("Hit Wall");
             return true;

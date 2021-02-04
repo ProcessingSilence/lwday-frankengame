@@ -99,13 +99,14 @@ public class AimingAtMouse : MonoBehaviour
             ThrownVals_script = enemyObj.GetComponent<ThrownVals>();
             ThrownVals_script.givenVelocity = 70;
             enemyObj.transform.position = throwLocation.position;
-            //enemyObj.GetComponent<BoxCollider2D>().enabled = false;
+            enemyObj.GetComponent<BoxCollider2D>().size = new Vector2(0.05f,0.05f);
             if (detectOverlap_script.isOverlapping)
             {
                 ThrownVals_script.instaKill = true;
             }
 
             enemyObj.GetComponent<Animator>().SetBool("thrown", true);
+            enemyObj.GetComponent<BoxCollider2D>().enabled = true;
             enemyObj = null;
             PlayerController_script.chosenSprite = 1;
             haveThrown = false;
