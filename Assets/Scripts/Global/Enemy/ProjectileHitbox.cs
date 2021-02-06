@@ -45,13 +45,17 @@ public class ProjectileHitbox : MonoBehaviour
         if (buttonObj && alreadyPressedButton == false)
         {
             alreadyPressedButton = true;
-            var Button_script = buttonObj.GetComponent<Button>();
-            Button_script.buttonHit = 1;
-            if (Button_script.buttonHit == 1)
-            {
-                child.GetComponent<ToGoreHitbox>().beginDeathSequence = true;
-            }
+            StartCoroutine(ButtonPressProcess());
         }
+    }
+
+    IEnumerator ButtonPressProcess()
+    {
+        var Button_script = buttonObj.GetComponent<Button>();
+        Button_script.buttonHit = 1;
+        ToGoreHitbox goreScript = child.GetComponent<ToGoreHitbox>();
+        yield return new WaitUntil(()=> Button_script.buttonHit == 1);
+        goreScript.beginDeathSequence = true;
     }
 
     void KillOtherEnemy()
