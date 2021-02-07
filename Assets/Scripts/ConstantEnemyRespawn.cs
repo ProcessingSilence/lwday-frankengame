@@ -8,6 +8,7 @@ public class ConstantEnemyRespawn : MonoBehaviour
     private GameObject currentEnemy;
 
     public float waitTime;
+    public Vector3 enemyScale;
 
     // Start is called before the first frame update
     void Start()
@@ -23,7 +24,16 @@ public class ConstantEnemyRespawn : MonoBehaviour
 
     IEnumerator Spawn()
     {
-        currentEnemy = Instantiate(enemyToSpawn, transform.position, Quaternion.identity);   
+        currentEnemy = Instantiate(enemyToSpawn, transform.position, Quaternion.identity);
+        enemyScale = currentEnemy.transform.localScale;
+        currentEnemy.transform.localScale = Vector3.zero;
+
+        for (int i = 0; i < 20; i++)
+        {
+            yield return new WaitForSecondsRealtime(0.01f);
+            currentEnemy.transform.localScale += enemyScale / 20;
+        }
+        
         yield return new WaitForSecondsRealtime(waitTime);
         StartCoroutine(Spawn());
     }
