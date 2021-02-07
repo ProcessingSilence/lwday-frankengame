@@ -164,7 +164,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 10173438}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 6d4a440085ffbdd44bf82e86fed50866, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -355,7 +355,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 49862128}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 6d4a440085ffbdd44bf82e86fed50866, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -465,7 +465,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 108357061}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 6d4a440085ffbdd44bf82e86fed50866, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -1219,7 +1219,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 970506754}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 6d4a440085ffbdd44bf82e86fed50866, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -1329,7 +1329,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 984027318}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 6d4a440085ffbdd44bf82e86fed50866, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -1613,6 +1613,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Button+Wall
       objectReference: {fileID: 0}
+    - target: {fileID: 7106364128448171322, guid: ce059893102e694419d7fadcefe2ff9c,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 6d4a440085ffbdd44bf82e86fed50866, type: 2}
     - target: {fileID: 7106364128448171325, guid: ce059893102e694419d7fadcefe2ff9c,
         type: 3}
       propertyPath: m_Color.b
@@ -1643,6 +1648,11 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7106364129137470187, guid: ce059893102e694419d7fadcefe2ff9c,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 6d4a440085ffbdd44bf82e86fed50866, type: 2}
     - target: {fileID: 7106364129166480744, guid: ce059893102e694419d7fadcefe2ff9c,
         type: 3}
       propertyPath: m_Color.b
@@ -1658,6 +1668,16 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7106364129166480745, guid: ce059893102e694419d7fadcefe2ff9c,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 6d4a440085ffbdd44bf82e86fed50866, type: 2}
+    - target: {fileID: 7106364129456878276, guid: ce059893102e694419d7fadcefe2ff9c,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 6d4a440085ffbdd44bf82e86fed50866, type: 2}
     - target: {fileID: 7106364129456878279, guid: ce059893102e694419d7fadcefe2ff9c,
         type: 3}
       propertyPath: m_Color.b
@@ -1683,6 +1703,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -18.7
       objectReference: {fileID: 0}
+    - target: {fileID: 7106364130059782298, guid: ce059893102e694419d7fadcefe2ff9c,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 6d4a440085ffbdd44bf82e86fed50866, type: 2}
     - target: {fileID: 7106364130059782301, guid: ce059893102e694419d7fadcefe2ff9c,
         type: 3}
       propertyPath: m_Color.b
@@ -1781,7 +1806,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1338740142}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 6d4a440085ffbdd44bf82e86fed50866, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -2065,7 +2090,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1520730756}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 6d4a440085ffbdd44bf82e86fed50866, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0

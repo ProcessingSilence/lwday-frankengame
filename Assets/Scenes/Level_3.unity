@@ -7089,6 +7089,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Button+Wall (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7106364128448171322, guid: ce059893102e694419d7fadcefe2ff9c,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 6d4a440085ffbdd44bf82e86fed50866, type: 2}
     - target: {fileID: 7106364128448171325, guid: ce059893102e694419d7fadcefe2ff9c,
         type: 3}
       propertyPath: m_Color.b
@@ -7119,6 +7124,11 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7106364129137470187, guid: ce059893102e694419d7fadcefe2ff9c,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 6d4a440085ffbdd44bf82e86fed50866, type: 2}
     - target: {fileID: 7106364129166480744, guid: ce059893102e694419d7fadcefe2ff9c,
         type: 3}
       propertyPath: m_Color.b
@@ -7134,6 +7144,16 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7106364129166480745, guid: ce059893102e694419d7fadcefe2ff9c,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 6d4a440085ffbdd44bf82e86fed50866, type: 2}
+    - target: {fileID: 7106364129456878276, guid: ce059893102e694419d7fadcefe2ff9c,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 6d4a440085ffbdd44bf82e86fed50866, type: 2}
     - target: {fileID: 7106364129456878279, guid: ce059893102e694419d7fadcefe2ff9c,
         type: 3}
       propertyPath: m_Color.b
@@ -7189,6 +7209,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 7106364130059782298, guid: ce059893102e694419d7fadcefe2ff9c,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 6d4a440085ffbdd44bf82e86fed50866, type: 2}
     - target: {fileID: 7106364130059782301, guid: ce059893102e694419d7fadcefe2ff9c,
         type: 3}
       propertyPath: m_Color.b
@@ -12819,6 +12844,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Button+Wall
       objectReference: {fileID: 0}
+    - target: {fileID: 7106364128448171322, guid: ce059893102e694419d7fadcefe2ff9c,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 6d4a440085ffbdd44bf82e86fed50866, type: 2}
     - target: {fileID: 7106364128448171325, guid: ce059893102e694419d7fadcefe2ff9c,
         type: 3}
       propertyPath: m_Color.b
@@ -12849,6 +12879,11 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7106364129137470187, guid: ce059893102e694419d7fadcefe2ff9c,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 6d4a440085ffbdd44bf82e86fed50866, type: 2}
     - target: {fileID: 7106364129166480744, guid: ce059893102e694419d7fadcefe2ff9c,
         type: 3}
       propertyPath: m_Color.b
@@ -12864,6 +12899,16 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7106364129166480745, guid: ce059893102e694419d7fadcefe2ff9c,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 6d4a440085ffbdd44bf82e86fed50866, type: 2}
+    - target: {fileID: 7106364129456878276, guid: ce059893102e694419d7fadcefe2ff9c,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 6d4a440085ffbdd44bf82e86fed50866, type: 2}
     - target: {fileID: 7106364129456878279, guid: ce059893102e694419d7fadcefe2ff9c,
         type: 3}
       propertyPath: m_Color.b
@@ -12914,6 +12959,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 7106364130059782298, guid: ce059893102e694419d7fadcefe2ff9c,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 6d4a440085ffbdd44bf82e86fed50866, type: 2}
     - target: {fileID: 7106364130059782301, guid: ce059893102e694419d7fadcefe2ff9c,
         type: 3}
       propertyPath: m_Color.b
