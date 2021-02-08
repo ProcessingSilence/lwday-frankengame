@@ -18,6 +18,7 @@ TagManager:
   - Projectile
   - ProjectileHitbox
   - PlayerComponent
+  - Destroyable
   layers:
   - Default
   - TransparentFX
@@ -39,7 +40,7 @@ TagManager:
   - DamageEnemy
   - Damage
   - Background
-  - 
+  - TileDestroyer
   - 
   - 
   - 

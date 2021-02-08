@@ -65,8 +65,8 @@ public class ToGoreHitbox : MonoBehaviour
     {
         if ((obj.gameObject.layer == 8 || obj.gameObject.layer == 18) && beginDeathSequence == false && !obj.CompareTag("Projectile"))
         {
-            //Debug.Log("Hit Wall");
-            return true;
+            if (!obj.CompareTag("Destroyable"))
+                return true;
         }
 
         return false;

@@ -27,7 +27,7 @@ public class PlayerController : MonoBehaviour
         // the ground within that time period, they will automatically jump.
         private float jumpPressedPeriodCurrent;
         private float jumpPressedPeriodTime = 0.1f;
-        private bool haveAlreadyJumped;
+
         public bool jumpFromThrowingEnemy;
         
    
@@ -110,7 +110,7 @@ public class PlayerController : MonoBehaviour
         
         if (IsGrounded())
         {
-            if (rb.velocity.y <= 0 && jumpPressedPeriodCurrent > 0)
+            if (rb.velocity.y <= 0.01f && jumpPressedPeriodCurrent > 0)
             {
                 Jump();
             }
@@ -118,10 +118,6 @@ public class PlayerController : MonoBehaviour
 
         if (!IsGrounded())
         {
-            if (Input.GetKeyUp(KeyCode.W))
-            {
-                haveAlreadyJumped = true;
-            }
             
             // Jump sprite
             if (chosenSprite != 3)
@@ -193,7 +189,7 @@ public class PlayerController : MonoBehaviour
 
     public bool IsGrounded()
     {
-        RaycastHit2D raycastHit = Physics2D.BoxCast(boxCollider2D.bounds.center, boxCollider2D.bounds.size*.9f, 0f,Vector2.down, .5f, platformLayerMask);
+        RaycastHit2D raycastHit = Physics2D.BoxCast(boxCollider2D.bounds.center, boxCollider2D.bounds.size*1.1f, 0f,Vector2.down, .5f, platformLayerMask);
         return raycastHit.collider != null;
     }
 
