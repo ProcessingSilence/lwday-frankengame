@@ -11,36 +11,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/Scripts/Global/Enemy/ProjectileHitbox.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="672">
-              <caret line="48" column="9" selection-start-line="48" selection-start-column="9" selection-end-line="48" selection-end-column="9" />
-              <folding>
-                <marker date="1612465123595" expanded="false" signature="6:78" ph="..." />
-                <marker date="1612465123595" expanded="true" signature="80:239" ph="/* Detects when enemies are hit or when buttons are pressed, uses a larger hitbox than ToGoreHitbox so it's more  ... */" />
-                <marker date="1612465123595" expanded="true" signature="286:2319" ph="{...}" />
-                <marker date="1612465123595" expanded="true" signature="675:1121" ph="{...}" />
-                <marker date="1612465123595" expanded="true" signature="995:1049" ph="{...}" />
-                <marker date="1612465123595" expanded="true" signature="1062:1115" ph="{...}" />
-                <marker date="1612465123595" expanded="true" signature="1145:1206" ph="{...}" />
-                <marker date="1612465123595" expanded="true" signature="1230:1409" ph="{...}" />
-                <marker date="1612465123595" expanded="true" signature="1292:1403" ph="{...}" />
-                <marker date="1612465123595" expanded="true" signature="1447:1745" ph="{...}" />
-                <marker date="1612465123595" expanded="true" signature="1772:1984" ph="{...}" />
-                <marker date="1612465123595" expanded="true" signature="1802:1978" ph="{...}" />
-                <marker date="1612465123595" expanded="true" signature="2038:2317" ph="{...}" />
-                <marker date="1612465123595" expanded="true" signature="2143:2206" ph="{...}" />
-                <marker date="1612465123595" expanded="true" signature="2249:2311" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/ConstantEnemyRespawn.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="496">
-              <caret line="33" column="65" selection-start-line="33" selection-start-column="65" selection-end-line="33" selection-end-column="65" />
+            <state relative-caret-position="608">
+              <caret line="40" selection-start-line="40" selection-end-line="40" />
               <folding>
                 <marker date="1612732335044" expanded="false" signature="6:78" ph="..." />
                 <marker date="1612732335044" expanded="true" signature="129:1060" ph="{...}" />
@@ -48,6 +22,21 @@
                 <marker date="1612732335044" expanded="true" signature="430:531" ph="{...}" />
                 <marker date="1612732335044" expanded="true" signature="556:1058" ph="{...}" />
                 <marker date="1612732335044" expanded="true" signature="805:951" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/ScrollScript.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="336">
+              <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+              <folding>
+                <marker date="1612755265987" expanded="false" signature="6:78" ph="..." />
+                <marker date="1612755265987" expanded="true" signature="121:494" ph="{...}" />
+                <marker date="1612755265987" expanded="true" signature="287:346" ph="{...}" />
+                <marker date="1612755265987" expanded="true" signature="404:492" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -320,6 +309,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Global/Entity/TakeDamage.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/HandEnable.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Global/Entity/DeathFall.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScrollScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Global/Enemy/DeathProperties.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/physicsObj.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Global/GlobalVars.cs" root0="FORCE_HIGHLIGHTING" />
@@ -329,7 +319,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Games/Teleportation/Scripts/Teleporter.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Capsule.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CapsuleEventSys.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GlobalEnemy/PulledIn.cs" />
@@ -380,14 +369,14 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/AimingAtMouse.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Global/Enemy/ProjectileHitbox.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ConstantEnemyRespawn.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ScrollScript.cs" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1296" />
-    <option name="height" value="1416" />
+  <component name="ProjectFrameBounds" extendedState="1">
+    <option name="x" value="-7" />
+    <option name="width" value="1294" />
+    <option name="height" value="1407" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -451,12 +440,12 @@
       <workItem from="1611092387129" duration="1410000" />
       <workItem from="1612208470841" duration="15002000" />
       <workItem from="1612454617369" duration="4493000" />
-      <workItem from="1612731971013" duration="361000" />
+      <workItem from="1612731971013" duration="2341000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="136370000" />
+    <option name="totallyTimeSpent" value="138350000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -468,7 +457,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1296" height="1416" extended-state="0" />
+    <frame x="-7" y="0" width="1294" height="1407" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.5177994" />
@@ -634,7 +623,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/GlobalSettings/EntitySettings.cs" />
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Global/EntitySettings.cs" />
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Capsule.cs">
       <provider selected="true" editor-type-id="text-editor">
@@ -1243,8 +1231,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/ConstantEnemyRespawn.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="496">
-          <caret line="33" column="65" selection-start-line="33" selection-start-column="65" selection-end-line="33" selection-end-column="65" />
+        <state relative-caret-position="608">
+          <caret line="40" selection-start-line="40" selection-end-line="40" />
           <folding>
             <marker date="1612732335044" expanded="false" signature="6:78" ph="..." />
             <marker date="1612732335044" expanded="true" signature="129:1060" ph="{...}" />
@@ -1252,6 +1240,19 @@
             <marker date="1612732335044" expanded="true" signature="430:531" ph="{...}" />
             <marker date="1612732335044" expanded="true" signature="556:1058" ph="{...}" />
             <marker date="1612732335044" expanded="true" signature="805:951" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/ScrollScript.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+          <folding>
+            <marker date="1612755265987" expanded="false" signature="6:78" ph="..." />
+            <marker date="1612755265987" expanded="true" signature="121:494" ph="{...}" />
+            <marker date="1612755265987" expanded="true" signature="287:346" ph="{...}" />
+            <marker date="1612755265987" expanded="true" signature="404:492" ph="{...}" />
           </folding>
         </state>
       </provider>
