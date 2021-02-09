@@ -37,16 +37,18 @@ public class TakeDamage : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.gameObject.CompareTag("Damage"))
+        if (other.gameObject.CompareTag("Damage") || other.gameObject.CompareTag("DamageEnemy"))
         {
             if (dieOnce == 0)
                 dieOnce = 1;
         }
 
+        /*
         if (other.gameObject.CompareTag("DamageEnemy") && takeEnemyDamage)
         {
             if (dieOnce == 0)
                 dieOnce = 1;
         }
+        */
     }
 }
