@@ -6,6 +6,8 @@ using UnityEngine.XR;
 public class PlayerController : MonoBehaviour
 {
     [SerializeField]private LayerMask platformLayerMask;
+    public PlayerState currentState;
+    
     
     // Jump
         public float jumpVel;
@@ -51,9 +53,17 @@ public class PlayerController : MonoBehaviour
         private SpriteRenderer spriteRenderer;
         public Sprite[] spriteStates = new Sprite[4];
         private GameObject aimFace;
-        public int chosenSprite; 
-    
-    void Awake()
+        public int chosenSprite;
+
+        public enum PlayerState
+        {
+            Normal,
+            Hurt,
+            Dead,
+            Holding
+        }
+
+        void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         boxCollider2D = GetComponent<BoxCollider2D>();
