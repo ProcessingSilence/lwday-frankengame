@@ -164,6 +164,8 @@ GameObject:
   m_Component:
   - component: {fileID: 3744556654537868964}
   - component: {fileID: 3744556654537868965}
+  - component: {fileID: 3545265353853323348}
+  - component: {fileID: 6782092211161748954}
   m_Layer: 0
   m_Name: ThrowLocation
   m_TagString: Untagged
@@ -206,6 +208,35 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!58 &3545265353853323348
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3744556654537868963}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.2
+--- !u!114 &6782092211161748954
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3744556654537868963}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81bbe636c292a5a44bf04c812be70a9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isOverlapping: 0
 --- !u!1 &3744556654690036804
 GameObject:
   m_ObjectHideFlags: 0
@@ -391,6 +422,8 @@ MonoBehaviour:
   inputGravityWeight: 7
   noInputGravityWeight: 17.84
   jumpFromThrowingEnemy: 0
+  groundedTime: 0
+  rememberGroundedTime: 0
   moveSpeed: 650
   inputDirection: 0
   spriteStates:
