@@ -29,7 +29,9 @@ public class PlayerController : MonoBehaviour
         private float jumpPressedPeriodTime = 0.1f;
 
         public bool jumpFromThrowingEnemy;
-        
+
+        public float groundedTime;
+        public float rememberGroundedTime;
    
     // Movement 
         public float moveSpeed;
@@ -64,8 +66,9 @@ public class PlayerController : MonoBehaviour
     }
 
     private void LateUpdate()
-    {
+    {      
         JumpingInput();
+        CoyoteTime();
         HorizontalMovement();
         rb.velocity = new Vector2(moveSpeed * inputDirection, rb.velocity.y);
         SpriteRender();
@@ -108,17 +111,21 @@ public class PlayerController : MonoBehaviour
             jumpPressedPeriodCurrent = jumpPressedPeriodTime;
         }
         
-        if (IsGrounded())
+        if (jumpPressedPeriodCurrent > 0)
         {
-            if (rb.velocity.y <= 0.01f && jumpPressedPeriodCurrent > 0)
+            if (rb.velocity.y <= 0.01f && IsGrounded())
+            {
+                Jump();
+            }
+            else if (rememberGroundedTime - 0.05f < groundedTime)
             {
                 Jump();
             }
         }
+        
 
         if (!IsGrounded())
         {
-            
             // Jump sprite
             if (chosenSprite != 3)
             {
@@ -131,8 +138,17 @@ public class PlayerController : MonoBehaviour
             jumpFromThrowingEnemy = false;
             HigherJump();
         }      
-    }    
-    
+    }
+
+    void CoyoteTime()
+    {
+        groundedTime -= Time.deltaTime;
+        if (IsGrounded())
+        {
+            rememberGroundedTime = groundedTime;
+        }
+    }
+
     private void HorizontalMovement()
     {
         if (Input.GetKey(KeyCode.D))
