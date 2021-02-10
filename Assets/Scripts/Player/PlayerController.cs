@@ -38,12 +38,12 @@ public class PlayerController : MonoBehaviour
         public float rememberGroundedTime;
    
     // Movement 
-        public float moveSpeed;
+        private float moveSpeed = 13;
         private float movVec;   
         
         // Multiplies horizontal velocity to determine direction in FixedUpdate().
-        [HideInInspector]
-        public int inputDirection;
+        //[HideInInspector]
+        //public int inputDirection;
     
                        
     // Components
@@ -81,8 +81,8 @@ public class PlayerController : MonoBehaviour
     {      
         JumpingInput();
         CoyoteTime();
-        HorizontalMovement();
-        rb.velocity = new Vector2(moveSpeed * inputDirection, rb.velocity.y);
+        //HorizontalMovement();
+        rb.velocity = new Vector2(moveSpeed * Input.GetAxisRaw("Horizontal"), rb.velocity.y);
         SpriteRender();
     }
 
@@ -166,6 +166,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    /*
     private void HorizontalMovement()
     {
         if (Input.GetKey(KeyCode.D))
@@ -181,16 +182,17 @@ public class PlayerController : MonoBehaviour
             inputDirection = 0;
         }
     }
+    */
 
     private void SpriteRender()
     {
         // Left
-        if (inputDirection < 0)
+        if (Input.GetAxisRaw("Horizontal") < 0)
         {
             spriteRenderer.flipX = true;
         }
         // Right
-        else if (inputDirection > 0)
+        else if (Input.GetAxisRaw("Horizontal") > 0)
         {
             spriteRenderer.flipX = false;
         }
@@ -200,7 +202,7 @@ public class PlayerController : MonoBehaviour
             if (IsGrounded() )
             {
                 // Idle
-                if (inputDirection == 0)
+                if (Input.GetAxisRaw("Horizontal") < 0.1f && Input.GetAxisRaw("Horizontal") > -0.1f)
                 {
                     chosenSprite = 1;
                 }

@@ -426,8 +426,7 @@ MonoBehaviour:
   alreadyJumped: 0
   groundedTime: 0
   rememberGroundedTime: 0
-  moveSpeed: 650
-  inputDirection: 0
+  moveSpeed: 6
   spriteStates:
   - {fileID: 1039097438880152013, guid: 0f8049e01ee491248a111406659b635a, type: 3}
   - {fileID: -5667924240727281768, guid: 0f8049e01ee491248a111406659b635a, type: 3}
