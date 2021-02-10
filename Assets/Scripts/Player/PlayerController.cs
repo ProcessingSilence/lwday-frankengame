@@ -32,6 +32,8 @@ public class PlayerController : MonoBehaviour
 
         public bool jumpFromThrowingEnemy;
 
+        public bool alreadyJumped;
+
         public float groundedTime;
         public float rememberGroundedTime;
    
@@ -104,6 +106,7 @@ public class PlayerController : MonoBehaviour
     {
         //rb.velocity = new Vector2(rb.velocity.x, 0);
         rb.velocity = Vector2.up * jumpVel;
+        alreadyJumped = true;
     }
     void HigherJump()
     {
@@ -132,7 +135,11 @@ public class PlayerController : MonoBehaviour
                 Jump();
             }
         }
-        
+
+        if (IsGrounded())
+        {
+            alreadyJumped = true;
+        }
 
         if (!IsGrounded())
         {
@@ -215,7 +222,8 @@ public class PlayerController : MonoBehaviour
 
     public bool IsGrounded()
     {
-        RaycastHit2D raycastHit = Physics2D.BoxCast(boxCollider2D.bounds.center, boxCollider2D.bounds.size*1.1f, 0f,Vector2.down, .5f, platformLayerMask);
+        Debug.Log("Grounded");
+        RaycastHit2D raycastHit = Physics2D.BoxCast(boxCollider2D.bounds.center, boxCollider2D.bounds.size*1f, 0f,Vector2.down, .5f, platformLayerMask);
         return raycastHit.collider != null;
     }
 

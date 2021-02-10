@@ -1315,41 +1315,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1b4a0ee54fca064abfaf39ea527832b, type: 3}
---- !u!1 &1425637557 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3744556654537868963, guid: 6df08fb2b7a94ac4cb946fd32b4b6746,
-    type: 3}
-  m_PrefabInstance: {fileID: 1774180671}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1425637558
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1425637557}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 81bbe636c292a5a44bf04c812be70a9a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isOverlapping: 0
---- !u!58 &1425637559
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1425637557}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.5
 --- !u!1001 &1510533740
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1737,7 +1702,7 @@ PrefabInstance:
         type: 3}
       propertyPath: detectOverlap_script
       value: 
-      objectReference: {fileID: 1425637558}
+      objectReference: {fileID: 0}
     - target: {fileID: 3744556655907352570, guid: 6df08fb2b7a94ac4cb946fd32b4b6746,
         type: 3}
       propertyPath: m_TagString

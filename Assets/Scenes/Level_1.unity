@@ -816,7 +816,7 @@ MonoBehaviour:
   stringArray: []
   sceneNum: 0
   sceneStringNum: 0
-  playerObj: {fileID: 0}
+  playerObj: {fileID: 692440474}
   fadeImageObj: {fileID: 31555731}
   pressEnterToStart: 0
 --- !u!4 &543514720
@@ -1094,6 +1094,12 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &692440474 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3744556654827539432, guid: 6df08fb2b7a94ac4cb946fd32b4b6746,
+    type: 3}
+  m_PrefabInstance: {fileID: 1667884093}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &755193234
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1770,7 +1776,7 @@ PrefabInstance:
         type: 3}
       propertyPath: detectOverlap_script
       value: 
-      objectReference: {fileID: 1667884095}
+      objectReference: {fileID: 0}
     - target: {fileID: 3744556655907352570, guid: 6df08fb2b7a94ac4cb946fd32b4b6746,
         type: 3}
       propertyPath: m_TagString
@@ -1784,19 +1790,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1667884093}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1667884095
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1667884094}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 81bbe636c292a5a44bf04c812be70a9a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isOverlapping: 0
 --- !u!58 &1667884096
 CircleCollider2D:
   m_ObjectHideFlags: 0

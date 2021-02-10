@@ -165,7 +165,7 @@ GameObject:
   - component: {fileID: 3744556654537868964}
   - component: {fileID: 3744556654537868965}
   - component: {fileID: 3545265353853323348}
-  - component: {fileID: 6782092211161748954}
+  - component: {fileID: 6951529077692620502}
   m_Layer: 0
   m_Name: ThrowLocation
   m_TagString: Untagged
@@ -223,8 +223,8 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.2
---- !u!114 &6782092211161748954
+  m_Radius: 0.03
+--- !u!114 &6951529077692620502
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -418,10 +418,12 @@ MonoBehaviour:
   platformLayerMask:
     serializedVersion: 2
     m_Bits: 256
-  jumpVel: 32
+  currentState: 0
+  jumpVel: 27
   inputGravityWeight: 7
   noInputGravityWeight: 17.84
   jumpFromThrowingEnemy: 0
+  alreadyJumped: 0
   groundedTime: 0
   rememberGroundedTime: 0
   moveSpeed: 650
@@ -787,7 +789,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &3744556655624661074
 Transform:
   m_ObjectHideFlags: 0
@@ -827,7 +829,7 @@ MonoBehaviour:
   PlayerController_script: {fileID: 3744556654827539433}
   HandEnable_script: {fileID: 3744556654827539439}
   enemyObj: {fileID: 0}
-  detectOverlap_script: {fileID: 0}
+  detectOverlap_script: {fileID: 6951529077692620502}
   testThrow: 0
 --- !u!1 &3744556655907352570
 GameObject:
