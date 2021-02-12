@@ -45,12 +45,14 @@
           </e>
           <e p="Goal.cs" t="Include" />
           <e p="MainSceneManager.cs" t="Include" />
+          <e p="NewBehaviourScript.cs" t="Include" />
           <e p="Player" t="Include">
             <e p="AimingAtMouse.cs" t="Include" />
             <e p="HandEnable.cs" t="Include" />
             <e p="HandThrow.cs" t="Include" />
             <e p="PlayerController.cs" t="Include" />
           </e>
+          <e p="PlayerState.cs" t="Include" />
           <e p="ScrollScript.cs" t="Include" />
           <e p="SimpleEnemy" t="Include">
             <e p="isIdle.cs" t="Include" />

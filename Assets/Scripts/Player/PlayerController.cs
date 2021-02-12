@@ -36,6 +36,8 @@ public class PlayerController : MonoBehaviour
 
         public float groundedTime;
         public float rememberGroundedTime;
+
+        private AudioClip jumpSound;
    
     // Movement 
         private float moveSpeed = 13;
@@ -49,7 +51,7 @@ public class PlayerController : MonoBehaviour
     // Components
         private Rigidbody2D rb;
         private BoxCollider2D boxCollider2D;
-   
+        private AudioSource aS;
         
     // Sprite
         private SpriteRenderer spriteRenderer;
@@ -57,21 +59,17 @@ public class PlayerController : MonoBehaviour
         private GameObject aimFace;
         public int chosenSprite;
 
-        public enum PlayerState
-        {
-            Normal,
-            Hurt,
-            Dead,
-            Holding
-        }
-
         void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         boxCollider2D = GetComponent<BoxCollider2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        aS = GetComponent<AudioSource>();
+        jumpSound = Resources.Load("Audio/jump") as AudioClip;
     }
 
+        
+        
     private void FixedUpdate()
     {
         Gravity();
@@ -106,7 +104,12 @@ public class PlayerController : MonoBehaviour
     {
         //rb.velocity = new Vector2(rb.velocity.x, 0);
         rb.velocity = Vector2.up * jumpVel;
-        alreadyJumped = true;
+        if (alreadyJumped == false && aS.isPlaying == false)
+        {
+            alreadyJumped = true;
+            aS.clip = jumpSound;
+            aS.Play();
+        }
     }
     void HigherJump()
     {
@@ -138,7 +141,7 @@ public class PlayerController : MonoBehaviour
 
         if (IsGrounded())
         {
-            alreadyJumped = true;
+            alreadyJumped = false;
         }
 
         if (!IsGrounded())

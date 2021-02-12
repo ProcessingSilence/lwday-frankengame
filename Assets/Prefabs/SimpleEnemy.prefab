@@ -49,7 +49,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 10
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -188,6 +188,9 @@ MonoBehaviour:
   deathSprite: {fileID: 1004340224689716819, guid: cac5a0112dd2dc2448de8351daaf73fb,
     type: 3}
   thrownDirection: {x: 0, y: 0}
+  instaKill: 0
+  projectileHitbox: {fileID: 0}
+  toGoreHitbox: {fileID: 0}
 --- !u!114 &7241596278026985667
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -200,6 +203,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0c2d64eb50493440b96fe5a3155b8c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  takeEnemyDamage: 0
   goreSpawn: {fileID: 4489645240279299919, guid: 4d2729933e371f54088ad0738fb1aacc,
     type: 3}
+  healthObj: {fileID: 0}
+  healthBar: {fileID: 0}
+  barOn: {fileID: 0}
+  barOff: {fileID: 0}
+  health: 0
+  playerState: {fileID: 0}
