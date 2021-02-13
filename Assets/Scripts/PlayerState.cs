@@ -6,15 +6,20 @@ public class PlayerState : MonoBehaviour
 {
     public States currentState;
     private PlayerController playerController;
-    private TakeDamage takeDamage;
+    public TakeDamage takeDamage;
     public Animator animator;
+    public SpriteRenderer spriteRenderer;
 
     public bool leftOrRight;
+
+    private Coroutine invulnerableHurt;
     public enum States
     {
         Normal,
         PainAnimation,
         Hurt,
+        TakeDamage,
+        HurtInvulnerable,
         Dead,
         Holding
     }
@@ -22,9 +27,8 @@ public class PlayerState : MonoBehaviour
     void Awake()
     {
         playerController = GetComponent<PlayerController>();
-        takeDamage = GetComponent<TakeDamage>();
-        takeDamage.playerState = this;
         animator = GetComponent<Animator>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -38,6 +42,12 @@ public class PlayerState : MonoBehaviour
                 playerController.enabled = false;
                 StartCoroutine(Hurt());
                 break;               
+            case States.HurtInvulnerable:
+                if (invulnerableHurt == null)
+                {
+                    invulnerableHurt = StartCoroutine(InvulnerableHurtFlashing());
+                }
+                break;
         }
     }
 
@@ -58,8 +68,24 @@ public class PlayerState : MonoBehaviour
         rb.velocity = Vector2.zero;
         rb.velocity = new Vector2(force, 0);
         yield return new WaitForSecondsRealtime(0.3f);
-        currentState = States.Normal;
+        currentState = States.HurtInvulnerable;
         animator.SetInteger("state", 0);
         playerController.enabled = true;
+    }
+
+    IEnumerator InvulnerableHurtFlashing()
+    {
+        bool onOff = true;
+        for (int i = 0; i < 100f; i++)
+        {
+            onOff = !onOff;
+            spriteRenderer.enabled = onOff;
+            yield return new WaitForSecondsRealtime(0.01f);
+        }
+
+        spriteRenderer.enabled = true;
+        currentState = States.Normal;
+        invulnerableHurt = null;
+        takeDamage.damageState = null;
     }
 }

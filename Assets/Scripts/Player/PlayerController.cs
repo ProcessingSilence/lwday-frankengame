@@ -66,9 +66,11 @@ public class PlayerController : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         aS = GetComponent<AudioSource>();
         jumpSound = Resources.Load("Audio/jump") as AudioClip;
+        Physics2D.IgnoreLayerCollision(13,13, true);
     }
 
         
+    
         
     private void FixedUpdate()
     {

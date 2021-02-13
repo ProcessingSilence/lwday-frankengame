@@ -17,22 +17,31 @@ public class TakeDamage : MonoBehaviour
 
     public int health;
 
-    [HideInInspector]public PlayerState playerState;
+    public Coroutine damageState;
+
+    public GameObject playerObj;
+    private PlayerState playerState;
     void Awake()
     {
+        playerState = playerObj.GetComponent<PlayerState>();
+        damageState = null;
         Transform canvasObj = GameObject.Find("Canvas").transform;
-        newHealthObj = Instantiate(healthObj);
-        newHealthObj.transform.SetParent(canvasObj.transform, false);
+        newHealthObj = Instantiate(healthObj, canvasObj.transform, false);
         for (int i = 0; i < health; i++)
         {
-            GameObject tempBar = Instantiate(healthBar);
-            tempBar.transform.parent = newHealthObj.transform;            
+            GameObject tempBar = Instantiate(healthBar, newHealthObj.transform, true);
         }
+
+        transform.parent = null;
     }
 
 
     void Update()
     {
+        if (playerObj)
+        {
+            transform.position = playerObj.transform.position;
+        }
         SpawnGore();
         DestroyObj();
     }
@@ -49,38 +58,51 @@ public class TakeDamage : MonoBehaviour
 
     void DestroyObj()
     {
-        if (currentGoreSpawn && gameObject.activeSelf)
+        if (currentGoreSpawn && playerObj.activeSelf)
         {
-            gameObject.SetActive(false);
+            playerObj.SetActive(false);
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D other)
-    {
-        if (other.gameObject.CompareTag("Damage") || other.gameObject.CompareTag("DamageEnemy"))
-        {
-            dieOnce = 1;
-        }
 
-        if (other.gameObject.CompareTag("Enemy"))
+    private void OnTriggerStay2D(Collider2D other)
+    {
+        if (playerState.currentState != PlayerState.States.Hurt ||
+            playerState.currentState != PlayerState.States.HurtInvulnerable)
         {
-            health--;
-            newHealthObj.transform.GetChild(health).GetComponent<Image>().sprite = barOff;
-            if (health >= 1)
+            Debug.Log("go");
+            if (other.gameObject.CompareTag("Damage") || other.gameObject.CompareTag("DamageEnemy"))
             {
-                playerState.currentState = PlayerState.States.Hurt;
-                if (other.transform.transform.position.x > gameObject.transform.position.x)
-                {
-                    playerState.leftOrRight = false;
-                }
-                else
-                {
-                    playerState.leftOrRight = true;
-                }
+                dieOnce = 1;
             }
 
-            else if (dieOnce == 0 && health < 1)
-                dieOnce = 1;
+            if (other.gameObject.CompareTag("Enemy") && damageState == null)
+            {
+                damageState = StartCoroutine(TouchEnemy(other));
+            }
         }
+    }
+
+
+    private IEnumerator TouchEnemy(Collider2D other)
+    {
+        playerState.currentState = PlayerState.States.Hurt;
+        health--;
+        newHealthObj.transform.GetChild(health).GetComponent<Image>().sprite = barOff;
+        if (health >= 1)
+        {
+            if (other.transform.transform.position.x > playerObj.transform.position.x)
+            {
+                playerState.leftOrRight = false;
+            }
+            else
+            {
+                playerState.leftOrRight = true;
+            }
+        }
+
+        else if (dieOnce == 0 && health < 1)
+            dieOnce = 1;        
+        yield return new WaitForSecondsRealtime(0.001f);
     }
 }
