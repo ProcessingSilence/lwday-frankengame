@@ -19,6 +19,7 @@ TagManager:
   - ProjectileHitbox
   - PlayerComponent
   - Destroyable
+  - SpikeyEnemy
   layers:
   - Default
   - TransparentFX

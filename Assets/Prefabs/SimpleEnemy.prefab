@@ -190,3 +190,5 @@ MonoBehaviour:
   instaKill: 0
   projectileHitbox: {fileID: 0}
   toGoreHitbox: {fileID: 0}
+  caughtSprite: {fileID: -3208834251885037119, guid: cac5a0112dd2dc2448de8351daaf73fb,
+    type: 3}

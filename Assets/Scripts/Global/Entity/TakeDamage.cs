@@ -35,13 +35,16 @@ public class TakeDamage : MonoBehaviour
         transform.parent = null;
     }
 
-
-    void Update()
+    private void LateUpdate()
     {
         if (playerObj)
         {
             transform.position = playerObj.transform.position;
         }
+    }
+
+    void Update()
+    {
         SpawnGore();
         DestroyObj();
     }
@@ -53,6 +56,12 @@ public class TakeDamage : MonoBehaviour
         {
             dieOnce = 2;
             currentGoreSpawn = Instantiate(goreSpawn, transform.position, Quaternion.identity);
+            health = 0;
+            foreach (Transform child in newHealthObj.transform)
+            {
+                child.GetComponent<Image>().sprite = barOff;
+            }
+            Destroy(gameObject);
         }
     }
 
@@ -71,7 +80,7 @@ public class TakeDamage : MonoBehaviour
             playerState.currentState != PlayerState.States.HurtInvulnerable)
         {
             Debug.Log("go");
-            if (other.gameObject.CompareTag("Damage") || other.gameObject.CompareTag("DamageEnemy"))
+            if (other.gameObject.CompareTag("Damage") || other.gameObject.CompareTag("DamageEnemy") || other.gameObject.CompareTag("SpikeyEnemy"))
             {
                 dieOnce = 1;
             }
@@ -102,7 +111,9 @@ public class TakeDamage : MonoBehaviour
         }
 
         else if (dieOnce == 0 && health < 1)
-            dieOnce = 1;        
+        {
+            dieOnce = 1;
+        }        
         yield return new WaitForSecondsRealtime(0.001f);
     }
 }

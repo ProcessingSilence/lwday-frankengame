@@ -15,7 +15,6 @@ public class ProjectileHitbox : MonoBehaviour
     private GameObject buttonObj;
     private bool alreadyPressedButton;
     private bool goreOrCorpse;
-
     public Transform child;
     // Start is called before the first frame update
     void Start()
@@ -23,7 +22,7 @@ public class ProjectileHitbox : MonoBehaviour
         myParent = transform.parent.gameObject;
         ThrownVals_script = myParent.GetComponent<ThrownVals>();
         enemyAnimator = myParent.GetComponent<Animator>();
-        goreExplosion = ThrownVals_script.goreMess;
+        goreExplosion = Resources.Load("GoreSpawner") as GameObject;
         if (ThrownVals_script.givenVelocity >= ThrownVals_script.goreVelocityRequirement)
         {
             goreOrCorpse = false;
@@ -54,8 +53,9 @@ public class ProjectileHitbox : MonoBehaviour
         var Button_script = buttonObj.GetComponent<Button>();
         Button_script.buttonHit = 1;
         ToGoreHitbox goreScript = child.GetComponent<ToGoreHitbox>();
-        yield return new WaitUntil(()=> Button_script.buttonHit == 1);
-        goreScript.beginDeathSequence = true;
+        yield return new WaitForSecondsRealtime(0.1f);
+        Instantiate(Resources.Load("GoreSpawner") as GameObject, transform.position, Quaternion.identity);
+        Destroy(myParent);
     }
 
     void KillOtherEnemy()
@@ -75,10 +75,25 @@ public class ProjectileHitbox : MonoBehaviour
         {
             otherEnemy = other.gameObject;
         }
+        if (other.CompareTag("SpikeyEnemy"))
+        {
+            SpikeyEnemy(other);
+        }
 
         if (other.gameObject.layer == 16)
         {
             buttonObj = other.gameObject;
         }
     }
+
+    void SpikeyEnemy(Collider2D other) 
+    {
+        gameObject.GetComponent<CircleCollider2D>().enabled = false;
+        Debug.Log("spikey enemy");
+        other.gameObject.GetComponent<Animator>().SetBool("hit", true);
+        other.tag = "Enemy";
+        Instantiate(Resources.Load("GoreSpawner") as GameObject, transform.position, Quaternion.identity);
+        Destroy(myParent);
+    }
+    
 }

@@ -15,9 +15,10 @@ GameObject:
   - component: {fileID: 174436147742557964}
   - component: {fileID: 174436147742557967}
   - component: {fileID: 1697218784395559828}
+  - component: {fileID: 6521494130124003042}
   m_Layer: 13
   m_Name: spikeyEnemy
-  m_TagString: DamageEnemy
+  m_TagString: SpikeyEnemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -148,7 +149,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 8
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -171,3 +172,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isImportant: 0
   goreObj: {fileID: 4489645240279299919, guid: 4d2729933e371f54088ad0738fb1aacc, type: 3}
+--- !u!114 &6521494130124003042
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 174436147742557953}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04a2fa05e0e77f6468c7dbac7d82b508, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  goreVelocityRequirement: 60
+  givenVelocity: 0
+  deathSprite: {fileID: 0}
+  thrownDirection: {x: 0, y: 0}
+  instaKill: 0
+  projectileHitbox: {fileID: 0}
+  toGoreHitbox: {fileID: 0}
+  caughtSprite: {fileID: 5263543356486539647, guid: 9e8b283476a713140a725d4344c1f9cf,
+    type: 3}

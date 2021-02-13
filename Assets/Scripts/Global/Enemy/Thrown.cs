@@ -22,9 +22,10 @@ public class Thrown : StateMachineBehaviour
         
         // Instantly kill if the spawn position of the thrown projectile overlaps a layer.
 
-
-            rb = animator.gameObject.GetComponent<Rigidbody2D>();
-            velocity = animator.gameObject.GetComponent<ThrownVals>().givenVelocity;
+        rb = animator.gameObject.GetComponent<Rigidbody2D>();
+        velocity = animator.gameObject.GetComponent<ThrownVals>().givenVelocity;
+        
+        ThrownVals_script.WaitUntilExploding();
 
     }
 

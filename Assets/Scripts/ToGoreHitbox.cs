@@ -11,12 +11,13 @@ public class ToGoreHitbox : MonoBehaviour
     public bool beginDeathSequence;
     public GameObject myParent;
     private SpriteRenderer myParentSpriteRenderer;
-    public GameObject goreExplosion;
+    private GameObject goreExplosion;
     private Rigidbody2D rb2d;
 
     // Start is called before the first frame update
     void Start()
     {
+        goreExplosion = Resources.Load("GoreSpawner") as GameObject;
         myParent = gameObject.transform.parent.parent.gameObject;
         //myParent.GetComponent<BoxCollider2D>().enabled = false;
         myParentSpriteRenderer = myParent.GetComponent<SpriteRenderer>();

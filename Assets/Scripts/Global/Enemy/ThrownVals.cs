@@ -7,7 +7,6 @@ public class ThrownVals : MonoBehaviour
     public float goreVelocityRequirement;
 
     public float givenVelocity;
-    public GameObject goreMess;
     public Sprite deathSprite;
 
     public Vector2 thrownDirection;
@@ -17,15 +16,28 @@ public class ThrownVals : MonoBehaviour
     public GameObject projectileHitbox;
 
     public GameObject toGoreHitbox;
+
+    public Sprite caughtSprite;
+
+    private Animator animator;
+
+    private SpriteRenderer sR;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        animator = GetComponent<Animator>();
+        sR = GetComponent<SpriteRenderer>();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void WaitUntilExploding()
     {
-        
+        StartCoroutine(Countdown());
+    }
+
+    IEnumerator Countdown()
+    {
+        yield return new WaitForSecondsRealtime(1f);
+        instaKill = true;
     }
 }

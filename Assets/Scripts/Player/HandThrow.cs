@@ -115,7 +115,18 @@ public class HandThrow : MonoBehaviour
             caughtEnemy.tag = "Projectile";
             var audioObj = Instantiate(Resources.Load("AudioObj") as GameObject);
             audioObj.GetComponent<AudioObj>().givenAudio = Resources.Load("Audio/clap") as AudioClip;
-            caughtEnemy.GetComponent<BoxCollider2D>().enabled = false;
+            
+            var bC = caughtEnemy.GetComponent<BoxCollider2D>();
+            if (bC)
+            {
+                bC.enabled = false;
+            }
+
+            var cC = caughtEnemy.GetComponent<CircleCollider2D>();
+            if (cC)
+            {
+                cC.enabled = false;
+            }
         }
 
         if (haveCaughtEnemy == 2)
