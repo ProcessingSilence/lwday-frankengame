@@ -11,12 +11,18 @@ public class SpawnGoalUponDeaths : MonoBehaviour
     private AudioSource audioSource;
 
     private ParticleSystem particleSystem;
+
+    public bool getAllEnemies;
     // Start is called before the first frame update
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
         particleSystem = GetComponent<ParticleSystem>();
         GoalObj.SetActive(false);
+        if (getAllEnemies)
+        {
+            GameObject[] tempEnemies = GameObject.FindGameObjectsWithTag("Enemy");
+        }
     }
 
     // Update is called once per frame

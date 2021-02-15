@@ -11,58 +11,6 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/Scripts/Spikey/DeSpiked.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="640">
-              <caret line="46" selection-start-line="46" selection-end-line="46" />
-              <folding>
-                <marker date="1613252197102" expanded="false" signature="6:78" ph="..." />
-                <marker date="1613252197102" expanded="true" signature="125:1381" ph="{...}" />
-                <marker date="1613252197102" expanded="true" signature="285:632" ph="{...}" />
-                <marker date="1613252197102" expanded="true" signature="639:1379" ph="/* OnStateExit is called when a transition ends and the state machine finishes evaluating this state ... */" />
-                <marker date="1613252197102" expanded="true" signature="1434:1903" ph="{...}" />
-                <marker date="1613252197102" expanded="true" signature="1482:1583" ph="{...}" />
-                <marker date="1613252197102" expanded="true" signature="1611:1901" ph="{...}" />
-                <marker date="1613252197102" expanded="true" signature="1705:1842" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/Scripts/Player/HandThrow.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1568">
-              <caret line="107" column="7" selection-start-line="107" selection-start-column="7" selection-end-line="107" selection-end-column="7" />
-              <folding>
-                <marker date="1613324668760" expanded="false" signature="6:78" ph="..." />
-                <marker date="1613324668760" expanded="true" signature="118:4474" ph="{...}" />
-                <marker date="1613324668760" expanded="true" signature="371:498" ph="/* 0: No enemy. ... */" />
-                <marker date="1613324668760" expanded="true" signature="981:1286" ph="{...}" />
-                <marker date="1613324668760" expanded="true" signature="1344:1379" ph="{...}" />
-                <marker date="1613324668760" expanded="true" signature="1410:1482" ph="{...}" />
-                <marker date="1613324668760" expanded="true" signature="1600:2299" ph="{...}" />
-                <marker date="1613324668760" expanded="true" signature="1644:1900" ph="{...}" />
-                <marker date="1613324668760" expanded="true" signature="1744:1808" ph="{...}" />
-                <marker date="1613324668760" expanded="true" signature="1825:1890" ph="{...}" />
-                <marker date="1613324668760" expanded="true" signature="2102:2293" ph="{...}" />
-                <marker date="1613324668760" expanded="true" signature="2412:2845" ph="{...}" />
-                <marker date="1613324668760" expanded="true" signature="2445:2839" ph="{...}" />
-                <marker date="1613324668760" expanded="true" signature="2484:2620" ph="{...}" />
-                <marker date="1613324668760" expanded="true" signature="2993:4207" ph="{...}" />
-                <marker date="1613324668760" expanded="true" signature="3035:4016" ph="{...}" />
-                <marker date="1613324668760" expanded="true" signature="3636:3700" ph="{...}" />
-                <marker date="1613324668760" expanded="true" signature="3788:3852" ph="{...}" />
-                <marker date="1613324668760" expanded="true" signature="3941:4006" ph="{...}" />
-                <marker date="1613324668760" expanded="true" signature="4051:4201" ph="{...}" />
-                <marker date="1613324668760" expanded="true" signature="4260:4472" ph="{...}" />
-                <marker date="1613324668760" expanded="true" signature="4328:4466" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/Spring/SpringEnemy.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="721">
@@ -88,7 +36,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/Global/Enemy/Thrown.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="560">
@@ -99,6 +47,44 @@
                 <marker date="1613251478806" expanded="true" signature="418:1030" ph="{...}" />
                 <marker date="1613251478806" expanded="true" signature="1135:1589" ph="{...}" />
                 <marker date="1613251478806" expanded="true" signature="1249:1461" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/DetectOverlap.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="17" column="85" selection-start-line="17" selection-start-column="85" selection-end-line="17" selection-end-column="85" />
+              <folding>
+                <marker date="1613359470766" expanded="false" signature="6:78" ph="..." />
+                <marker date="1613359470766" expanded="true" signature="122:569" ph="{...}" />
+                <marker date="1613359470766" expanded="true" signature="208:362" ph="{...}" />
+                <marker date="1613359470766" expanded="true" signature="302:356" ph="{...}" />
+                <marker date="1613359470766" expanded="true" signature="413:567" ph="{...}" />
+                <marker date="1613359470766" expanded="true" signature="506:561" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/SpawnGoalUponDeaths.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="336">
+              <caret line="23" column="82" selection-start-line="23" selection-start-column="82" selection-end-line="23" selection-end-column="82" />
+              <folding>
+                <marker date="1613362095736" expanded="false" signature="6:78" ph="..." />
+                <marker date="1613362095736" expanded="true" signature="128:1433" ph="{...}" />
+                <marker date="1613362095736" expanded="true" signature="444:728" ph="{...}" />
+                <marker date="1613362095736" expanded="true" signature="619:722" ph="{...}" />
+                <marker date="1613362095736" expanded="true" signature="786:951" ph="{...}" />
+                <marker date="1613362095736" expanded="true" signature="852:945" ph="{...}" />
+                <marker date="1613362095736" expanded="true" signature="998:1186" ph="{...}" />
+                <marker date="1613362095736" expanded="true" signature="1049:1159" ph="{...}" />
+                <marker date="1613362095736" expanded="true" signature="1091:1149" ph="{...}" />
+                <marker date="1613362095736" expanded="true" signature="1215:1431" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -350,7 +336,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/SimpleEnemy/Walking.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/TakeDamage.cs" />
         <option value="$PROJECT_DIR$/Assets/Resources/Audio/CREDITS.txt" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/SpawnGoalUponDeaths.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/EnemyRespawner.cs" />
         <option value="$PROJECT_DIR$/Assets/Graphics/FONT CREDIT.txt" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Flashing.cs" />
@@ -358,7 +343,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/MainSceneManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Button.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/DontGoThroughThings.cs" />
-        <option value="$PROJECT_DIR$/Assets/DetectOverlap.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ConstantEnemyRespawn.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ScrollScript.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/DestructibleTiles.cs" />
@@ -377,6 +361,8 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/HandThrow.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SimpleEnemy/SpringEnemy.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Spring/SpringEnemy.cs" />
+        <option value="$PROJECT_DIR$/Assets/DetectOverlap.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SpawnGoalUponDeaths.cs" />
       </list>
     </option>
   </component>
@@ -451,12 +437,12 @@
       <workItem from="1612731971013" duration="27021000" />
       <workItem from="1613153572561" duration="17193000" />
       <workItem from="1613319613559" duration="5770000" />
-      <workItem from="1613349610064" duration="2372000" />
+      <workItem from="1613349610064" duration="3341000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="188365000" />
+    <option name="totallyTimeSpent" value="189334000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -468,7 +454,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="0" width="1294" height="1407" extended-state="0" />
+    <frame x="656" y="527" width="1294" height="1407" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.5177994" />
@@ -776,24 +762,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/SpawnGoalUponDeaths.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="27" column="40" selection-start-line="27" selection-start-column="40" selection-end-line="27" selection-end-column="40" />
-          <folding>
-            <marker date="1599609656315" expanded="false" signature="6:78" ph="..." />
-            <marker date="1599609656315" expanded="true" signature="128:1271" ph="{...}" />
-            <marker date="1599609656315" expanded="true" signature="412:566" ph="{...}" />
-            <marker date="1599609656315" expanded="true" signature="624:789" ph="{...}" />
-            <marker date="1599609656315" expanded="true" signature="690:783" ph="{...}" />
-            <marker date="1599609656315" expanded="true" signature="836:1024" ph="{...}" />
-            <marker date="1599609656315" expanded="true" signature="887:997" ph="{...}" />
-            <marker date="1599609656315" expanded="true" signature="929:987" ph="{...}" />
-            <marker date="1599609656315" expanded="true" signature="1053:1269" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/EnemyRespawner.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="96">
@@ -955,21 +923,6 @@
             <marker date="1612810132273" expanded="true" signature="793:854" ph="{...}" />
             <marker date="1612810132273" expanded="true" signature="909:1567" ph="{...}" />
             <marker date="1612810132273" expanded="true" signature="1092:1561" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/DetectOverlap.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="32">
-          <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
-          <folding>
-            <marker date="1612234716872" expanded="true" signature="6:78" ph="..." />
-            <marker date="1612234716872" expanded="true" signature="122:476" ph="{...}" />
-            <marker date="1612234716872" expanded="true" signature="208:315" ph="{...}" />
-            <marker date="1612234716872" expanded="true" signature="255:309" ph="{...}" />
-            <marker date="1612234716872" expanded="true" signature="366:474" ph="{...}" />
-            <marker date="1612234716872" expanded="true" signature="413:468" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -1348,6 +1301,40 @@
             <marker date="1613251478806" expanded="true" signature="418:1030" ph="{...}" />
             <marker date="1613251478806" expanded="true" signature="1135:1589" ph="{...}" />
             <marker date="1613251478806" expanded="true" signature="1249:1461" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/DetectOverlap.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="17" column="85" selection-start-line="17" selection-start-column="85" selection-end-line="17" selection-end-column="85" />
+          <folding>
+            <marker date="1613359470766" expanded="false" signature="6:78" ph="..." />
+            <marker date="1613359470766" expanded="true" signature="122:569" ph="{...}" />
+            <marker date="1613359470766" expanded="true" signature="208:362" ph="{...}" />
+            <marker date="1613359470766" expanded="true" signature="302:356" ph="{...}" />
+            <marker date="1613359470766" expanded="true" signature="413:567" ph="{...}" />
+            <marker date="1613359470766" expanded="true" signature="506:561" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/SpawnGoalUponDeaths.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="23" column="82" selection-start-line="23" selection-start-column="82" selection-end-line="23" selection-end-column="82" />
+          <folding>
+            <marker date="1613362095736" expanded="false" signature="6:78" ph="..." />
+            <marker date="1613362095736" expanded="true" signature="128:1433" ph="{...}" />
+            <marker date="1613362095736" expanded="true" signature="444:728" ph="{...}" />
+            <marker date="1613362095736" expanded="true" signature="619:722" ph="{...}" />
+            <marker date="1613362095736" expanded="true" signature="786:951" ph="{...}" />
+            <marker date="1613362095736" expanded="true" signature="852:945" ph="{...}" />
+            <marker date="1613362095736" expanded="true" signature="998:1186" ph="{...}" />
+            <marker date="1613362095736" expanded="true" signature="1049:1159" ph="{...}" />
+            <marker date="1613362095736" expanded="true" signature="1091:1149" ph="{...}" />
+            <marker date="1613362095736" expanded="true" signature="1215:1431" ph="{...}" />
           </folding>
         </state>
       </provider>
