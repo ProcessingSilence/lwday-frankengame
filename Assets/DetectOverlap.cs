@@ -8,14 +8,14 @@ public class DetectOverlap : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.layer == 8)
+        if (other.gameObject.layer == 8 && !other.gameObject.CompareTag("Destroyable"))
         {
             isOverlapping = true;
         }
     }
     private void OnTriggerExit2D(Collider2D other)
     {
-        if (other.gameObject.layer == 8)
+        if (other.gameObject.layer == 8&& !other.gameObject.CompareTag("Destroyable"))
         {
             isOverlapping = false;
         }
