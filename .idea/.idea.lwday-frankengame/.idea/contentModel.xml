@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\Liam\AppData\Local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Liam\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_lwday-frankengame.1524897162.00" t="ExcludeRecursive" />
+    <e p="C:\Users\Liam\Favorites\Documents\GitHub\lwday-frankengame" t="IncludeRecursive">
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="DetectOverlap.cs" t="Include" />
+        <e p="Graphics" t="Include">
+          <e p="FONT CREDIT.txt" t="Include" />
+        </e>
+        <e p="physicsObj.cs" t="Include" />
+        <e p="Resources" t="Include">
+          <e p="Audio" t="Include">
+            <e p="CREDITS.txt" t="Include" />
+          </e>
+        </e>
+        <e p="Scripts" t="Include">
+          <e p="AudioObj.cs" t="Include" />
+          <e p="Button.cs" t="Include" />
+          <e p="Capsule.cs" t="Include" />
+          <e p="ConstantEnemyRespawn.cs" t="Include" />
+          <e p="DestructibleTiles.cs" t="Include" />
+          <e p="DontGoThroughThings.cs" t="Include" />
+          <e p="EndlessRotation.cs" t="Include" />
+          <e p="EnemyRespawner.cs" t="Include" />
+          <e p="Flashing.cs" t="Include" />
+          <e p="Global" t="Include">
+            <e p="Enemy" t="Include">
+              <e p="Caught.cs" t="Include" />
+              <e p="DeathProperties.cs" t="Include" />
+              <e p="GoreExplosion.cs" t="Include" />
+              <e p="Idle.cs" t="Include" />
+              <e p="LimpCorpse.cs" t="Include" />
+              <e p="ProjectileHitbox.cs" t="Include" />
+              <e p="Thrown.cs" t="Include" />
+              <e p="ThrownVals.cs" t="Include" />
+            </e>
+            <e p="Entity" t="Include">
+              <e p="DeathFall.cs" t="Include" />
+              <e p="TakeDamage.cs" t="Include" />
+            </e>
+            <e p="GlobalVars.cs" t="Include" />
+          </e>
+          <e p="Goal.cs" t="Include" />
+          <e p="MainSceneManager.cs" t="Include" />
+          <e p="NewBehaviourScript.cs" t="Include" />
+          <e p="Player" t="Include">
+            <e p="AimingAtMouse.cs" t="Include" />
+            <e p="HandEnable.cs" t="Include" />
+            <e p="HandThrow.cs" t="Include" />
+            <e p="PlayerController.cs" t="Include" />
+          </e>
+          <e p="PlayerState.cs" t="Include" />
+          <e p="ScrollScript.cs" t="Include" />
+          <e p="SimpleEnemy" t="Include">
+            <e p="isIdle.cs" t="Include" />
+            <e p="SimpleVals.cs" t="Include" />
+            <e p="Walking.cs" t="Include" />
+          </e>
+          <e p="SpawnGoalUponDeaths.cs" t="Include" />
+          <e p="Spikey" t="Include">
+            <e p="DeSpiked.cs" t="Include" />
+          </e>
+          <e p="Spring" t="Include">
+            <e p="SpringEnemy.cs" t="Include" />
+          </e>
+          <e p="Teleporter.cs" t="Include" />
+          <e p="ToGoreHitbox.cs" t="Include" />
+          <e p="Wall.cs" t="Include" />
+        </e>
+      </e>
+      <e p="lwday-frankengame.sln" t="IncludeFlat" />
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="Packages" t="ExcludeRecursive" />
+      <e p="Temp\Bin" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>

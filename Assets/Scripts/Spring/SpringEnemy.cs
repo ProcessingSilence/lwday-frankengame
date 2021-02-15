@@ -6,7 +6,6 @@ public class SpringEnemy : MonoBehaviour
 {
     public bool isWalking;
     public bool walkWhenPlayerClose;
-    private bool detectedPlayer;
     public float requiredDetectionDist;
     
     public float walkSpeed;
@@ -26,7 +25,7 @@ public class SpringEnemy : MonoBehaviour
     }
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         animator = gameObject.GetComponent<Animator>();
@@ -40,30 +39,36 @@ public class SpringEnemy : MonoBehaviour
 
          player = GameObject.Find("Player").transform;
 
-         StartCoroutine(Neutral());
+         if (walkWhenPlayerClose == false)
+         {
+             StartCoroutine(Neutral());
+         }
     }
 
 
     void Update()
     {
-        /*
-        if (walkWhenPlayerClose && detectedPlayer == false)
+        if (walkWhenPlayerClose)
         {
-            if (Vector2.Distance(player.position, transform.position) <= requiredDetectionDist)
+            if (grounded)
+                rb.velocity = Vector2.zero;
+            float distance = Vector2.Distance(player.position, transform.position);
+            if (distance < requiredDetectionDist)
             {
-                detectedPlayer = true;
-
-                animator.SetBool("walking", true);              
+                Debug.Log("distance: " + distance + " less than: " + requiredDetectionDist);
+                walkWhenPlayerClose = false;
+                StartCoroutine(Neutral());
             }
-        }*/
+        }
+
         spriteRenderer.flipX = leftOrRightFromPlayer() == 1;
     }
     
 
     IEnumerator Neutral()
     {
-        spriteRenderer.sprite = springSprites[0];
         yield return new WaitUntil(()=>grounded);
+        rb.velocity = Vector2.zero;
         StartCoroutine(Preparing());
 
     }
@@ -80,9 +85,12 @@ public class SpringEnemy : MonoBehaviour
     {
         spriteRenderer.sprite = springSprites[2];
         gameObject.tag = "SpikeyEnemy";
-        rb.AddForce(new Vector2(200*leftOrRight,1000));
+        rb.AddForce(new Vector2(700*leftOrRight,1500));
         yield return new WaitForSecondsRealtime(0.3f);
         yield return new WaitUntil(()=>grounded);
+        spriteRenderer.sprite = springSprites[1];
+        yield return new WaitForSecondsRealtime(0.1f);
+        spriteRenderer.sprite = springSprites[0];
         gameObject.tag = "DamageEnemy";
         StartCoroutine(Neutral());
 
