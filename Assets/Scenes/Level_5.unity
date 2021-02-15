@@ -5525,6 +5525,12 @@ MonoBehaviour:
   - {fileID: 1370821904}
   - {fileID: 1703895207}
   - {fileID: 1026805252}
+  - {fileID: 1967308071}
+  - {fileID: 1239358664}
+  - {fileID: 564699225}
+  - {fileID: 435951708}
+  - {fileID: 1873835222}
+  - {fileID: 935133054}
   GoalObj: {fileID: 1878046495}
   getAllEnemies: 0
 --- !u!4 &280565508
@@ -5715,6 +5721,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2fcedb509013c694b9bec4ab4582608c, type: 3}
+--- !u!4 &435951708 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5943888735986116792, guid: 2fcedb509013c694b9bec4ab4582608c,
+    type: 3}
+  m_PrefabInstance: {fileID: 1133326311}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &443666597
 GameObject:
   m_ObjectHideFlags: 0
@@ -6116,6 +6128,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &564699225 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5943888735986116792, guid: 2fcedb509013c694b9bec4ab4582608c,
+    type: 3}
+  m_PrefabInstance: {fileID: 520332624}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &845542938
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6190,6 +6208,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2fcedb509013c694b9bec4ab4582608c, type: 3}
+--- !u!4 &935133054 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 174436147742557955, guid: d996436db611a5549a28743cfece186a,
+    type: 3}
+  m_PrefabInstance: {fileID: 501914529}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1018883179
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6342,6 +6366,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: BackgroundCamera
+      objectReference: {fileID: 0}
+    - target: {fileID: 9119525376362993756, guid: df5f01f961930474698d938406434c06,
+        type: 3}
+      propertyPath: m_BackGroundColor.b
+      value: 0.26782405
+      objectReference: {fileID: 0}
+    - target: {fileID: 9119525376362993756, guid: df5f01f961930474698d938406434c06,
+        type: 3}
+      propertyPath: m_BackGroundColor.g
+      value: 0.14124244
+      objectReference: {fileID: 0}
+    - target: {fileID: 9119525376362993756, guid: df5f01f961930474698d938406434c06,
+        type: 3}
+      propertyPath: m_BackGroundColor.r
+      value: 0.4339623
       objectReference: {fileID: 0}
     - target: {fileID: 9119525376362993759, guid: df5f01f961930474698d938406434c06,
         type: 3}
@@ -6652,6 +6691,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Size.y
       value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 6422651855898315940, guid: 6a49689d03617094ba6d943870135b9f,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.95030963
+      objectReference: {fileID: 0}
+    - target: {fileID: 6422651855898315940, guid: 6a49689d03617094ba6d943870135b9f,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.6745283
+      objectReference: {fileID: 0}
+    - target: {fileID: 6422651855898315940, guid: 6a49689d03617094ba6d943870135b9f,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6422651855898315940, guid: 6a49689d03617094ba6d943870135b9f,
         type: 3}
@@ -9731,6 +9785,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 174436148698766340}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &1239358664 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5943888735986116792, guid: 2fcedb509013c694b9bec4ab4582608c,
+    type: 3}
+  m_PrefabInstance: {fileID: 368215313}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1251531512 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5943888735986116792, guid: 2fcedb509013c694b9bec4ab4582608c,
@@ -10065,6 +10125,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2fcedb509013c694b9bec4ab4582608c, type: 3}
+--- !u!4 &1873835222 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 174436147742557955, guid: d996436db611a5549a28743cfece186a,
+    type: 3}
+  m_PrefabInstance: {fileID: 250573257}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1878046495
 GameObject:
   m_ObjectHideFlags: 0
@@ -15118,6 +15184,12 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 1
+--- !u!4 &1967308071 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5943888735986116792, guid: 2fcedb509013c694b9bec4ab4582608c,
+    type: 3}
+  m_PrefabInstance: {fileID: 2143741187}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2098734309
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15520,6 +15592,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1131135253364485030, guid: d1b4a0ee54fca064abfaf39ea527832b,
+        type: 3}
+      propertyPath: m_FlipX
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7885165935460507878, guid: d1b4a0ee54fca064abfaf39ea527832b,
         type: 3}
       propertyPath: m_RootOrder
@@ -15600,6 +15677,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 2.16
       objectReference: {fileID: 0}
+    - target: {fileID: 8298159413713811170, guid: d1b4a0ee54fca064abfaf39ea527832b,
+        type: 3}
+      propertyPath: rotateSpeed
+      value: 1000
+      objectReference: {fileID: 0}
     - target: {fileID: 8298159413713811171, guid: d1b4a0ee54fca064abfaf39ea527832b,
         type: 3}
       propertyPath: m_LocalRotation.w
@@ -15624,6 +15706,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 180.00002
+      objectReference: {fileID: 0}
+    - target: {fileID: 8298159413713811180, guid: d1b4a0ee54fca064abfaf39ea527832b,
+        type: 3}
+      propertyPath: m_FlipX
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1b4a0ee54fca064abfaf39ea527832b, type: 3}

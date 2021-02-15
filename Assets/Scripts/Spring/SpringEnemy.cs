@@ -17,6 +17,7 @@ public class SpringEnemy : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     private bool grounded;
     private Rigidbody2D rb;
+    private BoxCollider2D boxCollider;
     public enum springState
     {
         Grounded,
@@ -30,6 +31,8 @@ public class SpringEnemy : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         animator = gameObject.GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
+        boxCollider = GetComponent<BoxCollider2D>();
+        
         /*
         if (isWalking)
         {
@@ -86,7 +89,18 @@ public class SpringEnemy : MonoBehaviour
         spriteRenderer.sprite = springSprites[2];
         gameObject.tag = "SpikeyEnemy";
         rb.AddForce(new Vector2(700*leftOrRight,1500));
+        RaycastHit hitInfo;
+        //Physics.Raycast(transform.position, transform.forward * leftOrRight, out hitInfo, 5);
+        
+        yield return new WaitUntil(()=>rb.velocity.y < -5f || grounded);
         yield return new WaitForSecondsRealtime(0.3f);
+
+
+        if (grounded == false && (rb.velocity.x < 0.1f && rb.velocity.x > -0.1f))
+        {
+            //Debug.Log("I'm not moving, give me a push.");
+            rb.AddForce(new Vector2(500*leftOrRight,0));
+        }
         yield return new WaitUntil(()=>grounded);
         spriteRenderer.sprite = springSprites[1];
         yield return new WaitForSecondsRealtime(0.1f);
