@@ -8,6 +8,15 @@ TextureImporter:
   - first:
       213: -6049260483185349996
     second: springEnemy_1
+  - first:
+      213: 2242267579467177621
+    second: springEnemy_2
+  - first:
+      213: 8220147891331897605
+    second: springEnemy_3
+  - first:
+      213: -3836642720941964493
+    second: springEnemy_4
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -29,6 +38,7 @@ TextureImporter:
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
+  vTOnly: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -60,9 +70,12 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  ignorePngGamma: 0
   applyGammaDecoding: 0
   platformSettings:
   - serializedVersion: 3
@@ -135,9 +148,9 @@ TextureImporter:
         x: 0
         y: 0
         width: 11
-        height: 22
+        height: 20
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -156,9 +169,9 @@ TextureImporter:
         x: 11
         y: 0
         width: 11
-        height: 22
+        height: 20
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -166,6 +179,69 @@ TextureImporter:
       bones: []
       spriteID: 49aede114a5bc0ca0800000000000000
       internalID: -6049260483185349996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: springEnemy_2
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 0
+        width: 13
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59e1485cb722e1f10800000000000000
+      internalID: 2242267579467177621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: springEnemy_3
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 0
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 509930874f4d31270800000000000000
+      internalID: 8220147891331897605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: springEnemy_4
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 0
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3338a20d5c181cac0800000000000000
+      internalID: -3836642720941964493
       vertices: []
       indices: 
       edges: []

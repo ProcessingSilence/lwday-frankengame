@@ -63,6 +63,9 @@
           <e p="Spikey" t="Include">
             <e p="DeSpiked.cs" t="Include" />
           </e>
+          <e p="Spring" t="Include">
+            <e p="SpringEnemy.cs" t="Include" />
+          </e>
           <e p="Teleporter.cs" t="Include" />
           <e p="ToGoreHitbox.cs" t="Include" />
           <e p="Wall.cs" t="Include" />

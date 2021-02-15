@@ -20,6 +20,7 @@ TagManager:
   - PlayerComponent
   - Destroyable
   - SpikeyEnemy
+  - UnthrowableEnemy
   layers:
   - Default
   - TransparentFX

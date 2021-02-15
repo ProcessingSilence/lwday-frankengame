@@ -127,6 +127,12 @@ public class HandThrow : MonoBehaviour
             {
                 cC.enabled = false;
             }
+
+            var caC = caughtEnemy.GetComponent<CapsuleCollider>();
+            if (caC)
+            {
+                caC.enabled = false;
+            }
         }
 
         if (haveCaughtEnemy == 2)
