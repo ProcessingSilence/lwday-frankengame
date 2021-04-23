@@ -19,7 +19,7 @@ public class BigSpiker : MonoBehaviour
         circleCollider = GetComponent<CircleCollider2D>();
         playerObj = GameObject.Find("Player");
         takeDamage = playerObj.GetComponent<PlayerState>().takeDamage;
-        requiredDist = (circleCollider.radius * 2) + 0.1f;
+        requiredDist = (circleCollider.radius * 2);
     }
 
     // Update is called once per frame

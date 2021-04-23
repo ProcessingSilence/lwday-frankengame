@@ -32,7 +32,7 @@ public class SimpleVals : MonoBehaviour
     {
         if (walkWhenPlayerClose && detectedPlayer == false)
         {
-            if (Vector2.Distance(player.position, transform.position) <= requiredDetectionDist)
+            if (Vector2.Distance(new Vector2(player.position.x ,0), new Vector2(transform.position.x, 0)) <= requiredDetectionDist)
             {
                 detectedPlayer = true;
 

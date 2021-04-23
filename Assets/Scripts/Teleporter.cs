@@ -9,6 +9,8 @@ public class Teleporter : MonoBehaviour
     private Transform teleportObj;
 
     private AudioSource audioSource;
+
+    public ParticleSystem[] entranceExitEffects;
     // Start is called before the first frame update
     void Awake()
     {
@@ -28,7 +30,11 @@ public class Teleporter : MonoBehaviour
 
     void OnTeleport()
     {
+        entranceExitEffects[0].gameObject.transform.position = teleportObj.transform.position;
         teleportObj.transform.position = exit.position;
         audioSource.Play();
+
+        entranceExitEffects[0].Play();
+        entranceExitEffects[1].Play();
     }
 }

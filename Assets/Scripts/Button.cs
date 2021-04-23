@@ -5,6 +5,7 @@ using UnityEngine;
 public class Button : MonoBehaviour
 {
     public GameObject wall;
+    public GameObject[] appearObj;
     public GameObject[] walls;
     private Button Button_script;
     public Sprite[] buttonStates;
@@ -17,6 +18,14 @@ public class Button : MonoBehaviour
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         Button_script = GetComponent<Button>();
+
+        for (int i = 0; i < appearObj.Length; i++)
+        {
+            if (appearObj[i])
+            {
+                appearObj[i].SetActive(false);
+            }
+        }
     }
 
     // Update is called once per frame
@@ -38,6 +47,17 @@ public class Button : MonoBehaviour
             _audioSource.Play();
             Destroy(wall);
             spriteRenderer.sprite = buttonStates[1];
+            if (appearObj.Length > 0)
+            {
+                for (int i = 0; i < appearObj.Length; i++)
+                {
+                    if (appearObj[i])
+                    {
+                        appearObj[i].SetActive(true);
+                    }
+                }
+            }
+
             Destroy(gameObject.GetComponent<BoxCollider2D>());
             Destroy(Button_script);
         }
