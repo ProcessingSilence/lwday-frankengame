@@ -32,6 +32,7 @@ public class SpringEnemy : MonoBehaviour
         animator = gameObject.GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         boxCollider = GetComponent<BoxCollider2D>();
+        gameObject.tag = "UnthrowableEnemy";
         
         /*
         if (isWalking)
@@ -87,7 +88,7 @@ public class SpringEnemy : MonoBehaviour
     IEnumerator Jumping(int leftOrRight)
     {
         spriteRenderer.sprite = springSprites[2];
-        gameObject.tag = "SpikeyEnemy";
+        gameObject.tag = "DamageEnemy";
         rb.AddForce(new Vector2(700*leftOrRight,1500));
         RaycastHit hitInfo;
         //Physics.Raycast(transform.position, transform.forward * leftOrRight, out hitInfo, 5);
@@ -105,7 +106,7 @@ public class SpringEnemy : MonoBehaviour
         spriteRenderer.sprite = springSprites[1];
         yield return new WaitForSecondsRealtime(0.1f);
         spriteRenderer.sprite = springSprites[0];
-        gameObject.tag = "DamageEnemy";
+        gameObject.tag = "UnthrowableEnemy";
         StartCoroutine(Neutral());
 
     }

@@ -39,7 +39,7 @@ public class Thrown : StateMachineBehaviour
         }
         
         if (ThrownVals_script.instaKill == false)
-            rb.velocity = animator.transform.right * velocity;
+            rb.velocity = (animator.transform.right * (velocity * 200) * Time.deltaTime);
     }
     
 }

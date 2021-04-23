@@ -167,7 +167,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isWalking: 0
+  walkWhenPlayerClose: 0
+  requiredDetectionDist: 0
   walkSpeed: 5
+  player: {fileID: 0}
 --- !u!114 &3648369441485113686
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -181,9 +184,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   goreVelocityRequirement: 60
-  givenVelocity: 0
-  goreMess: {fileID: 4489645240279299919, guid: 4d2729933e371f54088ad0738fb1aacc,
-    type: 3}
+  givenVelocity: 60
   deathSprite: {fileID: 1004340224689716819, guid: cac5a0112dd2dc2448de8351daaf73fb,
     type: 3}
   thrownDirection: {x: 0, y: 0}

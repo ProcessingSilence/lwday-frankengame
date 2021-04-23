@@ -95,7 +95,7 @@ public class PlayerController : MonoBehaviour
             {
                 rb.velocity += Vector2.up * Physics2D.gravity.y * (inputGravityWeight - 1) * Time.deltaTime;
             }
-            else if (rb.velocity.y > 0 && !Input.GetKey(KeyCode.W))
+            else if (rb.velocity.y > 0 && !Input.GetKey(KeyCode.W) && !Input.GetKey(KeyCode.Space))
             {
                 rb.velocity += Vector2.up * Physics2D.gravity.y * (noInputGravityWeight - 1 ) * Time.deltaTime;
             }
@@ -111,6 +111,7 @@ public class PlayerController : MonoBehaviour
             alreadyJumped = true;
             aS.clip = jumpSound;
             aS.Play();
+            Debug.Log("Jumped");
         }
     }
     void HigherJump()
@@ -124,7 +125,7 @@ public class PlayerController : MonoBehaviour
         jumpPressedPeriodCurrent -= Time.deltaTime;
         
         // Reset timer on jump.
-        if (Input.GetKeyDown(KeyCode.W))
+        if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.Space))
         {
             jumpPressedPeriodCurrent = jumpPressedPeriodTime;
         }

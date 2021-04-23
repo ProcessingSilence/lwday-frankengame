@@ -28,6 +28,7 @@
           <e p="Flashing.cs" t="Include" />
           <e p="Global" t="Include">
             <e p="Enemy" t="Include">
+              <e p="BigSpiker.cs" t="Include" />
               <e p="Caught.cs" t="Include" />
               <e p="DeathProperties.cs" t="Include" />
               <e p="GoreExplosion.cs" t="Include" />

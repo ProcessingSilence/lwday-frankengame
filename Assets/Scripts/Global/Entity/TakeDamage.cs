@@ -7,7 +7,7 @@ public class TakeDamage : MonoBehaviour
 {
     public GameObject goreSpawn;
     private GameObject currentGoreSpawn;
-    private int dieOnce;
+    [HideInInspector]public int dieOnce;
 
     public GameObject healthObj;
     private GameObject newHealthObj;
@@ -85,7 +85,7 @@ public class TakeDamage : MonoBehaviour
                 dieOnce = 1;
             }
 
-            if (other.gameObject.CompareTag("Enemy") && damageState == null)
+            if (((other.gameObject.CompareTag("Enemy") || other.gameObject.CompareTag("UnthrowableEnemy")) || other.gameObject.layer == 18)  && damageState == null)
             {
                 damageState = StartCoroutine(TouchEnemy(other));
             }
