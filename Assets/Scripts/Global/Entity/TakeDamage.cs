@@ -79,7 +79,7 @@ public class TakeDamage : MonoBehaviour
         if (playerState.currentState != PlayerState.States.Hurt ||
             playerState.currentState != PlayerState.States.HurtInvulnerable)
         {
-            Debug.Log("go");
+            //Debug.Log("go");
             if (other.gameObject.CompareTag("Damage") || other.gameObject.CompareTag("DamageEnemy") || other.gameObject.CompareTag("SpikeyEnemy"))
             {
                 dieOnce = 1;

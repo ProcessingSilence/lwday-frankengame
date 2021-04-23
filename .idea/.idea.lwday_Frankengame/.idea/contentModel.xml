@@ -54,6 +54,7 @@
             <e p="PlayerController.cs" t="Include" />
           </e>
           <e p="PlayerState.cs" t="Include" />
+          <e p="ScrollingEffect.cs" t="Include" />
           <e p="ScrollScript.cs" t="Include" />
           <e p="SimpleEnemy" t="Include">
             <e p="isIdle.cs" t="Include" />

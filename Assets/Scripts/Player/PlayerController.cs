@@ -230,7 +230,7 @@ public class PlayerController : MonoBehaviour
 
     public bool IsGrounded()
     {
-        Debug.Log("Grounded");
+        //Debug.Log("Grounded");
         RaycastHit2D raycastHit = Physics2D.BoxCast(boxCollider2D.bounds.center, boxCollider2D.bounds.size*1f, 0f,Vector2.down, .5f, platformLayerMask);
         return raycastHit.collider != null;
     }

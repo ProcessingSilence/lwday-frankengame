@@ -10,16 +10,32 @@ public class DestructibleTiles : MonoBehaviour
     public Transform followObj;
 
     public GameObject soundPlayer;
-    // Start is called before the first frame update
-    void Start()
+
+    private CircleCollider2D circleCollider2D;
+
+    private void Awake()
     {
+        circleCollider2D = GetComponent<CircleCollider2D>();
     }
 
     private void FixedUpdate()
     {
         transform.position = followObj.position;
+        var hit = Physics2D.CircleCastAll(transform.position, circleCollider2D.radius, transform.forward);
+        if (hit.Length > 0)
+        {
+            foreach (var obj in hit)
+            {
+                if (obj.collider.gameObject.CompareTag("Destroyable"))
+                {
+                    Debug.Log("hit");
+                    NewDestroyTiles(obj);
+                }
+            }
+        }
     }
 
+    /*
     // Update is called once per frame
     void Update()
     {
@@ -30,6 +46,7 @@ public class DestructibleTiles : MonoBehaviour
     {
         transform.position = followObj.position;
     }
+    */
 
     void OnCollisionStay2D(Collision2D collision) 
     {
@@ -41,7 +58,7 @@ public class DestructibleTiles : MonoBehaviour
 
     void DestroyTiles(Collision2D collision)
     {
-        Vector3 hitPos = Vector3.zero;
+        Vector3 hitPos = new Vector3();
         var destroyableTilemap = collision.gameObject.GetComponent<Tilemap>();
         foreach (ContactPoint2D hit in collision.contacts)
         {
@@ -54,5 +71,20 @@ public class DestructibleTiles : MonoBehaviour
             aS.clip = Resources.Load<AudioClip>("Audio/destroyBlock");
             aS.Play();
         }
+    }
+
+    void NewDestroyTiles(RaycastHit2D hit)
+    {
+        Vector3 hitPos = new Vector3();
+        var destroyableTilemap = hit.collider.gameObject.GetComponent<Tilemap>();
+
+        hitPos.x = hit.point.x - 0.01f;
+        hitPos.y = hit.point.y - 0.01f;
+        destroyableTilemap.SetTile(destroyableTilemap.WorldToCell(hitPos),null);
+        
+        GameObject newSoundPlayer = Instantiate(soundPlayer);
+        AudioSource aS = newSoundPlayer.GetComponent<AudioSource>();
+        aS.clip = Resources.Load<AudioClip>("Audio/destroyBlock");
+        aS.Play();       
     }
 }

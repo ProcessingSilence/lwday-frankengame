@@ -1011,6 +1011,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wall: {fileID: 176433097}
+  appearObj: []
   walls: []
   buttonStates:
   - {fileID: -5066846463355323016, guid: cdb5175be7f05b045bb3fab700f669f0, type: 3}
@@ -36421,6 +36422,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1333978749, guid: df5f01f961930474698d938406434c06, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2375277254906616951, guid: df5f01f961930474698d938406434c06,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.41
+      objectReference: {fileID: 0}
+    - target: {fileID: 2375277254906616951, guid: df5f01f961930474698d938406434c06,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.21
+      objectReference: {fileID: 0}
     - target: {fileID: 9119525376362993746, guid: df5f01f961930474698d938406434c06,
         type: 3}
       propertyPath: m_Name
@@ -36439,7 +36454,7 @@ PrefabInstance:
     - target: {fileID: 9119525376362993759, guid: df5f01f961930474698d938406434c06,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 31.54
       objectReference: {fileID: 0}
     - target: {fileID: 9119525376362993759, guid: df5f01f961930474698d938406434c06,
         type: 3}

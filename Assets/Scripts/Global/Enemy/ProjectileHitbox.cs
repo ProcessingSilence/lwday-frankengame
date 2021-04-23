@@ -71,11 +71,11 @@ public class ProjectileHitbox : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if ((other.CompareTag("Enemy") || other.CompareTag("DamageEnemy") || other.CompareTag("UnthrowableEnemy")) && otherEnemy == false)
+        if ((other.CompareTag("Enemy")  || other.CompareTag("UnthrowableEnemy")) && otherEnemy == false)
         {
             otherEnemy = other.gameObject;
         }
-        if (other.CompareTag("SpikeyEnemy"))
+        if (other.CompareTag("SpikeyEnemy") || other.CompareTag("DamageEnemy"))
         {
             SpikeyEnemy(other);
         }
