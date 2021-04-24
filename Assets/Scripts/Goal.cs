@@ -35,8 +35,11 @@ public class Goal : MonoBehaviour
         {
             hitGoal = 2;
             circleCollider2D.enabled = false;
-            audioSource.Play();
-            particleSystem.Play();
+            if (audioSource.clip)
+            {
+                audioSource.Play();
+                particleSystem.Play();
+            }
             spriteRenderer.enabled = false;
             MainSceneManager_script.sceneNum = 2;
         }
