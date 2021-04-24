@@ -45,8 +45,15 @@ public class Button : MonoBehaviour
             _audioSource = gameObject.AddComponent<AudioSource>();
             _audioSource.clip = Resources.Load<AudioClip>("click");
             _audioSource.Play();
-            Destroy(wall);
-            spriteRenderer.sprite = buttonStates[1];
+            if (wall)
+            {
+                Destroy(wall);
+            }
+
+            if (spriteRenderer.enabled)
+            {
+                spriteRenderer.sprite = buttonStates[1];
+            }
             if (appearObj.Length > 0)
             {
                 for (int i = 0; i < appearObj.Length; i++)

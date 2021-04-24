@@ -46,6 +46,9 @@
           </e>
           <e p="Goal.cs" t="Include" />
           <e p="MainSceneManager.cs" t="Include" />
+          <e p="Missile" t="Include">
+            <e p="Missile.cs" t="Include" />
+          </e>
           <e p="NewBehaviourScript.cs" t="Include" />
           <e p="Player" t="Include">
             <e p="AimingAtMouse.cs" t="Include" />
@@ -55,6 +58,7 @@
           </e>
           <e p="PlayerState.cs" t="Include" />
           <e p="RandomStartRotation.cs" t="Include" />
+          <e p="ScriptedSunEvent.cs" t="Include" />
           <e p="ScrollingEffect.cs" t="Include" />
           <e p="ScrollScript.cs" t="Include" />
           <e p="SimpleEnemy" t="Include">
@@ -62,6 +66,8 @@
             <e p="SimpleVals.cs" t="Include" />
             <e p="Walking.cs" t="Include" />
           </e>
+          <e p="SoundPlayer.cs" t="Include" />
+          <e p="SoundSpawner.cs" t="Include" />
           <e p="SpawnGoalUponDeaths.cs" t="Include" />
           <e p="Spikey" t="Include">
             <e p="DeSpiked.cs" t="Include" />
@@ -69,6 +75,7 @@
           <e p="Spring" t="Include">
             <e p="SpringEnemy.cs" t="Include" />
           </e>
+          <e p="SunBoss.cs" t="Include" />
           <e p="Teleporter.cs" t="Include" />
           <e p="ToGoreHitbox.cs" t="Include" />
           <e p="Wall.cs" t="Include" />
