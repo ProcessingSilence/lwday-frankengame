@@ -49049,6 +49049,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b264c654892d3548ad7be9f25916152, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetObj: {fileID: 0}
 --- !u!1 &2131598446
 GameObject:
   m_ObjectHideFlags: 0
@@ -62151,6 +62152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b264c654892d3548ad7be9f25916152, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetObj: {fileID: 0}
 --- !u!1 &6590689314789203694
 GameObject:
   m_ObjectHideFlags: 0
@@ -62509,6 +62511,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: GOAL_drumstick
       objectReference: {fileID: 0}
+    - target: {fileID: 9055313935636738689, guid: b614af16d8bcc324b8dafb886649b31e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9055313935636738748, guid: b614af16d8bcc324b8dafb886649b31e,
+        type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9055313935636738751, guid: b614af16d8bcc324b8dafb886649b31e,
         type: 3}
       propertyPath: m_RootOrder
@@ -62522,7 +62534,7 @@ PrefabInstance:
     - target: {fileID: 9055313935636738751, guid: b614af16d8bcc324b8dafb886649b31e,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.04
+      value: -4.65
       objectReference: {fileID: 0}
     - target: {fileID: 9055313935636738751, guid: b614af16d8bcc324b8dafb886649b31e,
         type: 3}
