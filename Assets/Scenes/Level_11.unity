@@ -54215,6 +54215,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: GOAL_drumstick
       objectReference: {fileID: 0}
+    - target: {fileID: 9055313935636738689, guid: b614af16d8bcc324b8dafb886649b31e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9055313935636738748, guid: b614af16d8bcc324b8dafb886649b31e,
         type: 3}
       propertyPath: m_Materials.Array.size
