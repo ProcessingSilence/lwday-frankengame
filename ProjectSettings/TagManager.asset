@@ -21,6 +21,9 @@ TagManager:
   - Destroyable
   - SpikeyEnemy
   - UnthrowableEnemy
+  - SunHitbox
+  - SunHurtPlayer
+  - Land
   layers:
   - Default
   - TransparentFX
@@ -43,7 +46,7 @@ TagManager:
   - Damage
   - Background
   - TileDestroyer
-  - 
+  - Sun
   - 
   - 
   - 

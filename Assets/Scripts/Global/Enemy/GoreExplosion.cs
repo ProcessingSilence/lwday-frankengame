@@ -22,6 +22,7 @@ public class GoreExplosion : MonoBehaviour
     void Start()
     {
         audioSource = gameObject.GetComponent<AudioSource>();
+        StartCoroutine(DestroySelf());
     }
 
     // Update is called once per frame
@@ -34,7 +35,10 @@ public class GoreExplosion : MonoBehaviour
             {
                 randomRotation = Random.Range(0, 360);
                 currentGoreObj = Instantiate(goreObj, transform.position, Quaternion.identity);
-                currentGoreObj.GetComponent<SpriteRenderer>().sprite = goryParts[Random.Range(0, goryParts.Length)];
+                if (goryParts.Length > 0)
+                {
+                    currentGoreObj.GetComponent<SpriteRenderer>().sprite = goryParts[Random.Range(0, goryParts.Length)];
+                }
                 var tempRB = currentGoreObj.GetComponent<Rigidbody2D>();
                 currentGoreObj.transform.eulerAngles = new Vector3(0,0,randomRotation);
                 tempRB.AddRelativeForce(Random.onUnitSphere * 500);
@@ -42,5 +46,11 @@ public class GoreExplosion : MonoBehaviour
             audioSource.clip = goreSound[Random.Range(0, goreSound.Length)];
             audioSource.Play();
         }       
-    }  
+    }
+
+    IEnumerator DestroySelf()
+    {
+        yield return new WaitForSecondsRealtime(0.5f);
+        Destroy(gameObject);
+    }
 }

@@ -137,8 +137,15 @@ public class HandThrow : MonoBehaviour
 
         if (haveCaughtEnemy == 2)
         {
-            caughtEnemy.transform.position = transform.position;
-            caughtEnemy.transform.rotation = transform.rotation;
+            if (!caughtEnemy)
+            {
+                haveCaughtEnemy = 0;
+            }
+            if (caughtEnemy)
+            {
+                caughtEnemy.transform.position = transform.position;
+                caughtEnemy.transform.rotation = transform.rotation;
+            }
         }
     }
 

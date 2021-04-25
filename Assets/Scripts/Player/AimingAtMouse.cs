@@ -87,7 +87,7 @@ public class AimingAtMouse : MonoBehaviour
 
     private void SetThrownProperties()
     {
-        if (haveThrown)
+        if (haveThrown && enemyObj)
         {
             if (transform.eulerAngles.z <= 300 && transform.eulerAngles.z >= 240)
             {
@@ -125,6 +125,13 @@ public class AimingAtMouse : MonoBehaviour
             haveThrown = false;
             StartCoroutine(StartHandEnableDelay());
             
+        }
+
+        if (!enemyObj)
+        {
+            PlayerController_script.chosenSprite = 1;
+            haveThrown = false;
+            StartCoroutine(StartHandEnableDelay());
         }
     }
 

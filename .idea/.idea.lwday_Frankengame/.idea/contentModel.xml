@@ -6,11 +6,10 @@
     <e p="F:\UnityProjects\lwday_Frankengame" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
-        <e p="DetectOverlap.cs" t="Include" />
         <e p="Graphics" t="Include">
           <e p="FONT CREDIT.txt" t="Include" />
         </e>
-        <e p="physicsObj.cs" t="Include" />
+        <e p="LandHitbox.cs" t="Include" />
         <e p="Resources" t="Include">
           <e p="Audio" t="Include">
             <e p="CREDITS.txt" t="Include" />
@@ -22,6 +21,7 @@
           <e p="Capsule.cs" t="Include" />
           <e p="ConstantEnemyRespawn.cs" t="Include" />
           <e p="DestructibleTiles.cs" t="Include" />
+          <e p="DetectOverlap.cs" t="Include" />
           <e p="DontGoThroughThings.cs" t="Include" />
           <e p="EndlessRotation.cs" t="Include" />
           <e p="EnemyRespawner.cs" t="Include" />
@@ -45,11 +45,13 @@
             <e p="GlobalVars.cs" t="Include" />
           </e>
           <e p="Goal.cs" t="Include" />
+          <e p="GoreObj.cs" t="Include" />
           <e p="MainSceneManager.cs" t="Include" />
           <e p="Missile" t="Include">
             <e p="Missile.cs" t="Include" />
           </e>
           <e p="NewBehaviourScript.cs" t="Include" />
+          <e p="physicsObj.cs" t="Include" />
           <e p="Player" t="Include">
             <e p="AimingAtMouse.cs" t="Include" />
             <e p="HandEnable.cs" t="Include" />
@@ -58,7 +60,6 @@
           </e>
           <e p="PlayerState.cs" t="Include" />
           <e p="RandomStartRotation.cs" t="Include" />
-          <e p="ScriptedSunEvent.cs" t="Include" />
           <e p="ScrollingEffect.cs" t="Include" />
           <e p="ScrollScript.cs" t="Include" />
           <e p="SimpleEnemy" t="Include">
@@ -75,7 +76,11 @@
           <e p="Spring" t="Include">
             <e p="SpringEnemy.cs" t="Include" />
           </e>
-          <e p="SunBoss.cs" t="Include" />
+          <e p="Sun" t="Include">
+            <e p="ScriptedSunEvent.cs" t="Include" />
+            <e p="SunBoss.cs" t="Include" />
+            <e p="SunCollisionHitBox.cs" t="Include" />
+          </e>
           <e p="Teleporter.cs" t="Include" />
           <e p="ToGoreHitbox.cs" t="Include" />
           <e p="Wall.cs" t="Include" />

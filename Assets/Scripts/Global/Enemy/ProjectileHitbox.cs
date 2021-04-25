@@ -16,6 +16,8 @@ public class ProjectileHitbox : MonoBehaviour
     private bool alreadyPressedButton;
     private bool goreOrCorpse;
     public Transform child;
+
+    public bool damageTheSun;
     // Start is called before the first frame update
     void Start()
     {
@@ -75,6 +77,16 @@ public class ProjectileHitbox : MonoBehaviour
         {
             otherEnemy = other.gameObject;
         }
+
+        if (other.CompareTag("SunHitbox"))
+        {
+            if (damageTheSun == false)
+            {
+                damageTheSun = true;
+                DamageSun(other.gameObject);
+            }
+        }
+
         if (other.CompareTag("SpikeyEnemy") || other.CompareTag("DamageEnemy"))
         {
             SpikeyEnemy(other);
@@ -95,5 +107,14 @@ public class ProjectileHitbox : MonoBehaviour
         Instantiate(Resources.Load("GoreSpawner") as GameObject, transform.position, Quaternion.identity);
         Destroy(myParent);
     }
-    
+
+    void DamageSun(GameObject sun)
+    {
+        SunBoss sunBossScript= sun.GetComponent<SunBoss>();
+        sunBossScript.health -= 1;
+        Debug.Log("Hit the sun");
+        Instantiate(Resources.Load("GoreSpawner") as GameObject, transform.position, Quaternion.identity);
+        Destroy(myParent);
+    }
+
 }
