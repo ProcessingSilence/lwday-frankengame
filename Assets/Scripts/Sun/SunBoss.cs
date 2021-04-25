@@ -7,6 +7,7 @@ public class SunBoss : MonoBehaviour
 {
     public int health;
     private int detectHealth;
+    private int maxHealth;
     public GameObject missile;
 
     public Coroutine currentAttack;
@@ -38,6 +39,12 @@ public class SunBoss : MonoBehaviour
     private CircleCollider2D collider;
 
     public GameObject hurtHitbox;
+
+    private Animator animator;
+
+    private BoxCollider2D boxCollider;
+
+    private Color colorHealth;
     public enum Attack
     {
         Missiles,
@@ -60,23 +67,30 @@ public class SunBoss : MonoBehaviour
     {
         originalPosition = transform.position;
         spriteRenderer = GetComponent<SpriteRenderer>();
-        detectHealth = health;
+        detectHealth =health;
+        maxHealth = health;
         currentBiteMoveSpeed = biteMovementSpeed;
         bitePos = player.transform.position;
         rb = GetComponent<Rigidbody2D>();
         particleSystem = gameObject.GetComponent<ParticleSystem>();
-        collider = GetComponent<CircleCollider2D>();        
+        colorHealth = spriteRenderer.color;
+        collider = GetComponent<CircleCollider2D>();
+        animator = GetComponent<Animator>();
+        boxCollider = GetComponent<BoxCollider2D>();
         currentAttack = StartCoroutine(DelayBeforeStarting());
     }
 
     // Update is called once per frame
     void Update()
     {
+        Debug.Log("health/maxhealth: " + (float)health/maxHealth);
+        spriteRenderer.color = Color.Lerp(Color.white, colorHealth, (float) health/maxHealth);
         if (health < detectHealth)
         {
             detectHealth = health;
             SoundSpawner.PlaySoundObj(transform.position, hurtSound);
             currentBiteMoveSpeed = 0;
+
         }
 
         if (health <= 0 && health > -999)
@@ -86,10 +100,15 @@ public class SunBoss : MonoBehaviour
             currentAttackState = Attack.Defeated;
             spriteRenderer.sprite = defeated;
             gameObject.layer = 13;
-            
+            gameObject.tag = "Enemy";
+            animator.enabled = true;
             hurtHitbox.SetActive(false);
             collider.radius = 1.44f;
             collider.offset = new Vector2(0, 0.66f);
+            gameObject.GetComponent<SimpleVals>().enabled = true;
+            gameObject.GetComponent<ThrownVals>().enabled = true;
+            collider.enabled = false;
+            boxCollider.enabled = true;
             rb.gravityScale = 1;
 
         }
@@ -107,7 +126,7 @@ public class SunBoss : MonoBehaviour
                 {
                     SoundSpawner.PlaySoundObj(transform.position, teleportSound);
                     particleSystem.Play();
-                    transform.position = new Vector2(player.transform.position.x + Random.Range(0,5f), player.transform.position.y + 8f);
+                    transform.position = new Vector2(player.transform.position.x + Random.Range(-5,5f), player.transform.position.y + 8f);
                     currentAttack = StartCoroutine(FiringAtPlayer());
                 }
                 var step =  missileFiringMovementSpeed * Time.deltaTime;
@@ -139,14 +158,19 @@ public class SunBoss : MonoBehaviour
     {
         for (int i = 0; i < Random.Range(7, 9); i++)
         {
-            yield return new WaitForSecondsRealtime(Random.Range(0.2f, 0.4f));
-            spriteRenderer.sprite = laugh;
-            var newMissile = Instantiate(missile, transform.position, Quaternion.identity);
-            Vector3 dir = new Vector3(player.transform.position.x + Random.Range(-1,1), player.transform.position.y + Random.Range(-1,1), player.transform.position.z) - newMissile.transform.position;
-            float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
-            newMissile.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
-            yield return new WaitForSecondsRealtime(0.2f);
-            spriteRenderer.sprite = smile;
+            if (health > 0)
+            {
+                yield return new WaitForSecondsRealtime(Random.Range(0.2f, 0.4f));
+                spriteRenderer.sprite = laugh;
+                var newMissile = Instantiate(missile, transform.position, Quaternion.identity);
+                Vector3 dir =
+                    new Vector3(player.transform.position.x + Random.Range(-3, 3), player.transform.position.y,
+                        player.transform.position.z) - newMissile.transform.position;
+                float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+                newMissile.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+                yield return new WaitForSecondsRealtime(0.2f);
+                spriteRenderer.sprite = smile;
+            }
         }
 
         currentAttack = null;
@@ -194,6 +218,8 @@ public class SunBoss : MonoBehaviour
         rb.velocity = new Vector2(0,1);
         yield return new WaitForSecondsRealtime(3.3f);
         rb.velocity = new Vector2(0,0);
+        spriteRenderer.sprite = bite;
+        yield return new WaitForSecondsRealtime(0.25f);
         spriteRenderer.sprite = smile;
         SoundSpawner.PlaySoundObj(transform.position, teleportSound);
         particleSystem.Play();

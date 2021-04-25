@@ -17,11 +17,16 @@ public class Goal : MonoBehaviour
     private SpriteRenderer spriteRenderer;
 
     private CircleCollider2D circleCollider2D;
+
+    public bool isFakeGoal;
     // Start is called before the first frame update
     void Start()
     {
         mainSceneManager = GameObject.FindWithTag("SceneManager");
-        MainSceneManager_script = mainSceneManager.GetComponent<MainSceneManager>();
+        if (isFakeGoal == false)
+        {
+            MainSceneManager_script = mainSceneManager.GetComponent<MainSceneManager>();
+        }
         audioSource = GetComponent<AudioSource>();
         particleSystem = GetComponent<ParticleSystem>();
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -41,7 +46,18 @@ public class Goal : MonoBehaviour
                 particleSystem.Play();
             }
             spriteRenderer.enabled = false;
-            MainSceneManager_script.sceneNum = 2;
+            if (isFakeGoal == false)
+            {
+                MainSceneManager_script.sceneNum = 2;
+            }
+
+            if (isFakeGoal)
+            {
+                SoundSpawner.PlaySoundObj(transform.position, audioSource.clip);
+                spriteRenderer.sprite = null;
+            }
+
+            StartCoroutine(WaitBeforeDestroy());
         }
     }
 
@@ -51,5 +67,11 @@ public class Goal : MonoBehaviour
         {
             hitGoal = 1;
         }
+    }
+
+    IEnumerator WaitBeforeDestroy()
+    {
+        yield return new WaitForSecondsRealtime(2f);
+        Destroy(gameObject);
     }
 }
