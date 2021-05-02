@@ -23,6 +23,8 @@ public class ThrownVals : MonoBehaviour
 
     private SpriteRenderer sR;
 
+    public bool regularExplosion;
+
     // Start is called before the first frame update
     void Start()
     {

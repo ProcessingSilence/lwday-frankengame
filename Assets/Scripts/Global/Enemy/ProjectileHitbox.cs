@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEngine;
 
 // Detects when enemies are hit or when buttons are pressed, uses a larger hitbox than ToGoreHitbox so it's more forgiving
@@ -9,6 +10,7 @@ public class ProjectileHitbox : MonoBehaviour
 {
     private GameObject myParent;
     private GameObject goreExplosion;
+    private GameObject regularExplosion;
     private ThrownVals ThrownVals_script;
     private Animator enemyAnimator;
     private GameObject otherEnemy;
@@ -25,6 +27,7 @@ public class ProjectileHitbox : MonoBehaviour
         ThrownVals_script = myParent.GetComponent<ThrownVals>();
         enemyAnimator = myParent.GetComponent<Animator>();
         goreExplosion = Resources.Load("GoreSpawner") as GameObject;
+        regularExplosion = Resources.Load("Explosion") as GameObject;
         if (ThrownVals_script.givenVelocity >= ThrownVals_script.goreVelocityRequirement)
         {
             goreOrCorpse = false;
@@ -64,7 +67,17 @@ public class ProjectileHitbox : MonoBehaviour
     {
         if (otherEnemy)
         {
-            Instantiate(goreExplosion, otherEnemy.transform.position, Quaternion.identity);
+            GameObject explosionType;
+            if (otherEnemy.CompareTag("Missile"))
+            {
+                explosionType = regularExplosion;
+            }
+            else
+            {
+                explosionType = goreExplosion;
+            }
+
+            Instantiate(explosionType, otherEnemy.transform.position, Quaternion.identity);
             Destroy(otherEnemy);
             otherEnemy = null;
         }
@@ -73,7 +86,7 @@ public class ProjectileHitbox : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if ((other.CompareTag("Enemy")  || other.CompareTag("UnthrowableEnemy")) && otherEnemy == false)
+        if ((other.CompareTag("Enemy")  || other.CompareTag("UnthrowableEnemy") || other.CompareTag("Missile")) && otherEnemy == false)
         {
             otherEnemy = other.gameObject;
         }
@@ -113,7 +126,23 @@ public class ProjectileHitbox : MonoBehaviour
         SunBoss sunBossScript= sun.GetComponent<SunBoss>();
         sunBossScript.health -= 1;
         Debug.Log("Hit the sun");
-        Instantiate(Resources.Load("GoreSpawner") as GameObject, transform.position, Quaternion.identity);
+        var goreExplosion = Instantiate(Resources.Load("GoreSpawner") as GameObject, sun.transform.position, Quaternion.identity);
+        goreExplosion.GetComponent<GoreExplosion>().goreAmount = 0;
+        if (transform.parent.CompareTag("Missile"))
+        {
+            Instantiate(regularExplosion, transform.position, Quaternion.identity);
+        }
+
+        var sunRb = sun.GetComponent<Rigidbody2D>();
+        if (sunBossScript.currentAttackState == SunBoss.Attack.Bite && sunBossScript.health > 0)
+        {
+            var myVelocity = transform.parent.GetComponent<Rigidbody2D>().velocity;
+            sunRb.velocity = myVelocity/4;
+            sunRb.gravityScale = 1;
+            sun.GetComponent<TrailRenderer>().enabled = false;
+            sunRb.AddTorque(360 * myVelocity.magnitude, ForceMode2D.Impulse);
+        }
+    
         Destroy(myParent);
     }
 

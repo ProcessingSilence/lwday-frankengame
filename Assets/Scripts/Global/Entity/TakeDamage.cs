@@ -85,7 +85,7 @@ public class TakeDamage : MonoBehaviour
                 dieOnce = 1;
             }
 
-            if (((other.gameObject.CompareTag("Enemy") || other.gameObject.CompareTag("UnthrowableEnemy")) || other.gameObject.CompareTag("SunHurtPlayer") || other.gameObject.layer == 18)  && damageState == null)
+            if (((other.gameObject.CompareTag("Enemy") || other.gameObject.CompareTag("UnthrowableEnemy")) || other.gameObject.CompareTag("SunHurtPlayer") || other.gameObject.CompareTag("Missile") || other.gameObject.layer == 18)  && damageState == null)
             {
                 if (other.name != "Evil Sun")
                 {

@@ -18,7 +18,7 @@ public class SoundSpawner : MonoBehaviour
     {
         
     }
-    public static void PlaySoundObj(Vector3 position, AudioClip clip, float volume = 1, bool hasLimitedRange = false, float maxDist = 80)
+    public static void PlaySoundObj(Vector3 position, AudioClip clip, float volume = 1, bool hasLimitedRange = false, float maxDist = 80, float pitch = 1)
     {
         var currentSoundPlayer = Instantiate(soundPlayer, position, Quaternion.identity).GetComponent<AudioSource>();
         if (hasLimitedRange)
@@ -28,6 +28,7 @@ public class SoundSpawner : MonoBehaviour
         }
 
         currentSoundPlayer.volume = volume;
-        currentSoundPlayer.clip = clip;       
+        currentSoundPlayer.clip = clip;
+        currentSoundPlayer.pitch = pitch;
     }
 }

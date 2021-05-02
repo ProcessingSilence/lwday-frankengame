@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEngine;
 using Random = UnityEngine.Random;
 public class SunBoss : MonoBehaviour
@@ -17,12 +18,26 @@ public class SunBoss : MonoBehaviour
     public Sprite smile, laugh, bite, weird, defeated, thrown;
 
     private SpriteRenderer spriteRenderer;
+    private TrailRenderer trailRenderer;
+
+    private enum MoveTowards
+    {
+        Choose,
+        Left,
+        Player,
+        Right
+    }
+
+    private MoveTowards moveTowards;
+
+    private Missile missileScript;
 
     public AudioClip hurtSound;
     public AudioClip roar;
     public AudioClip teleportSound;
 
     public float missileFiringMovementSpeed;
+    private float currentMissileFiringMovementSpeed;
     public float biteMovementSpeed;
     private float currentBiteMoveSpeed;
 
@@ -45,6 +60,18 @@ public class SunBoss : MonoBehaviour
     private BoxCollider2D boxCollider;
 
     private Color colorHealth;
+
+    private int biteAmt;
+
+    private float colliderSize;
+
+    private bool canFireMissile;
+
+    float lessHealthFasterAttack()
+    {
+        return 1f + (1f -(float)health/(float)maxHealth);
+    }
+
     public enum Attack
     {
         Missiles,
@@ -77,18 +104,24 @@ public class SunBoss : MonoBehaviour
         collider = GetComponent<CircleCollider2D>();
         animator = GetComponent<Animator>();
         boxCollider = GetComponent<BoxCollider2D>();
+        trailRenderer = GetComponent<TrailRenderer>();
+        trailRenderer.enabled = false;
+        colliderSize = collider.bounds.size.x/2;
         currentAttack = StartCoroutine(DelayBeforeStarting());
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         Debug.Log("health/maxhealth: " + (float)health/maxHealth);
         spriteRenderer.color = Color.Lerp(Color.white, colorHealth, (float) health/maxHealth);
         if (health < detectHealth)
         {
             detectHealth = health;
-            SoundSpawner.PlaySoundObj(transform.position, hurtSound);
+            if (health > 0)
+            {
+                SoundSpawner.PlaySoundObj(transform.position, hurtSound);
+            }
             currentBiteMoveSpeed = 0;
 
         }
@@ -96,6 +129,11 @@ public class SunBoss : MonoBehaviour
         if (health <= 0 && health > -999)
         {
             currentAttack = null;
+            GameObject[] missiles = GameObject.FindGameObjectsWithTag("Missile");
+            foreach (var missile in missiles)
+            {
+                missile.GetComponent<Missile>().DestroyImmediately();
+            }
             health = -1000;
             currentAttackState = Attack.Defeated;
             spriteRenderer.sprite = defeated;
@@ -110,28 +148,105 @@ public class SunBoss : MonoBehaviour
             collider.enabled = false;
             boxCollider.enabled = true;
             rb.gravityScale = 1;
+            SoundSpawner.PlaySoundObj(transform.position, hurtSound, 1, false, 80, 0.8f);
+            SoundSpawner.PlaySoundObj(transform.position, hurtSound, 1, false, 80, 0.8f);
 
         }
 
         if (currentAttack == null && health > 0)
         {
             currentAttackState = (Attack) Random.Range(0, 2);
+            transform.rotation = quaternion.Euler(0,0,0);
+            ResetRbTransform();
         }
 
         switch (currentAttackState)
         {
             case Attack.Missiles:
             {
+                trailRenderer.enabled = false;
                 if (currentAttack == null && health > 0)
                 {
+                    moveTowards = MoveTowards.Choose;
                     SoundSpawner.PlaySoundObj(transform.position, teleportSound);
                     particleSystem.Play();
-                    transform.position = new Vector2(player.transform.position.x + Random.Range(-5,5f), player.transform.position.y + 8f);
+                    transform.position = new Vector2(player.transform.position.x + Random.Range(-10,10f), player.transform.position.y + 8f);
+                    biteAmt = 0;
                     currentAttack = StartCoroutine(FiringAtPlayer());
                 }
-                var step =  missileFiringMovementSpeed * Time.deltaTime;
+                var step =  (missileFiringMovementSpeed * lessHealthFasterAttack()) * Time.deltaTime;
+                Vector3 chosenPos = Vector3.zero;
+                switch (moveTowards)
+                {
+                    case MoveTowards.Choose:
+                    {
+                        moveTowards = (MoveTowards) Random.Range(1, 4);
+                        break;
+                    }
+                    case MoveTowards.Left:
+                    {
+                        chosenPos = new Vector3(-32, Random.Range(-4f,2f));
+                        break;
+                    }
+                    case MoveTowards.Right:
+                    {
+                        chosenPos = new Vector3(43, Random.Range(-4f,2f));
+                        break;
+                    }
+                    case MoveTowards.Player:
+                    {
+                        chosenPos = new Vector3(player.transform.position.x, Random.Range(-4f, 2f));
+                        break;
+                    }
+                }
                 transform.position =
-                    Vector2.MoveTowards(transform.position, new Vector2(player.transform.position.x, 0), step);
+                    Vector2.MoveTowards(transform.position, chosenPos, step);
+                if (transform.position.x < -30)
+                {
+                    transform.position = new Vector3(player.transform.position.x, 0) + new Vector3(Random.Range(0, 10f), 0);
+                    SoundSpawner.PlaySoundObj(transform.position, teleportSound);
+                    particleSystem.Play();
+                    if (Random.value > 0.5f)
+                    {
+                        moveTowards = MoveTowards.Right;
+                    }
+                    else
+                    {
+                        moveTowards = MoveTowards.Player;
+                    }
+
+
+                }
+                if (transform.position.x > 41)
+                {
+                    transform.position = new Vector3(player.transform.position.x, 0) + new Vector3(Random.Range(-10f, 0f), 0);
+                    SoundSpawner.PlaySoundObj(transform.position, teleportSound);
+                    particleSystem.Play();
+                    if (Random.value > 0.5f)
+                    {
+                        moveTowards = MoveTowards.Left;
+                    }
+                    else
+                    {
+                        moveTowards = MoveTowards.Player;
+                    }
+                }
+                transform.position = new Vector3(transform.position.x, (Mathf.Sin(Time.time * (lessHealthFasterAttack() * 6.5f)) * lessHealthFasterAttack()));
+                if (transform.position.y > 0)
+                {
+                    spriteRenderer.sprite = laugh;
+                    if (canFireMissile)
+                    {
+                        canFireMissile = false;
+                        MissileFire();
+                    }
+                }
+                if (transform.position.y <= 0)
+                {
+                    spriteRenderer.sprite = smile;
+                    canFireMissile = true;
+                }
+
                 break;
             }
             case Attack.Bite:
@@ -148,6 +263,7 @@ public class SunBoss : MonoBehaviour
             case Attack.Defeated:
             {
                 spriteRenderer.sprite = defeated;
+                trailRenderer.enabled = false;
                 currentAttack = null;
                 break;
             }
@@ -156,18 +272,41 @@ public class SunBoss : MonoBehaviour
 
     IEnumerator FiringAtPlayer()
     {
-        for (int i = 0; i < Random.Range(7, 9); i++)
+        for (int i = 0; i < Random.Range(7-(lessHealthFasterAttack() * 2), 9 - (lessHealthFasterAttack() * 2)); i++)
         {
             if (health > 0)
             {
-                yield return new WaitForSecondsRealtime(Random.Range(0.2f, 0.4f));
+                yield return new WaitForSecondsRealtime(0.4f);
+                //spriteRenderer.sprite = laugh;
+                //MissileFire();
+                yield return new WaitForSecondsRealtime(0.2f);
+                //spriteRenderer.sprite = smile;
+            }
+        }
+
+        currentAttack = null;
+    }
+
+    void MissileFire()
+    {
+        var newMissile = Instantiate(missile, transform.position + new Vector3(Random.Range(-colliderSize, colliderSize), Random.Range(-colliderSize, colliderSize), 0), Quaternion.identity);
+        Vector3 dir =
+            new Vector3(player.transform.position.x + Random.Range(-3, 3), player.transform.position.y,
+                player.transform.position.z) - newMissile.transform.position;
+        float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+        newMissile.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+        SoundSpawner.PlaySoundObj(transform.position, Resources.Load<AudioClip>("Audio/sunFire"), 1, false, 80, 0.8f);
+    }
+
+    IEnumerator BeginningFiringAtPlayer()
+    {
+        for (int i = 0; i < Random.Range(7-(lessHealthFasterAttack() * 2), 9 - lessHealthFasterAttack()); i++)
+        {
+            if (health > 0)
+            {
+                yield return new WaitForSecondsRealtime(0.4f);
                 spriteRenderer.sprite = laugh;
-                var newMissile = Instantiate(missile, transform.position, Quaternion.identity);
-                Vector3 dir =
-                    new Vector3(player.transform.position.x + Random.Range(-3, 3), player.transform.position.y,
-                        player.transform.position.z) - newMissile.transform.position;
-                float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
-                newMissile.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+                MissileFire();
                 yield return new WaitForSecondsRealtime(0.2f);
                 spriteRenderer.sprite = smile;
             }
@@ -180,37 +319,78 @@ public class SunBoss : MonoBehaviour
     {
         for (int i = 0; i < Random.Range(3,4); i++)
         {
-
-            if (health > 0)
+            trailRenderer.enabled = false;
+            if (health > 0 && biteAmt <= 9)
             {
                 currentBiteMoveSpeed = 0;
                 spriteRenderer.sprite = weird;
-                var randomFloatX = (Random.Range(7f, 9f));
-                if (Random.value > 0.5f)
-                {
-                    randomFloatX = -randomFloatX;
-                }
-                var randomFloatY = (Random.Range(3f, 5f));
-                if (Random.value > 0.5f)
-                {
-                    randomFloatY = -randomFloatY;
-                }
-                SoundSpawner.PlaySoundObj(transform.position, teleportSound);
-                particleSystem.Play();
-                transform.position = new Vector2(player.transform.position.x + randomFloatX, player.transform.position.y + randomFloatY);
+                ResetRbTransform();
+                RandomTeleportLocation();
+
                 yield return new WaitForSecondsRealtime(0.5f);
+                if (health <= maxHealth / 2f)
+                {
+                    for (int j = 0; j < 2; j++)
+                    {
+                        // Juke the player
+                        if (Random.Range(0, 6) < 3)
+                        {
+                            ResetRbTransform();
+                            RandomTeleportLocation();
+                            biteAmt++;
+                            yield return new WaitForSecondsRealtime(0.5f);
+                        }
+                        else
+                        {
+                            i = 99;
+                        }
+                    }
+
+                }
+
                 bitePos = player.transform.position;
                 SoundSpawner.PlaySoundObj(transform.position, roar);
-                currentBiteMoveSpeed = biteMovementSpeed;
-                spriteRenderer.sprite = bite;
-                yield return new WaitForSecondsRealtime(0.4f);
-            }
+                trailRenderer.enabled = true;
 
+
+                 currentBiteMoveSpeed = biteMovementSpeed;
+
+
+
+
+                spriteRenderer.sprite = bite;
+
+                yield return new WaitForSecondsRealtime(0.4f);
+                biteAmt++;
+            }
+            // Prevent the sun from biting too much.
+            if (biteAmt > 9)
+            {
+                i = 90;
+                currentAttackState = (Attack) 0;
+            }
 
         }
         
         currentAttack = null;
 
+    }
+
+    void RandomTeleportLocation()
+    {
+        var randomFloatX = (Random.Range(7f, 9f));
+        if (Random.value > 0.5f)
+        {
+            randomFloatX = -randomFloatX;
+        }
+        var randomFloatY = (Random.Range(3f, 5f));
+        if (Random.value > 0.5f)
+        {
+            randomFloatY = -randomFloatY;
+        }
+        SoundSpawner.PlaySoundObj(transform.position, teleportSound);
+        particleSystem.Play();
+        transform.position = new Vector2(player.transform.position.x + randomFloatX, player.transform.position.y + randomFloatY);
     }
 
     IEnumerator DelayBeforeStarting()
@@ -224,6 +404,14 @@ public class SunBoss : MonoBehaviour
         SoundSpawner.PlaySoundObj(transform.position, teleportSound);
         particleSystem.Play();
         transform.position = new Vector2(player.transform.position.x + Random.Range(0,5f), player.transform.position.y + 8f);
-        currentAttack = StartCoroutine(FiringAtPlayer());
+        currentAttack = StartCoroutine(BeginningFiringAtPlayer());
+    }
+
+    void ResetRbTransform()
+    {
+        transform.rotation = quaternion.Euler(0,0,0);
+        rb.velocity = Vector2.zero;
+        rb.gravityScale = 0;
+        rb.angularVelocity = 0;
     }
 }

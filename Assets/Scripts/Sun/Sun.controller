@@ -145,6 +145,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectileHitbox: {fileID: 3539640189663058576, guid: a1ac679f4a44c1044a4633261312754f,
     type: 3}
+  sunThrownSprite: {fileID: -5762550702744672948, guid: 077f121f052fea841896590e1c585fb0,
+    type: 3}
 --- !u!1102 &-2915182655853755846
 AnimatorState:
   serializedVersion: 6

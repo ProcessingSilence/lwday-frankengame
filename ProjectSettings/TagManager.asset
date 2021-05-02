@@ -24,6 +24,7 @@ TagManager:
   - SunHitbox
   - SunHurtPlayer
   - Land
+  - Missile
   layers:
   - Default
   - TransparentFX

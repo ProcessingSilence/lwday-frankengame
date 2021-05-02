@@ -53,4 +53,10 @@ public class Missile : MonoBehaviour
         Instantiate(goreSpawn, transform.position, quaternion.identity);
         Destroy(gameObject);
     }
+
+    public void DestroyImmediately()
+    {
+        Instantiate(goreSpawn, transform.position, quaternion.identity);
+        Destroy(gameObject);
+    }
 }

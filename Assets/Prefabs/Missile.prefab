@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 7947741130387494588}
   m_Layer: 13
   m_Name: Missile
-  m_TagString: Enemy
+  m_TagString: Missile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -144,6 +144,7 @@ MonoBehaviour:
   toGoreHitbox: {fileID: 0}
   caughtSprite: {fileID: 7504823413331151819, guid: 74c305bfe17104047af874f19b6b0375,
     type: 3}
+  regularExplosion: 1
 --- !u!61 &7947741130387494589
 BoxCollider2D:
   m_ObjectHideFlags: 0

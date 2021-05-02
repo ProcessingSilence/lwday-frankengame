@@ -151,7 +151,7 @@ public class HandThrow : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Enemy") && haveCaughtEnemy < 1)
+        if ((other.CompareTag("Enemy") || other.CompareTag("Missile")) && haveCaughtEnemy < 1)
         {
             //Debug.Log("Caught Enemy");
             haveCaughtEnemy = 1;
