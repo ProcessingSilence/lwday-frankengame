@@ -6,10 +6,8 @@ public class Thrown : StateMachineBehaviour
 {
     private Vector2 thrownDireciton;
 
-    private float velocity;
     public GameObject projectileHitbox;
 
-    private Rigidbody2D rb;
     
     private ThrownVals ThrownVals_script;
 
@@ -33,8 +31,10 @@ public class Thrown : StateMachineBehaviour
         }
         // Instantly kill if the spawn position of the thrown projectile overlaps a layer.
 
-        rb = animator.gameObject.GetComponent<Rigidbody2D>();
-        velocity = animator.gameObject.GetComponent<ThrownVals>().givenVelocity;
+        if (ThrownVals_script.instaKill == false)
+        {
+            ThrownVals_script.beginMovement = true;
+        }
 
 
 
@@ -50,9 +50,7 @@ public class Thrown : StateMachineBehaviour
             projectileHitbox.transform.GetChild(0).GetComponent<ToGoreHitbox>().beginDeathSequence = true;
             Debug.Log("NO BULLET-THROUGH-PAPER FOR YOU, PROJECTILE! INSTA-KILLED.");
         }
-        
-        if (ThrownVals_script.instaKill == false)
-            rb.velocity = (animator.transform.right * (velocity * 200) * Time.deltaTime);
-    }
-    
+
+
+    }    
 }

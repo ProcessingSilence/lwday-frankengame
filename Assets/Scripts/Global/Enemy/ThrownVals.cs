@@ -7,6 +7,7 @@ public class ThrownVals : MonoBehaviour
     public float goreVelocityRequirement;
 
     public float givenVelocity;
+    public bool beginMovement;
     public Sprite deathSprite;
 
     public Vector2 thrownDirection;
@@ -23,6 +24,8 @@ public class ThrownVals : MonoBehaviour
 
     private SpriteRenderer sR;
 
+    private Rigidbody2D rb;
+
     public bool regularExplosion;
 
     // Start is called before the first frame update
@@ -30,11 +33,20 @@ public class ThrownVals : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         sR = GetComponent<SpriteRenderer>();
+        rb = GetComponent<Rigidbody2D>();
     }
 
     public void WaitUntilExploding()
     {
         StartCoroutine(Countdown());
+    }
+
+    private void FixedUpdate()
+    {
+        if (beginMovement)
+        {
+            rb.velocity = (animator.transform.right * (givenVelocity * 200) * Time.deltaTime);
+        }
     }
 
     IEnumerator Countdown()

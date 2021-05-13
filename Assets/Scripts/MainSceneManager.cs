@@ -66,6 +66,12 @@ public class MainSceneManager : MonoBehaviour
         {
             sceneNum = 3;
         }
+
+        if (Input.GetKey(KeyCode.F12))
+        {
+            SceneManager.LoadScene("Level_13");
+        }
+
     }
     
     void NextLevelName()

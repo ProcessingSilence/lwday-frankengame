@@ -13,6 +13,11 @@ public class ScrollScript : MonoBehaviour
     void Start()
     {
         myRenderer = GetComponent<Renderer>();
+        if (!playerPos)
+        {
+            Debug.Log("Playerpos not given, turning off scroll script");
+            this.enabled = false;
+        }
     }
 
     // Update is called once per frame
