@@ -45,7 +45,7 @@ public class ThrownVals : MonoBehaviour
     {
         if (beginMovement)
         {
-            rb.velocity = (animator.transform.right * (givenVelocity * 200) * Time.deltaTime);
+
         }
     }
 

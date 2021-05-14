@@ -48,7 +48,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.1
+  m_Radius: 0.3
 --- !u!50 &8328388600411114725
 Rigidbody2D:
   serializedVersion: 4
@@ -84,6 +84,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   beginDeathSequence: 0
   myParent: {fileID: 0}
+  goreExplosion: {fileID: 0}
+  landLayer:
+    serializedVersion: 2
+    m_Bits: 65792
+  givenVelocity: 0
 --- !u!1 &3539640189663058576
 GameObject:
   m_ObjectHideFlags: 0
@@ -133,6 +138,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   child: {fileID: 7239780506178149067}
+  damageTheSun: 0
+  markedTarget: {fileID: 0}
 --- !u!58 &1243007247388510576
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -290,7 +297,7 @@ GameObject:
   - component: {fileID: 2755941402791698944}
   - component: {fileID: 2070298578940679435}
   m_Layer: 20
-  m_Name: GameObject
+  m_Name: TileDestroyer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -361,4 +368,4 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 1
+  m_Radius: 0.5

@@ -20,6 +20,8 @@ public class ProjectileHitbox : MonoBehaviour
     public Transform child;
 
     public bool damageTheSun;
+
+    public Collider markedTarget;
     // Start is called before the first frame update
     void Start()
     {
