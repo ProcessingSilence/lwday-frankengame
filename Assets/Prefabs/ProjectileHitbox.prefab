@@ -87,7 +87,7 @@ MonoBehaviour:
   goreExplosion: {fileID: 0}
   landLayer:
     serializedVersion: 2
-    m_Bits: 65792
+    m_Bits: 256
   givenVelocity: 0
 --- !u!1 &3539640189663058576
 GameObject:
@@ -347,7 +347,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1

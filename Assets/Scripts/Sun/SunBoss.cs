@@ -353,7 +353,7 @@ public class SunBoss : MonoBehaviour
                 trailRenderer.enabled = true;
 
 
-                 currentBiteMoveSpeed = biteMovementSpeed;
+                currentBiteMoveSpeed = biteMovementSpeed;
 
 
 

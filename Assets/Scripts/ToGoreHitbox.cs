@@ -56,7 +56,7 @@ public class ToGoreHitbox : MonoBehaviour
         if (beginDeathSequence == false)
         {
             RaycastHit2D hit = Physics2D.Raycast(transform.position, myParent.transform.right,Mathf.Infinity, landLayer);
-            if (hit.collider)
+            if (hit.collider && !hit.collider.gameObject.CompareTag("Destroyable"))
             {
                 endPoint = hit.point;
                 endPointDetected = true;
@@ -77,7 +77,7 @@ public class ToGoreHitbox : MonoBehaviour
 
         if (beginDeathSequence == false)
         {
-            rb.velocity = (myParent.transform.right * (givenVelocity * 200) * Time.deltaTime);
+            rb.velocity = (myParent.transform.right * (givenVelocity * 1200) * Time.deltaTime);
         }
 
         if (beginDeathSequence == true)
@@ -92,10 +92,10 @@ public class ToGoreHitbox : MonoBehaviour
     // Call death in LateUpdate so if it collides with a button + wall at the same time, it will detect button first.
     void Update()
     {
-
         if (beginDeathSequence)
         {
             StartCoroutine(DeathSequence());
+            transform.parent.GetChild(1).gameObject.SetActive(false);
         }
 
     }
@@ -103,8 +103,11 @@ public class ToGoreHitbox : MonoBehaviour
     IEnumerator DeathSequence()
     {
         rb.velocity = Vector2.zero;
-        myParent.transform.position = endPoint;
-        var goreSpawnCheck= Instantiate(goreExplosion, myParent.transform.position, quaternion.identity);
+        if (endPointDetected)
+        {
+            myParent.transform.position = endPoint;
+        }
+        var goreSpawnCheck= Instantiate(goreExplosion, myParent.transform.position, Quaternion.identity);
         myParentSpriteRenderer.enabled = false;
         yield return new WaitUntil(() => goreSpawnCheck == true);
             

@@ -41,7 +41,7 @@ public class GoreExplosion : MonoBehaviour
                 }
                 var tempRB = currentGoreObj.GetComponent<Rigidbody2D>();
                 currentGoreObj.transform.eulerAngles = new Vector3(0,0,randomRotation);
-                tempRB.AddRelativeForce(Random.onUnitSphere * 500);
+                tempRB.AddRelativeForce(Random.onUnitSphere * 5000);
             }
             audioSource.clip = goreSound[Random.Range(0, goreSound.Length)];
             audioSource.Play();

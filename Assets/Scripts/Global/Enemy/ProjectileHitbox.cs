@@ -139,10 +139,10 @@ public class ProjectileHitbox : MonoBehaviour
         if (sunBossScript.currentAttackState == SunBoss.Attack.Bite && sunBossScript.health > 0)
         {
             var myVelocity = transform.parent.GetComponent<Rigidbody2D>().velocity;
-            sunRb.velocity = myVelocity/4;
+            sunRb.velocity = myVelocity/2;
             sunRb.gravityScale = 1;
             sun.GetComponent<TrailRenderer>().enabled = false;
-            sunRb.AddTorque(360 * myVelocity.magnitude, ForceMode2D.Impulse);
+            sunRb.AddTorque(0.08f * myVelocity.magnitude, ForceMode2D.Impulse);
         }
     
         Destroy(myParent);

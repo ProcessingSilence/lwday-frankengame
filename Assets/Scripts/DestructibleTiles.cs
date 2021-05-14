@@ -35,7 +35,7 @@ public class DestructibleTiles : MonoBehaviour
         }
     }
 
-    /*
+
     // Update is called once per frame
     void Update()
     {
@@ -46,7 +46,8 @@ public class DestructibleTiles : MonoBehaviour
     {
         transform.position = followObj.position;
     }
-    */
+
+
 
     void OnCollisionStay2D(Collision2D collision) 
     {
@@ -55,6 +56,7 @@ public class DestructibleTiles : MonoBehaviour
             DestroyTiles(collision);    
         }   
     }
+
 
     void DestroyTiles(Collision2D collision)
     {

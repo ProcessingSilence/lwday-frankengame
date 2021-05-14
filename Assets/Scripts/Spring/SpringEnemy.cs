@@ -89,7 +89,7 @@ public class SpringEnemy : MonoBehaviour
     {
         spriteRenderer.sprite = springSprites[2];
         gameObject.tag = "DamageEnemy";
-        rb.AddForce(new Vector2(700*leftOrRight,1500));
+        rb.AddForce(new Vector2(7000*leftOrRight,15000));
         RaycastHit hitInfo;
         //Physics.Raycast(transform.position, transform.forward * leftOrRight, out hitInfo, 5);
         
