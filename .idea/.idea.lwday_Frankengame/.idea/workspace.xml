@@ -176,33 +176,33 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/Global/Enemy/ProjectileHitbox.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="767">
-              <caret line="137" column="47" selection-start-line="137" selection-start-column="47" selection-end-line="137" selection-end-column="47" />
+            <state relative-caret-position="703">
+              <caret line="133" column="9" lean-forward="true" selection-start-line="133" selection-start-column="9" selection-end-line="133" selection-end-column="9" />
               <folding>
-                <marker date="1620954632174" expanded="false" signature="6:103" ph="..." />
-                <marker date="1620954632174" expanded="true" signature="105:264" ph="/* Detects when enemies are hit or when buttons are pressed, uses a larger hitbox than ToGoreHitbox so it's more  ... */" />
-                <marker date="1620954632174" expanded="true" signature="311:4685" ph="{...}" />
-                <marker date="1620954632174" expanded="true" signature="806:1339" ph="{...}" />
-                <marker date="1620954632174" expanded="true" signature="1213:1267" ph="{...}" />
-                <marker date="1620954632174" expanded="true" signature="1280:1333" ph="{...}" />
-                <marker date="1620954632174" expanded="true" signature="1363:1424" ph="{...}" />
-                <marker date="1620954632174" expanded="true" signature="1448:1627" ph="{...}" />
-                <marker date="1620954632174" expanded="true" signature="1510:1621" ph="{...}" />
-                <marker date="1620954632174" expanded="true" signature="1665:2035" ph="{...}" />
-                <marker date="1620954632174" expanded="true" signature="2062:2533" ph="{...}" />
-                <marker date="1620954632174" expanded="true" signature="2092:2527" ph="{...}" />
-                <marker date="1620954632174" expanded="true" signature="2190:2268" ph="{...}" />
-                <marker date="1620954632174" expanded="true" signature="2285:2360" ph="{...}" />
-                <marker date="1620954632174" expanded="true" signature="2587:3249" ph="{...}" />
-                <marker date="1620954632174" expanded="true" signature="2729:2792" ph="{...}" />
-                <marker date="1620954632174" expanded="true" signature="2836:3005" ph="{...}" />
-                <marker date="1620954632174" expanded="true" signature="2885:2995" ph="{...}" />
-                <marker date="1620954632174" expanded="true" signature="3086:3138" ph="{...}" />
-                <marker date="1620954632174" expanded="true" signature="3181:3243" ph="{...}" />
-                <marker date="1620954632174" expanded="true" signature="3290:3641" ph="{...}" />
-                <marker date="1620954632174" expanded="true" signature="3677:4682" ph="{...}" />
-                <marker date="1620954632174" expanded="true" signature="4063:4167" ph="{...}" />
-                <marker date="1620954632174" expanded="true" signature="4318:4644" ph="{...}" />
+                <marker date="1620954794777" expanded="false" signature="6:103" ph="..." />
+                <marker date="1620954794777" expanded="true" signature="105:264" ph="/* Detects when enemies are hit or when buttons are pressed, uses a larger hitbox than ToGoreHitbox so it's more  ... */" />
+                <marker date="1620954794777" expanded="true" signature="311:4685" ph="{...}" />
+                <marker date="1620954794777" expanded="true" signature="806:1339" ph="{...}" />
+                <marker date="1620954794777" expanded="true" signature="1213:1267" ph="{...}" />
+                <marker date="1620954794777" expanded="true" signature="1280:1333" ph="{...}" />
+                <marker date="1620954794777" expanded="true" signature="1363:1424" ph="{...}" />
+                <marker date="1620954794777" expanded="true" signature="1448:1627" ph="{...}" />
+                <marker date="1620954794777" expanded="true" signature="1510:1621" ph="{...}" />
+                <marker date="1620954794777" expanded="true" signature="1665:2035" ph="{...}" />
+                <marker date="1620954794777" expanded="true" signature="2062:2533" ph="{...}" />
+                <marker date="1620954794777" expanded="true" signature="2092:2527" ph="{...}" />
+                <marker date="1620954794777" expanded="true" signature="2190:2268" ph="{...}" />
+                <marker date="1620954794777" expanded="true" signature="2285:2360" ph="{...}" />
+                <marker date="1620954794777" expanded="true" signature="2587:3249" ph="{...}" />
+                <marker date="1620954794777" expanded="true" signature="2729:2792" ph="{...}" />
+                <marker date="1620954794777" expanded="true" signature="2836:3005" ph="{...}" />
+                <marker date="1620954794777" expanded="true" signature="2885:2995" ph="{...}" />
+                <marker date="1620954794777" expanded="true" signature="3086:3138" ph="{...}" />
+                <marker date="1620954794777" expanded="true" signature="3181:3243" ph="{...}" />
+                <marker date="1620954794777" expanded="true" signature="3290:3641" ph="{...}" />
+                <marker date="1620954794777" expanded="true" signature="3677:4682" ph="{...}" />
+                <marker date="1620954794777" expanded="true" signature="4063:4167" ph="{...}" />
+                <marker date="1620954794777" expanded="true" signature="4318:4644" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -532,12 +532,12 @@
       <workItem from="1619285813824" duration="22369000" />
       <workItem from="1619559113219" duration="2977000" />
       <workItem from="1619668395425" duration="19678000" />
-      <workItem from="1620928175149" duration="13652000" />
+      <workItem from="1620928175149" duration="14407000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="277358000" />
+    <option name="totallyTimeSpent" value="278113000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1568,33 +1568,33 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Global/Enemy/ProjectileHitbox.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="767">
-          <caret line="137" column="47" selection-start-line="137" selection-start-column="47" selection-end-line="137" selection-end-column="47" />
+        <state relative-caret-position="703">
+          <caret line="133" column="9" lean-forward="true" selection-start-line="133" selection-start-column="9" selection-end-line="133" selection-end-column="9" />
           <folding>
-            <marker date="1620954632174" expanded="false" signature="6:103" ph="..." />
-            <marker date="1620954632174" expanded="true" signature="105:264" ph="/* Detects when enemies are hit or when buttons are pressed, uses a larger hitbox than ToGoreHitbox so it's more  ... */" />
-            <marker date="1620954632174" expanded="true" signature="311:4685" ph="{...}" />
-            <marker date="1620954632174" expanded="true" signature="806:1339" ph="{...}" />
-            <marker date="1620954632174" expanded="true" signature="1213:1267" ph="{...}" />
-            <marker date="1620954632174" expanded="true" signature="1280:1333" ph="{...}" />
-            <marker date="1620954632174" expanded="true" signature="1363:1424" ph="{...}" />
-            <marker date="1620954632174" expanded="true" signature="1448:1627" ph="{...}" />
-            <marker date="1620954632174" expanded="true" signature="1510:1621" ph="{...}" />
-            <marker date="1620954632174" expanded="true" signature="1665:2035" ph="{...}" />
-            <marker date="1620954632174" expanded="true" signature="2062:2533" ph="{...}" />
-            <marker date="1620954632174" expanded="true" signature="2092:2527" ph="{...}" />
-            <marker date="1620954632174" expanded="true" signature="2190:2268" ph="{...}" />
-            <marker date="1620954632174" expanded="true" signature="2285:2360" ph="{...}" />
-            <marker date="1620954632174" expanded="true" signature="2587:3249" ph="{...}" />
-            <marker date="1620954632174" expanded="true" signature="2729:2792" ph="{...}" />
-            <marker date="1620954632174" expanded="true" signature="2836:3005" ph="{...}" />
-            <marker date="1620954632174" expanded="true" signature="2885:2995" ph="{...}" />
-            <marker date="1620954632174" expanded="true" signature="3086:3138" ph="{...}" />
-            <marker date="1620954632174" expanded="true" signature="3181:3243" ph="{...}" />
-            <marker date="1620954632174" expanded="true" signature="3290:3641" ph="{...}" />
-            <marker date="1620954632174" expanded="true" signature="3677:4682" ph="{...}" />
-            <marker date="1620954632174" expanded="true" signature="4063:4167" ph="{...}" />
-            <marker date="1620954632174" expanded="true" signature="4318:4644" ph="{...}" />
+            <marker date="1620954794777" expanded="false" signature="6:103" ph="..." />
+            <marker date="1620954794777" expanded="true" signature="105:264" ph="/* Detects when enemies are hit or when buttons are pressed, uses a larger hitbox than ToGoreHitbox so it's more  ... */" />
+            <marker date="1620954794777" expanded="true" signature="311:4685" ph="{...}" />
+            <marker date="1620954794777" expanded="true" signature="806:1339" ph="{...}" />
+            <marker date="1620954794777" expanded="true" signature="1213:1267" ph="{...}" />
+            <marker date="1620954794777" expanded="true" signature="1280:1333" ph="{...}" />
+            <marker date="1620954794777" expanded="true" signature="1363:1424" ph="{...}" />
+            <marker date="1620954794777" expanded="true" signature="1448:1627" ph="{...}" />
+            <marker date="1620954794777" expanded="true" signature="1510:1621" ph="{...}" />
+            <marker date="1620954794777" expanded="true" signature="1665:2035" ph="{...}" />
+            <marker date="1620954794777" expanded="true" signature="2062:2533" ph="{...}" />
+            <marker date="1620954794777" expanded="true" signature="2092:2527" ph="{...}" />
+            <marker date="1620954794777" expanded="true" signature="2190:2268" ph="{...}" />
+            <marker date="1620954794777" expanded="true" signature="2285:2360" ph="{...}" />
+            <marker date="1620954794777" expanded="true" signature="2587:3249" ph="{...}" />
+            <marker date="1620954794777" expanded="true" signature="2729:2792" ph="{...}" />
+            <marker date="1620954794777" expanded="true" signature="2836:3005" ph="{...}" />
+            <marker date="1620954794777" expanded="true" signature="2885:2995" ph="{...}" />
+            <marker date="1620954794777" expanded="true" signature="3086:3138" ph="{...}" />
+            <marker date="1620954794777" expanded="true" signature="3181:3243" ph="{...}" />
+            <marker date="1620954794777" expanded="true" signature="3290:3641" ph="{...}" />
+            <marker date="1620954794777" expanded="true" signature="3677:4682" ph="{...}" />
+            <marker date="1620954794777" expanded="true" signature="4063:4167" ph="{...}" />
+            <marker date="1620954794777" expanded="true" signature="4318:4644" ph="{...}" />
           </folding>
         </state>
       </provider>
