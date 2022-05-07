@@ -123,7 +123,6 @@ public class SunBoss : MonoBehaviour
                 SoundSpawner.PlaySoundObj(transform.position, hurtSound);
             }
             currentBiteMoveSpeed = 0;
-
         }
 
         if (health <= 0 && health > -999)
@@ -150,7 +149,6 @@ public class SunBoss : MonoBehaviour
             rb.gravityScale = 1;
             SoundSpawner.PlaySoundObj(transform.position, hurtSound, 1, false, 80, 0.8f);
             SoundSpawner.PlaySoundObj(transform.position, hurtSound, 1, false, 80, 0.8f);
-
         }
 
         if (currentAttack == null && health > 0)
@@ -174,8 +172,10 @@ public class SunBoss : MonoBehaviour
                     biteAmt = 0;
                     currentAttack = StartCoroutine(FiringAtPlayer());
                 }
+
                 float step =  (missileFiringMovementSpeed * lessHealthFasterAttack()) * Time.deltaTime;
                 Vector3 chosenPos = Vector3.zero;
+
                 switch (moveTowards)
                 {
                     case MoveTowards.Choose:
@@ -214,9 +214,8 @@ public class SunBoss : MonoBehaviour
                     {
                         moveTowards = MoveTowards.Player;
                     }
-
-
                 }
+
                 if (transform.position.x > 41)
                 {
                     transform.position = new Vector3(player.transform.position.x, 0) + new Vector3(Random.Range(-10f, 0f), 0);
@@ -231,7 +230,9 @@ public class SunBoss : MonoBehaviour
                         moveTowards = MoveTowards.Player;
                     }
                 }
+
                 transform.position = new Vector3(transform.position.x, (Mathf.Sin(Time.time * (lessHealthFasterAttack() * 6.5f)) * lessHealthFasterAttack()));
+
                 if (transform.position.y > 0)
                 {
                     spriteRenderer.sprite = laugh;
@@ -276,11 +277,7 @@ public class SunBoss : MonoBehaviour
         {
             if (health > 0)
             {
-                yield return new WaitForSecondsRealtime(0.4f);
-                //spriteRenderer.sprite = laugh;
-                //MissileFire();
-                yield return new WaitForSecondsRealtime(0.2f);
-                //spriteRenderer.sprite = smile;
+                yield return new WaitForSecondsRealtime(0.6f);
             }
         }
 

@@ -10,12 +10,15 @@ public class Missile : MonoBehaviour
     private BoxCollider2D collider;
 
     private bool keepMoving;
+    private SpriteRenderer sr;
 
     public GameObject goreSpawn;
     // Start is called before the first frame update
     void Awake()
     {
         collider = gameObject.GetComponent<BoxCollider2D>();
+        sr = GetComponent<SpriteRenderer>();
+        sr.color = new Color(1f, 0f, 0.86f);
     }
 
     private void FixedUpdate()
@@ -42,8 +45,9 @@ public class Missile : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Land") && collider.enabled)
         {
-            gameObject.layer = 0;
+            gameObject.layer = 13;
             speed = 0;
+            sr.color = new Color(0.86f, 0.74f, 0.97f);
             StartCoroutine(WaitBeforeDestroy());
         }
     }
