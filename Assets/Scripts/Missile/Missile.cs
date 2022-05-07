@@ -42,6 +42,7 @@ public class Missile : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Land") && collider.enabled)
         {
+            gameObject.layer = 0;
             speed = 0;
             StartCoroutine(WaitBeforeDestroy());
         }

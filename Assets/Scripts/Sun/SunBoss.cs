@@ -76,11 +76,11 @@ public class SunBoss : MonoBehaviour
     {
         Missiles,
         Bite,
-        
+
         Swoop,
 
-        BulletHell,        
-        
+        BulletHell,
+
 
         Defeated,
     }
@@ -174,7 +174,7 @@ public class SunBoss : MonoBehaviour
                     biteAmt = 0;
                     currentAttack = StartCoroutine(FiringAtPlayer());
                 }
-                var step =  (missileFiringMovementSpeed * lessHealthFasterAttack()) * Time.deltaTime;
+                float step =  (missileFiringMovementSpeed * lessHealthFasterAttack()) * Time.deltaTime;
                 Vector3 chosenPos = Vector3.zero;
                 switch (moveTowards)
                 {
@@ -258,7 +258,7 @@ public class SunBoss : MonoBehaviour
                 var step =  currentBiteMoveSpeed * Time.deltaTime;
                 transform.position =
                     Vector2.MoveTowards(transform.position, bitePos, step);
-                break;               
+                break;
             }
             case Attack.Defeated:
             {
@@ -371,7 +371,7 @@ public class SunBoss : MonoBehaviour
             }
 
         }
-        
+
         currentAttack = null;
 
     }
