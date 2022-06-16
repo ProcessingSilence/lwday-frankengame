@@ -7,18 +7,7 @@ public class LandHitbox : MonoBehaviour
     [SerializeField]private BoxCollider2D collider;
 
     public GameObject explosion;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-    
     private void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.CompareTag("Land") && collider.enabled)
